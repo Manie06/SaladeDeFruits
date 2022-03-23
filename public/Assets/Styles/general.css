@@ -1,0 +1,1327 @@
+/*////////////////////////////////////////////////////  TYPO /////////////////////////////////////////////////////*/ 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*////////////////////////////////////////////////////  GENERAL /////////////////////////////////////////////////////*/ 
+
+:root {
+    --hd-blue: #272D7E;
+    --hd-white: #FFFEFE; 
+    --hd-red: #D84B51;  
+    --hd-orange: #E43730; 
+    --hd-yellow: #FFCF00; 
+    --hd-blue-clear: #B7D2E7;
+    --hd-grey: #7089A7; 
+    --hd-beige: #FAD1BD; 
+    --hd-black: #1C1C1C; 
+    --hd-bleu-light: #E9EAF2; 
+    --hd-yellow-dark: #E99A24; 
+    --hd-inactif: #B2B6ED; 
+
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */ 
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    color: var(--hd-blue);
+    font-size: 1.6rem;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+main {
+    padding: 14.4rem 0 20rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--hd-blue) !important;
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    opacity: 1; /* Firefox */
+  }
+
+/*////////////////////////////////////////////////////  BOUTONS /////////////////////////////////////////////////////*/ 
+
+.btn {
+    height: 4.4rem;
+    font-size: 1.8rem;
+    min-width: 16.6rem;
+    padding: 0 2rem;
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--hd-blue);
+    outline: none;
+    border: 1px solid var(--hd-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--hd-black);
+}
+
+.btn-secondary {
+    background-color: var(--hd-white);
+    outline: none;
+    color: var(--hd-blue);
+    border: 1px solid var(--hd-blue);
+}
+
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus  {
+    color: var(--hd-blue);
+
+}
+
+
+
+
+/*////////////////////////////////////////////////////  NAVBAR /////////////////////////////////////////////////////*/
+
+#navbarNav {
+    width: 28rem;
+}
+
+.logo {
+    width: 119px;
+}
+
+nav,.navbar-light, .bg-light {
+    background-color: var(--hd-white);
+    --bs-bg-opacity: 0;
+    box-shadow: 0px 8px 24px rgba(28, 28, 28, 0.15);
+}
+
+
+
+/*////////////////////////////////////////////////////  HEADER /////////////////////////////////////////////////////*/ 
+
+#header{
+    background-image: url('../Visuels/images/heroshot-sans-texte.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+#heroshot h1, #heroshot p {
+color: var(--hd-white); 
+}
+
+#heroshot h1 {
+    font-size: 9rem;
+    padding-bottom: 0;
+}
+
+#heroshot h1 span {
+    font-size: 5.6rem;
+    display: block;
+}
+
+#heroshot p {
+    font-size: 2.4rem;
+}
+
+
+/*////////////////////////////////////////////////////  HEADINGS   /////////////////////////////////////////////////////*/ 
+h1 { 
+    font-size: 5.6rem;
+    padding-bottom: 8.9rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    padding-bottom: 5.5rem;
+}
+
+
+
+/*////////////////////////////////////////////////////  HOME BENEFICIAIRE  /////////////////////////////////////////////////////*/
+
+
+
+
+
+/*////////////////////////////////////////////////////  FOOTER /////////////////////////////////////////////////////*/ 
+
+footer #copyright  {
+    text-align: center;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+ul li.social-link {
+    padding-right: 1rem; 
+}
+
+footer a {
+   text-decoration: none;
+   color: var(--hd-blue) 
+}
+
+footer a:hover {
+    font-weight: bold;
+    color: var(--hd-blue);
+}
+
+/*////////////////////////////////////////////////////  HOME ACCOMPAGNANT   /////////////////////////////////////////////////////*/ 
+#home-acc .card-activite {
+    box-shadow: 0px 8px 24px #1c1c1c1f;
+}
+
+#home-acc .carte-trouver-activite {
+    margin-bottom: 55px;
+}
+
+#home-acc article img {
+    object-fit: cover;
+}
+
+#home-acc .image-carte-trouver-activite {
+    padding: 0;
+}
+
+#home-acc .bloc-texte-carte-trouver-activite {
+    padding: 0;
+}
+
+#home-acc .bloc-texte-card {
+    padding: 15px;
+    height: 200px;
+}
+
+#home-acc .p-card {
+    padding-left: 5px;
+    margin: 0px
+}
+
+#home-acc h2 {
+    font-size: 56px;
+}
+
+#home-acc h3 {
+    font-size: 32px!important;
+    font-weight: bold;
+}
+
+#home-acc .bouton-bleu{
+    height:62px;
+    background-color: var(--hd-blue);
+    text-align:center;
+}
+
+#home-acc a {
+    text-decoration: none;
+    color: white;
+}
+
+#home-acc .row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#home-acc .row {
+    margin-top: 0;
+    --bs-gutter-x: 2em;
+    --bs-gutter-y: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+/* Code Valentin */
+
+#home-acc .pas-de-padding {
+    padding: 0;
+}
+
+#home-acc .pas-de-marge{
+    margin:0;
+}
+
+#home-acc .margin-bot-200{
+    margin-bottom:200px;
+}
+
+#home-acc .margin-bot-144{
+    margin-bottom:144px;
+}
+
+#home-acc .margin-bot-89{
+    margin-bottom:89px;
+}
+#home-acc .margin-bot-55{
+    margin-bottom:55px;
+}
+#home-acc .margin-bot-30{
+    margin-bottom:30px;
+}
+
+#home-acc #onglets-accompagnant{
+    margin-top:-144px;
+}
+
+#home-acc #trouver-une-activite{
+    margin: top -69px;
+}
+
+#home-acc .taille-filtres-desktop{
+    z-index:999;
+    width:250px;
+}
+
+#home-acc .accordion-header{
+    padding-bottom:0;
+    font-size: 1.8rem;
+}
+
+#home-acc .accordion-button{
+    height:6.2rem;
+    background-color: #FFFEFE;
+    border: 1px solid var(--hd-blue);
+    line-height: 1.5;
+    padding:3px 7px 3px 7px;
+}
+
+#home-acc .accordion-button:not(.collapsed){
+    height:6.2rem;
+    background-color: #FFFEFE;
+    border: 1px solid var(--hd-blue);
+    color:var(--hd-blue);
+    line-height: 1.5;
+    padding:3px 7px 3px 7px;
+}
+
+#home-acc .accordion-button:hover{
+    color:#FFFEFE;
+    background-color: var(--hd-blue);
+}
+
+#home-acc .accordion-button::after{
+    background-image: none;
+}
+
+#home-acc .accordion-button:not(.collapsed)::after{
+    background-image: none;
+}
+
+#home-acc .accordion-button:focus {
+    z-index: 3;
+    background-color: var(--hd-blue);
+    color:#FFFEFE;
+    border-color: var(--hd-blue);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #B7D2E7;
+}
+
+#home-acc #filtre-activite-sportive + button, #filtre-activite-culturelle + button, #filtre-activite-autre + button{
+    margin:0;
+    font-size:1.6rem;
+    color:var(--hd-blue);
+    background-color: #FFFEFE ;
+}
+
+#home-acc .btn{
+    border-radius: 0rem;
+}
+
+#home-acc .btn-filter{
+    text-align: left;
+    border: 1px solid var(--hd-blue);
+    color: var(--hd-blue);
+}
+
+#home-acc .btn-filter:hover{
+    color:#FFFEFE;
+    background-color: var(--hd-blue);
+}
+
+#home-acc .btn-check:focus + .btn-filter, .btn-filter:focus{
+    color: #FFFEFE;
+    background-color: var(--hd-blue);
+    border: 1px solid var(--hd-blue);
+    box-shadow: 0 0 0 .25rem #B7D2E7;
+}
+
+
+#home-acc option{
+    background-color: #FFFEFE;
+}
+
+#home-acc .form-select{
+    background-color: #FFFEFE;
+    color: var(--hd-blue);
+}
+
+#home-acc .taille-18{
+    font-size: 1.8rem;
+}
+
+#home-acc .taille-16{
+    font-size:1.6rem;
+}
+
+#home-acc .taille-14{
+    font-size:1.4rem;
+}
+
+#home-acc #ville-activite{
+    height:6.2rem;
+    background-color: #FFFEFE;
+    border: 1px solid var(--hd-blue);
+    line-height: 1.5;
+    padding:3px 7px 3rem 7px;
+}
+
+#home-acc .form-control{
+    font-size:1.8rem;
+    color: var(--hd-blue);
+    font-weight:bold
+}
+
+#home-acc .form-control::placeholder{
+    font-size:1.8rem;
+    color: var(--hd-blue);
+}
+
+#home-acc #ville-help{
+    position:relative;
+    font-size:1.6rem;
+    bottom:33px;
+    left: 9px;
+    color:var(--hd-blue);
+}
+
+#home-acc .filtre-apparence-bouton{
+    background-color: #FFFEFE;
+    border: 1px solid var(--hd-blue);
+}
+
+#home-acc .filtre-apparence-texte{
+    color:var(--hd-blue);
+    background-color: #FFFEFE;
+}
+
+#home-acc .filtre-apparence-choix{
+    color:var(--hd-blue);
+    background-color: #FFFEFE;
+}
+
+#home-acc .btn{
+    height:6.2rem;
+}
+
+#home-acc option{
+    font-size:1.6rem;
+    color:var(--hd-blue);
+    background-color: #FFFEFE;
+}
+
+#home-acc .demi-cercle-droite-trouver-une-activité{
+    position: relative;
+    width: 69.01px;
+    height: 69.01px;
+    z-index: 0;
+    top: 36px;
+    right: 24px;
+}
+
+#home-acc .illustration-oeil-rond-beige{
+    width: 250px;
+    height: 167px;
+    position: absolute;
+    left: 20px;
+    top: 1160px;
+    margin-top:-167px;
+}
+
+
+#home-acc .bouton-blanc-fullscreen{
+    display: inline-block;
+    padding: 15px;
+    height:auto;
+    background-color: #FFFEFE;
+    font-size: 2rem;
+}
+
+#home-acc .pas-de-bordure{
+    border:none;
+}
+
+#home-acc .bouton-deguise-blanc{
+    text-decoration:none;
+    color: var(--hd-blue);
+    text-align:center;
+}
+
+#home-acc .bouton-bleu-fullscreen{
+    display: inline-block;
+    padding: 15px;
+    height:auto;
+    background-color: var(--hd-blue);
+    font-size: 2rem;
+    box-shadow: inset 10px -10px 4px rgba(0, 0, 0, 0.25);
+}
+
+#home-acc .burger {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; /*pour ne pas que la checkbox prenne son apparence par défaut*/
+
+    display: block;
+    cursor: pointer;
+    width: 50px;
+}
+
+#home-acc .filtres-mobile{
+    display: none; /* Tant qu'on a pas cliqué sur le bouton burger, on cache la barre de nav */
+}
+
+/* quand on a cliqué sur le burger, c'est qu'on clique sur l'input:checkbox et donc celle ci passe en mode "checked", ce qui nous permet de lui affecter un style différent sur cette pseudo classe, ici la croix */
+#home-acc .burger:checked {
+    content: none; /*le code intégré dans la propriété content injecte l'icône en croix*/
+}
+
+
+#home-acc .burger:checked + .filtres-mobile {
+    height: auto;
+    padding-bottom: 50px;
+}
+/*fin Conception du menu burger*/
+
+#home-acc .burger:checked + .filtres-mobile{ /*le + est le sélecteur directement adjacent. Grâce à lui, on peut dans cette exercice visé exclusivement la balise nav qui se trouve directement après l'input de type checkbox*/
+    display: block;
+}
+
+
+@media screen and (max-width:576px){
+    #home-acc h3 {
+        font-size: 24px!important;
+    }
+}
+
+/*////////////////////////////////////////////////////  HOME BENEFICIARE   /////////////////////////////////////////////////////*/ 
+/* Police et titres */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+#home-bene {
+    margin: 144px 0px 200px;
+    color: #272D7E;
+    font-family: 'Mulish', sans-serif;
+}
+
+#home-bene a {
+    text-decoration: none;
+}
+
+#home-bene p {
+    font-size: 18px;
+}
+
+#home-bene h2 {
+    font-size: 56px;
+}
+
+#home-bene h3 {
+    font-size: 36px;
+}
+
+#home-bene h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#home-bene h5 {
+    text-align: center;
+    color: #FFFEFE;
+    font-size: 18px;
+}
+
+
+/* Général */
+
+#home-bene .row {
+    margin:0;
+}
+
+#home-bene .card {
+    box-shadow: 0px 8px 24px #1c1c1c1f;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    word-wrap: normal;
+}
+
+#home-bene .card-button, #home-bene .prop-button {
+    background-color: #272D7E;
+    color: #FFFEFE;
+    height: 62px;
+    border: none;
+    padding: 15px;
+}
+#home-bene .prop-button:hover, .card-button:hover {
+    background-color: #000543;
+}
+
+#home-bene .white-card-button:hover {
+    font-weight: bold;
+}
+
+#home-bene .white-card-button {
+    border: none;
+    background-color: #FFFEFE;
+    color: #272D7E;
+    border : 1px solid #272D7E;
+    height: 62px;
+}
+
+
+/* Bouton proposer une nouvelle activité */
+
+#home-bene .cercle-rouge {
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: -52px;
+}
+
+#home-bene .prop-button-bloc {
+    margin: auto;
+}
+
+#home-bene .icone-plus {
+    padding: 14px;
+    border: solid #272D7E 1px;
+}
+
+
+/* Section 1 : next activité prévue */
+
+#home-bene #next-activite {
+    margin: 89px 0px;
+}
+
+#home-bene .next-acti-card {
+    margin-top: 89px;
+}
+
+#home-bene .image-next-acti, #home-bene .image-acti-passe {
+    height: 360px;
+    object-fit: cover;
+}
+
+#home-bene #next-activite button {
+    text-align: justify;
+}
+
+#home-bene .text-next-acti {
+    padding: 25px 30px;
+}
+
+#home-bene .text-next-acti .row div {
+    padding-left: 0 ;
+    padding-right: 15px;
+}
+
+/* Section 2 : Autres activités */
+
+#home-bene #autres-acti {
+    margin-bottom: 89px;
+}
+#home-bene #autres-acti h4 {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+#home-bene .card-autres-acti {
+    margin-bottom: 30px;
+}
+
+.mini-card {
+    margin: auto;
+    margin-bottom: 14px;
+}
+
+#home-bene .contenu-autres-acti {
+    padding: 30px;
+}
+
+#home-bene .mini-bkg {
+    padding: 50px 0px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+#home-bene .cinema-bkg {
+    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-cinema.jpg);
+}
+
+#home-bene .piscine-bkg {
+    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-piscine.jpg);
+}
+
+#home-bene .resto-bkg {
+    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-restau.jpg);
+}
+
+#home-bene .cyclisme-bkg {
+    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-rugby.jpg);
+}
+
+#home-bene .text-sans-accomp {
+    height: 194px;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+#home-bene .text-sans-accomp p {
+    text-align: center;
+    width: 60%;
+}
+
+
+#home-bene #acti-passe .row {
+    margin: 55px 0px 89px;
+}
+
+#home-bene #acti-passe h4 {
+    padding-top: 15px;
+}
+
+#home-bene .cercle-rouge.bas {
+    position: absolute;
+    left: 50%;
+    margin-left: 120px;
+    margin-top: -45px;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+
+#home-bene .illu-cnx-droit {
+    margin-bottom: -177px;
+}
+
+/*//////////////////////////////////////////////////// INDEX   /////////////////////////////////////////////////////*/ 
+/* Général */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#index {
+    font-family: 'Mulish', sans-serif;
+}
+
+#index a {
+    text-decoration: none;
+}
+ 
+#index h2 {
+    font-size: 56px;
+}
+
+#index h3 {
+    font-size: 36px;
+}
+
+#index .btn-blue {
+    background-color: var(--hd-blue);
+    color: var(--hd-white);
+    height: 62px;
+    border: none;
+    padding: 15px;
+    margin: auto;
+}
+
+#index .btn-blue:hover {
+    background-color: #000543;
+}
+
+/* Titre principal */
+
+#index h2 {
+    margin-bottom: 114px;
+    margin-left: -40px;
+}
+
+#index .cercle-rouge {
+    margin-top: -50px;
+}
+
+#index h2 span {
+    padding-left: 50px;
+}
+
+
+/* section */
+
+#index article {
+    padding: 40px 50px;
+    box-shadow: 0px 8px 24px #1c1c1c1f;
+}
+
+#index h3 span {
+    padding-left: 15px;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+#index article p {
+    margin: 40px 0px;
+}
+
+
+/* Background */
+
+#index {
+    background-image: url(../Visuels/illustrations/illu-connexion-gauche.svg), url(../Visuels/illustrations/illu-connexion-droite.svg);
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+    background-size: 20%;
+}
+
+
+/*//////////////////////////////////////////////////// CONNEXION  /////////////////////////////////////////////////////*/ 
+/* Général */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#connexion {
+    font-family: 'Mulish', sans-serif;
+    color: var(--hd-blue);
+    background-image: url(../Visuels/illustrations/illu-gratuit-connexion.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 35%;
+}
+
+#connexion a {
+    text-decoration: none;
+    color: var(--hd-blue);
+}
+
+#connexion h1 {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+#connexion p, #connexion label, #connexion a {
+    font-size: 18px;
+}
+
+#connexion input::placeholder {
+    color: var(--hd-blue);
+    font-size: 16px;
+}
+
+#connexion .container {
+    box-shadow: 0px 8px 24px #1c1c1c1f;
+    padding: 60px;
+}
+
+
+/* Bloc de contenu texte */
+#connexion article {
+    background-color: var(--hd-white);
+}
+
+#connexion article > *, #connexion .btn-blue {
+    margin-bottom: 21px!important;
+}
+
+#connexion #input-email, #connexion #input-mdp {
+    height: 60px;
+    padding: 15px;
+    width: 100%;
+    border: var(--hd-blue) 1px solid;
+}
+
+#connexion .mdp-visible {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 19px;
+}
+
+#connexion input[type=checkbox] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--hd-blue);
+    background-color: var(--hd-white);
+}
+
+#connexion input[type=checkbox]:checked {
+    background-image: url(../Visuels/icones/taille-24/checkmark.svg);
+    background-position: center;
+}
+
+#connexion .label-check {
+    padding-left: 15px;
+}
+
+#connexion .btn-blue {
+    display: block;
+    background-color: var(--hd-blue);
+    color: var(--hd-white);
+    height: 62px;
+    border: none;
+    padding: 15px;
+    margin: auto;
+}
+
+#connexion .btn-blue:hover {
+   background-color: #000543;
+}
+
+#connexion a span {
+    font-weight: bold;
+}
+
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 42px!important;
+    }
+}
+
+/*//////////////////////////////////////////////////// FORMULAIRE BÉNÉFICAIRE /////////////////////////////////////////////////////*/ 
+/*//////////////////////////////////////////////   Formulaire    ///////////////////////////////////////////*/
+
+#activite-form legend {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+#activite-form label, #activite-form label[for="adresse_depart"] {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+strong.activite-label {
+    color: yellowgreen;
+}
+
+#activite-form input[type=text], #activite-form textarea, #activite-form select, #activite-form input[type=date], #activite-form input[type=time] {
+    width: 54rem;
+    min-height: 6.2rem;
+    outline: none;
+    border: 1px solid var(--hd-blue);
+    background-color: var(--hd-bleu-light);
+}
+
+#activite-form .dictaphone {
+    background-color: var(--hd-white);
+    border: 1px solid var(--hd-blue);
+    border-left: none;
+}
+
+#activite-form input[type=radio] {
+    appearance: none;
+} 
+
+#activite-form input[type=radio]:checked + div.card a {
+    background-color: var(--hd-blue);
+}
+
+#activite-form .activite-type {
+    margin: 5.5rem 0;
+}
+
+#activite-form .activite-bouton {
+    margin-top: 5.5rem;
+    width: 77%;
+}
+
+#activite-form .activite-bouton .btn-primary {
+    background-color: var(--hd-blue);
+}
+
+#activite-form .activite-bouton .btn-secondary {
+    border: 1px solid var(--hd-blue);
+    background-color: var(--hd-white);
+    outline: none;
+}
+
+#activite-form #activite-lieux input[type="radio"]:checked {
+    border: 6px solid var(--hd-blue) !important;
+}
+
+#activite-form select {
+    height: 6.2rem;
+    width: 30.1rem;
+    border: 1px solid var(--hd-blue);
+    color: var(--hd-blue);
+}
+
+#activite-form input#ville {
+    width: 30rem;
+}
+
+#activite-form input#code-postal {
+    width: 15.3rem; 
+}
+
+#activite-form .cp-ville, #activite-form #activite-lieux {
+    justify-content: space-between;
+    width: 79%;
+}
+
+#activite-form .cp-ville, #activite-form label[for=select-transport], #activite-form #activite-lieux, #activite-form .activite-adresse, #activite-form label[for=activite-name], #activite-form .activite-datetime label:nth-child(2n) {
+    margin-top: 5.5rem;
+}
+
+#activite-form select {
+    background-color: var(--hd-white);
+    border: 1px solid var(--hd-blue);
+    width: 50%;
+}
+
+#activite-form #activite-lieux input[type=radio] {
+    appearance: auto;
+}
+
+#activite-form #activite-lieux label[for=adresse-rdv-user], #activite-form #activite-lieux label[for=adresse-retour-user], #activite-form #activite-lieux label[for=adresse-rdv-add], #activite-form #activite-lieux label[for=adresse-retour-add] {
+    font-size: 0.5rem;
+    font-weight: normal;
+}
+
+#activite-form #activite-lieux .adresse-card {
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 8rem;
+    border: 1px solid var(--hd-blue);
+    margin-bottom: 2.1rem;
+}
+
+#activite-form #activite-lieux .adresse-card input[type="radio"] {
+    appearance: none;
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--hd-blue);
+    border-radius: 50%;
+    background-color: var(--hd-white);
+    position: relative;
+}
+
+#activite-form input[type=date], #activite-form input[type=time] {
+    width: 100%;
+    padding-left: 5rem;
+}
+
+#activite-form .input-icon {
+    position: absolute;
+    padding: 2rem 1.5rem;
+    min-width: 2rem;
+}
+
+
+
+/*//////////////////////////////////////////////   Progress Bar   ///////////////////////////////////////////*/
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: var(--hd-blue);
+    background-image: url('../Visuels/icones/flèche.svg');
+    background-position: 100% 30% ;
+    background-repeat: no-repeat;
+}
+
+#progressbar .active {
+    font-weight: bold;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    width: calc(100%/3);
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+#progressbar #activite-info:before {
+    content: "1";
+}
+
+#progressbar #activite-lieu:before {
+    
+    content: "2";
+}
+
+#progressbar #activite-date:before {
+    content: "3";
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: var(--hd-blue);
+    background: var(--hd-white);
+    border: solid 1px var(--hd-blue);
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--hd-blue);
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+#progressbar li:nth-last-child(1)::after {
+    content: '';
+    width: 99.5%;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: var(--hd-blue);
+    color: var(--hd-white);
+}
+
+/*/////////////////////////////////////////////////  SYMFONY STYLE /////////////////////////////////////////////////////*/
+legend.col-form-label  {
+    font-size:  2.4rem !important;
+}
+
+.form-controle::placeholder {
+    font-size: 1.8rem !important;
+    color: var(--hd-blue) !important;
+}
+
+/*//////////////////////////////////////////////   Activite-card   ///////////////////////////////////////////*/
+
+#activite-form .card-body {
+    padding: 0;
+    height: 14.4rem; 
+    background-size: cover;
+    background-position: center;
+    margin-top: -4rem;
+}
+
+#activite-form .card {
+    border: 0.4rem solid var(--hd-white);
+}
+
+#activite-form .card-title {
+    color: var(--hd-white); 
+    text-align: center;
+    transform: translateY(5rem);
+
+}
+
+#activite-form .btn-primary {
+    background-color: var(--hd-inactif);
+    border: var(--hd-inactif);
+    height: 4.2rem;
+    font-size: 1.8rem;
+
+}
+
+
+#activite-form .card-title, #activite-form a[role=button] {
+    z-index: 2;
+}
+
+#activite-form .activite-type-cinema {
+    background-image: url('Assets/Visuels/images/activite-cinema.jpg');
+    
+}
+
+#activite-form .activite-type-sport-aquatique {
+    background-image: url(../Visuels/images/activite-piscine.jpg);
+    
+}
+
+#activite-form .activite-type-restaurant {
+    background-image: url(../Visuels/images/activite-restau.jpg);
+    
+}
+
+#activite-form .card-body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(39, 45, 126, 4);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+
+
+
+
+/*//////////////////////////////////////////////   recap   ///////////////////////////////////////////*/
+#activite-form-recap {
+    border: 1px solid var(--hd-blue);
+    background-color:var(--hd-bleu-light);
+    padding: 2rem;
+    height: fit-content;
+}
+
+#activite-form-recap ul {
+    padding-left: 0;
+    margin-bottom: 5.5rem;
+}
+
+#activite-form-recap ul li {
+    padding-bottom: 2rem;
+    font-weight: 600;
+    
+}
+
+#activite-form-recap strong  {
+    display: block;
+    font-weight: inherit;
+} 
+
+
+/*///////////////////////////////////////////////// background illustration /////////////////////////////////////////:*/
+
+main#formulaire-bene-etape-1, main#formulaire-bene-etape-2, main#formulaire-bene-etape-3 {
+    background: url('../Visuels/illustrations/illu-amusant.svg') no-repeat;
+    background-size: 20%;
+    
+}
+
+main#formulaire-bene-etape-1 {
+    background-position: 105% 80%;
+}
+
+main#formulaire-bene-etape-2 {
+    background-position:  105% 100%;
+}
+
+main#formulaire-bene-etape-3 {
+    background-position: 104% 114%;
+}
+
+@media screen and (max-width: 1200px) {
+    main#formulaire-bene-etape-1, main#formulaire-bene-etape-2, main#formulaire-bene-etape-3 {
+        background: url('../Visuels/illustrations/illu-amusant.svg') no-repeat;
+        background-size: 20%;
+        background-position: bottom right;
+    }
+  }
+
+/*/////////////////////////////////////////  NOTIFICATIONS ///////////////////////////////////////////////////////*/
+
+#notification article {
+    padding: 2rem; 
+}
+
+#notification article img {
+   width: 48px;
+   height: 48px; 
+
+}
+
+#notification .titlepage h2 {
+    font-size: x-large;
+}
+
+#notification article  .notif-content {
+    width: 80%;
+}
+
+#notification h2 {
+    font-weight: bold;
+    padding: 0%;
+}
+#notification .container h3 {
+    font-weight: bold;
+}
+
+#notification .new-notif {
+    background-color: #B2B6ED;
+}
+
+#notification .new-notif {
+    box-shadow: 10px 5px 5px lightgrey;
+
+}
+
+#notification .notif-read {
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+#notification .new-notif , .notif-read {
+    margin-bottom: 11px;
+}
+
+/*/////////////////////////////////////////  NOTIFICATIONS ///////////////////////////////////////////////////////*/
+#pop-up {
+    padding: 3rem;
+    box-shadow: 0px 0px 20px black;
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pop-up .btn-blue {
+    background-color: #272D7E;
+    color: #FFFEFE;
+    text-decoration: none;
+    margin-bottom: 3%;
+    width: 40%;
+ 
+}
+
+#pop-up h2 {
+    font-weight: bold;
+    font-size: 2.3em;
+    margin-bottom: 7%;
+}
+
+#pop-up p {
+    margin-bottom: 20px;
+}
+
+#pop-up a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    margin: 5% 0;
+}
+
+#pop-up a:hover {
+    color:#FFFEFE;
+  }
+
+
+
+
+
+
+
+
+

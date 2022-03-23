@@ -1,0 +1,131 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Proposer une activité{% endblock %}
+
+
+
+  {% block body %}
+  <body>
+
+     
+      <main id="formulaire-bene-etape-1">
+        
+        <!-- Section Formulaire  Start -->
+        <section class="container" id="activite-form">
+          <h1>Proposer une activité</h1>
+          <div class="row">
+            <!-- progressbar Start -->
+            <div class="col-xl-12 col-12">
+                  <ul id="progressbar">
+                      <li class="active" id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+                      <li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
+                      <li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
+                  </ul>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+
+            <div class="col-xl-7 d-flex flex-column">
+            {{form_start(formActivite)}}
+              <fieldset class="d-flex flex-column">
+                <legend>Informations générales :</legend>
+                <label for="activite-name">Nom de l'activité</label>
+                <div class="d-flex">
+                  {{ form_row(formActivite.titre_activite)}} 
+                  <button><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le titre de l'activité"></button>
+                </div>
+
+                <!--  Type d'activite  start -->
+                <div class="activite-type row w-50 flex-column flex-lg-row">
+                  <label>Type d'activité : </label>
+
+                  <label for="cinema" class="col-12 col-lg-6">
+                    <input type="radio" value="cinema"  id="cinema" name="activite-type">
+                    <div class="card activity-type-card">
+                      <div class="card-body activite-type-cinema d-flex flex-column justify-content-between">
+                        <h3 class="card-title">Cinema</h3>
+                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
+                      </div>
+                    </div>
+                  </label> 
+
+                  <label for="sport-aquatique" class="col-12 col-lg-6">
+                    <input type="radio" id="sport-aquatique" value="sport aquatique" name="activite-type">
+                    <div class="card activity-type-card">   
+                      <div class="card-body activite-type-sport-aquatique d-flex flex-column justify-content-between">
+                        <h3 class="card-title justify-self-center">Sport d'eau</h3>
+                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label for="restaurant" class="col-12 col-lg-6">
+                    <input type="radio" id="restaurant" value="restaurant" name="activite-type">
+                    <div class="card activity-type-card">   
+                      <div class="card-body activite-type-restaurant d-flex flex-column justify-content-between">
+                        <h3 class="card-title justify-self-center">Restaurant</h3>
+                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label for="add-type" class="col-12 col-lg-6">
+                    <input type="radio" id="add-type" value="Ajouter un type d'activité" name="activite-type">
+                    <div class="card activity-type-card">   
+                      <div class="card-body activite-type-add-type d-flex flex-column justify-content-between">
+                        <h3 class="card-title justify-self-center">+</h3>
+                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
+                      </div>
+                    </div>
+                  </label>
+                  
+                </div>
+                <!--  Type d'activite  end -->
+
+                <label for="activite-desc">Description</label>
+                <div class="d-flex">
+                  {{ form_row(formActivite.description_activite)}}
+                  <button><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la description de l'activité"></button>
+                </div>
+                <div class="d-flex">
+                 <a name="retour" class="btn btn-secondary preview action-button" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
+                 <input type="submit" id="suivant" name="suivant" class="btn btn-primary next action-button" value="Étape suivante"/>
+                </div>
+              </fieldset>
+              {{form_end(formActivite)}}
+
+            </div>
+            <!-- Formulaire étape 1 End -->
+
+            <!-- Récapitulatif Start-->
+              <div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+                <h2>Récapitulatif</h2>
+                  <ul>
+                    <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
+                    <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
+                    <li id="lieuActivite"><strong>Lieu de rendez-vous : </strong></li>
+                    <li id="debutActivite"><strong>Heure de début : </strong></li>
+                    <li id="adresseActivite"><strong>Adresse  de l'activité</strong></li>
+                    <li id="finActivité"><strong>Heure de fin</strong></li> 
+                    <li id="retourActivite"><strong>Lieu de retour</strong></li>
+                    <li id="transportActivite"><strong>Transport</strong></li>
+                  </ul>
+              </div>
+            <!-- Récapitulatif End -->
+          </div>
+
+        </section> 
+          <div id="retour" >
+          </div>
+        <!-- Section Formulaire End -->        
+      </main>
+            
+  </body>
+</html>
+{% block javascripts %}   <script src="{{asset('Assets/Scripts/index1.js')}}"></script>  {% endblock %}
+
+{% endblock %}

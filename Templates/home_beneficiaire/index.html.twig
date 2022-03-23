@@ -1,0 +1,229 @@
+{% extends 'base.html.twig' %}
+{% block style %}
+
+  <link rel="stylesheet" href="{{asset('Assets/Styles/home-bene.css')}}">
+
+ {% endblock %}
+  
+
+{% block title %}Homepage{% endblock %}
+
+
+{% block body %}
+
+  
+
+
+
+<body>
+
+<div id="root2"></div>
+  <!-- Header Start -->
+  <header>
+       <!-- Heroshot Start -->
+    <div id="header" class="container-fluid d-flex align-items-center">
+      <div id="heroshot" class="container">
+        <h1>Handy, <span>dis moi oui !</span></h1>
+        <p>Des activités pour tous,<br> de la compagnie pour chacun</p>
+      </div>
+    </div>
+    <!-- Heroshot End -->
+  </header>
+  <!-- Header End -->
+
+
+  <main>
+    <div class="container d-flex justify-content-center">
+    
+    
+      <img class="cercle-rouge" src="{{asset('Assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg')}}" alt="demi cercle rouge">
+        
+      <button class="prop-button" >
+      
+      <a type="button" class="container d-flex justify-content-center prop-button-bloc text-white" href="{{ path('handy_activite_beneficiaire1') }}"> Proposer une nouvelle activité</a>
+      
+      </button>
+
+       <img class="icone-plus" src="{{asset('Assets/Visuels/icones/taille-32/plus-grand.svg')}}">
+      
+    </div>
+
+    <section id="next-activite">
+      <div class="container">
+
+        <h2>Prochaine activité prévue</h2>
+
+        <div class="next-acti-card card xl-12">
+          <div class="row g-0">
+            <div class="col-lg-4 d-flex flex-column">
+              <img src="{{asset('Assets/Visuels/images/activite-ballade.jpg')}}" class="img-fluid image-next-acti"
+                alt="cyclistes faisant du vélo en forêt">
+              <button class="card-button d-flex align-items-center">
+                Forêt de Fontainebleau, 77300 Fontainebleau<br>
+                Voir l'adresse sur une carte
+              </button>
+            </div>
+            <div class="col-md-8">
+              <div class="text-next-acti">
+                <h3>Randonnée</h3>
+                <p>Bonjour, je m’appelle Violette je vais faire une ballade dans la forêt de
+                  Fontainebleau le week-end prochain. J’aimerais qu’une personne vienne avec moi pour me soutenir si
+                  j’ai un petit moment de faiblesse pendant la ballade. On pourra picniquer dans une clairière très
+                  jolie, j’apporte du cidre ! À bientôt. </p>
+                <div class="row">
+                  <div class="col-lg-4 d-flex flex-column">
+                    <h4>Lieu de rendez-vous</h4>
+                    <p>Paris 10ème</p>
+                    <h4>Heure de rendez-vous</h4>
+                    <p>4 avril 2022 <br>
+                      9h30
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <h4>Lieu de retour</h4>
+                    <p>Paris 10ème</p>
+                    <h4>Heure de retour</h4>
+                    <p>4 avril 2022 <br>
+                      17h30
+                    </p>
+
+                  </div>
+                  <div class="col-lg-4">
+                    <h4>Transport</h4>
+                    <p>Métro</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="autres-acti">
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="card-autres-acti card col-lg-6">
+            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
+              <h4>Propositions d'accompagnement</h4>
+              <div class="d-flex justify-content-evenly">
+                <div class="card mini-card col-lg-5">
+                  <div class="cinema-bkg mini-bkg">
+                    <h5>Cinéma</h5>
+                  </div>
+                  <button class="white-card-button">En voir plus</button>
+                </div>
+
+              </div>
+            </div>
+            <button class="card-button">Voir toutes les propositions d'accompagnement</button>
+          </div>
+
+          <div class="card-autres-acti card col-lg-6 d-flex justify-content-center flex-column">
+            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
+              <h4>Donnez votre avis</h4>
+              <div class="d-flex justify-content-evenly">
+                <div class="card mini-card col-lg-5">
+                  <div class="piscine-bkg mini-bkg">
+                    <h5>Piscine</h5>
+                  </div>
+                  <button class="white-card-button">En voir plus</button>
+                </div>
+
+              </div>
+            </div>
+            <button class="card-button">Voir tous les avis à donner</button>
+          </div>
+        </div>
+
+        <div class="row justify-content-between">
+          <div class="card-autres-acti card col-lg-6">
+            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
+              <h4>Activités à venir</h4>
+              <div class="d-flex justify-content-evenly">
+                <div class="card mini-card col-lg-5">
+                  <div class="resto-bkg mini-bkg">
+                    <h5>Restaurant</h5>
+                  </div>
+                  <button class="white-card-button">En voir plus</button>
+                </div>
+
+                <div class="card mini-card col-lg-5">
+                  <div class="cyclisme-bkg mini-bkg">
+                    <h5>Cyclisme</h5>
+                  </div>
+                  <button class="white-card-button">En voir plus</button>
+                </div>
+              </div>
+            </div>
+            <button class="card-button">Voir toutes les activités à venir</button>
+          </div>
+
+          <div class="card-autres-acti card col-lg-6">
+            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
+              <h4>Activités sans accompagnant</h4>
+              <div class="text-sans-accomp d-flex justify-content-evenly">
+                <p>Vous n'avez aucune activité sans accompagnant</p>
+
+              </div>
+            </div>
+            <button class="card-button">Voir toutes les propositions d'accompagnement</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="acti-passe">
+      <div class="container">
+        <h3>Activités passées</h3>
+          <div class="row">
+
+            <div class="col-lg-4 d-flex flex-column">
+              <img src="{{asset('Assets/Visuels/images/activite-piscine.jpg ')}}" class="img-fluid image-acti-passe" 
+              alt="une bouée jaune dans une piscine et un transat">
+              <a href="#" class="card-button d-flex align-items-center">
+                Voir le lieu<br>
+                250 avenue Jean Jaurès, 75020 Paris
+              </a>
+              <h4>Piscine</h4>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column">
+              <img src="{{asset('Assets/Visuels/images/activite-restau.jpg')}}" class="img-fluid image-acti-passe"
+              alt="un dessert à base de crème, de fraises et de gâteau">
+              <a href="#" class="card-button d-flex align-items-center">
+                Voir le lieu<br>
+                97 rue de la Jonquière, 75017 Paris
+              </a>
+              <h4>Restaurant</h4>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column">
+              <img src="{{asset('Assets/Visuels/images/activite-coiffeur.jpg ')}} " class="img-fluid image-acti-passe" 
+              alt="un homme se faisant tondre les cheveux">
+              <a href="#" class="card-button d-flex align-items-center">
+                Voir le lieu<br>
+                8 rue des platanes, 94800 Villejuif
+              </a>
+              <h4>Coiffeur</h4>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <a href="{{ path('handy_activite_beneficiaire1') }}" class="container d-flex justify-content-center prop-button-bloc">
+      <button class="prop-button" >Proposer une nouvelle activité</button>
+      <img class="icone-plus" src="{{asset('Assets/Visuels/icones/taille-32/plus-grand.svg')}}">
+    </a>
+  
+  <img class="col-lg-4 illu-cnx-droit" src="{{asset('Assets/Visuels/illustrations/illu-connexion-droite.svg')}}">
+  </main>
+</body>
+
+</html>
+{% endblock %}

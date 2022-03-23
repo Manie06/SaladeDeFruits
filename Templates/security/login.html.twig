@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<body>
+  <!-- Header Start -->
+ 
+  <main id="connexion">
+
+    <section>
+      <div class="container">
+        <div  class="row">
+
+          <div class="col-12 col-lg-6 d-none d-lg-flex">
+            <img src="Assets/Visuels/illustrations/illu-connexion.svg" alt="illustration d'un visage stylisé">
+          </div>
+  
+          <article class="col-12 col-lg-6">
+
+            <h1>Identification</h1>
+            <p>Si vous êtes déjà un membre de Handy, vous pouvez vous connecter avec vôtre email et mot de passe.</p>
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+        
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('handy_deconnexion') }}">Deconnexion</a>
+                </div>
+            {% endif %}
+          <form method="post">
+          <label for="inputEmail">Email</label>
+          <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="entrer votre email" >
+          <label for="inputPassword">Mot de passe</label>
+          <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="entrer votre mot de passe" >
+      
+          <input type="hidden" name="_csrf_token"
+                 value="{{ csrf_token('authenticate') }}">
+          {# Le bouton( input) doit etre dans le form ! #}
+          <input class="btn btn-lg btn-primary" type="submit"/> 
+        </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+</html>
+{% endblock %}

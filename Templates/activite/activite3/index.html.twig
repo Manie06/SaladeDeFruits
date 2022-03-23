@@ -1,0 +1,111 @@
+{#{% form_theme form 'bootstrap_5_home.html.twig' %}#}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActiviteController!{% endblock %}
+
+{% block body %}
+
+<main id="formulaire-bene-etape-3">
+        
+        <!-- Section Formulaire  Start -->
+        <section class="container" id="activite-form">
+          <h1>Proposer une activité</h1>
+          <div class="row">
+            <!-- progressbar Start -->
+            <div class="col-xl-12 col-12">
+                  <ul id="progressbar">
+                      <li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+                      <li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
+                      <li id="activite-date" class="active" aria-label="Étape 3 du formulaire">Quand</li>
+                  </ul>
+            </div>
+            <!-- progressbar End -->
+        </div>
+
+
+        <div class="row">
+            
+        <div class="col-xl-7 d-flex flex-column">
+              <fieldset class="d-flex flex-column">
+                <legend>Date & Heure :</legend>
+        
+                {{form_start(formDate)}}
+        
+                
+                  <label>Rendez-vous</label>
+                  <div class="col-lg-6">
+
+                  
+                {{form_widget(formDate.date_debut)}}
+             
+                  </div>
+                  <label>Retour</label>
+                  <div class="col-lg-6 mt-lg-0 mt-2">
+                  
+                  {{form_widget(formDate.date_fin)}}
+                  
+                  </div> 
+
+                <div class="d-flex activite-bouton justify-content-between flex-column flex-lg-row">
+                        <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
+                        <input  class="btn btn-primary next action-button" onclick="openForm()" value="Proposer une activité"/>
+      
+                </div>
+   
+      <div class="login-popup">
+        <div class="form-popup d-none" id="popupForm">
+            <section id="pop-up">
+                <div class="d-flex justify-content-center align-items-center">
+                {% set activite = app.user.activite|last %} 
+
+                    <h2>Votre activité {{activite.titreActivite}} est publiée !</h2>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Vous pouvez modifier votre activité en y accédant depuis la page d'accueil.</p>
+                        <p>Vous recevrez une notification lorsque des accompagnants vous proposeront leurs aide. Vous pourrez accéder à leurs profil et discuter avec eux avant de décider quelle personne vous accompagnera à l'activité. </p>
+                        <p>Merci d'utiliser Handy !</p>
+                    </div>   
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+
+                    <button type="submit" class="btn-blue">Fermer et retourner a l'accueil</button>
+                   
+
+                </div>
+            </section>
+        </div>
+    </div>
+    {{form_end(formDate)}}
+              </fieldset>
+            </div>
+            <!-- Formulaire étape 3 End -->
+    <!-- Récapitulatif Start-->
+    <div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+    <h2>Récapitulatif</h2>
+        <ul>
+        <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
+        <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
+        <li id="lieuActivite"><strong>Lieu de rendez-vous : </strong></li>
+        <li id="debutActivite"><strong>Heure de début : </strong></li>
+        <li id="adresseActivite"><strong>Adresse  de l'activité</strong></li>
+        <li id="finActivité"><strong>Heure de fin</strong></li> 
+        <li id="retourActivite"><strong>Lieu de retour</strong></li>
+        <li id="transportActivite"><strong>Transport</strong></li>
+      </ul>
+    </div>
+    <!-- Récapitulatif End -->
+    </div>
+
+    </section> 
+
+    <!-- Section Formulaire End -->        
+    </main>
+
+    {% block javascripts %}  
+        <script src="{{asset('Assets/Scripts/index.js')}}"></script> 
+        <script src="{{asset('Assets/Scripts/index3.js')}}"></script> 
+    {% endblock %}
+
+{% endblock %}
