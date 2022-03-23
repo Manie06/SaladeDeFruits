@@ -1,0 +1,35 @@
+
+
+{{form_start(formLieu)}}
+
+
+Adresse activité : 
+{{form_label(formLieu.adresse_activite)}}
+{{form_widget(formLieu.adresse_activite,{'attr':{'placeholder':'adresse'}})}}
+
+Code Postal : 
+{{form_label(formLieu.code_postal_activite)}} 
+{{form_widget(formLieu.code_postal_activite,{'attr':{'placeholder':'code postal', 'name':'code-postal', 'id':'code-postal'}})}}
+
+Ville :
+ {{form_label(formLieu.ville_activite)}}
+ {{form_widget(formLieu.ville_activite,{'attr':{'placeholder':'ville', 'id':'ville', 'name':'ville'}})}}
+
+ Adresse rendez-vous : 
+ {{form_label(formLieu.adresse_depart)}}
+ {{form_widget(formLieu.adresse_depart)}}
+
+ Adresse retour : 
+ {{form_label(formLieu.adresse_retour)}}
+ {{form_widget(formLieu.adresse_retour)}} 
+
+ Moyen transport : 
+ {{form_label(formLieu.moyen_transport)}}
+ {{form_widget(formLieu.moyen_transport)}}
+
+ Form-lieu submit : 
+ {{form_widget(formLieu.submit)}} 
+{{form_end(formLieu)}}
+
+
+

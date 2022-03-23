@@ -2,30 +2,30 @@
 
 namespace App\Repository;
 
-use App\Entity\Utilisateurs;
+use App\Entity\QuestionnaireDeVie;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Utilisateurs|null find($id, $lockMode = null, $lockVersion = null)
- * @method Utilisateurs|null findOneBy(array $criteria, array $orderBy = null)
- * @method Utilisateurs[]    findAll()
- * @method Utilisateurs[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method QuestionnaireDeVie|null find($id, $lockMode = null, $lockVersion = null)
+ * @method QuestionnaireDeVie|null findOneBy(array $criteria, array $orderBy = null)
+ * @method QuestionnaireDeVie[]    findAll()
+ * @method QuestionnaireDeVie[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UtilisateursRepository extends ServiceEntityRepository
+class QuestionnaireDeVieRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Utilisateurs::class);
+        parent::__construct($registry, QuestionnaireDeVie::class);
     }
 
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function add(Utilisateurs $entity, bool $flush = true): void
+    public function add(QuestionnaireDeVie $entity, bool $flush = true): void
     {
         $this->_em->persist($entity);
         if ($flush) {
@@ -37,7 +37,7 @@ class UtilisateursRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Utilisateurs $entity, bool $flush = true): void
+    public function remove(QuestionnaireDeVie $entity, bool $flush = true): void
     {
         $this->_em->remove($entity);
         if ($flush) {
@@ -46,15 +46,15 @@ class UtilisateursRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Utilisateurs[] Returns an array of Utilisateurs objects
+    //  * @return QuestionnaireDeVie[] Returns an array of QuestionnaireDeVie objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('u.id', 'ASC')
+            ->orderBy('q.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -63,10 +63,10 @@ class UtilisateursRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Utilisateurs
+    public function findOneBySomeField($value): ?QuestionnaireDeVie
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

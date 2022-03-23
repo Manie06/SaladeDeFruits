@@ -1,3 +1,50 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+############## CONNEXION###########
+
+handy_connexion:
+    path: /connexion
+    controller: App\Controller\SecurityController::connexion
+
+handy_deconnexion:
+    path: /deconnexion
+    controller: App\Controller\SecurityController::deconnexion
+
+
+############# INDEX #########
+handy_index: 
+    path: /index    
+    controller: App\Controller\DefaultController::index
+   
+
+
+############### ACCUEIL ###########
+
+handy_home:
+    path: /
+    controller: App\Controller\DefaultController::home
+
+
+############# ACCUEIL BENEFICIAIRE ########
+
+
+handy_home_beneficiaire:
+    path: /beneficiaire
+    controller: App\Controller\HomeBeneficiaireController::HomeBeneficiaire
+
+handy_activite_beneficiaire1:
+    path: /beneficiaire/activite1
+    controller: App\Controller\ActiviteController::Activite1
+
+
+handy_activite_beneficiaire2:
+    path: /beneficiaire/activite2
+    controller: App\Controller\ActiviteController::Activite2
+
+handy_activite_beneficiaire3:
+    path: /beneficiaire/activite3
+    controller: App\Controller\ActiviteController::Activite3
+
+
+api_data:
+    path: /api_data
+    controller : App\Controller\ApiController::getData
+

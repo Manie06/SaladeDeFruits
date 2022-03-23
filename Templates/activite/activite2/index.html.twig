@@ -1,0 +1,151 @@
+{#{% form_theme form 'bootstrap_5_home.html.twig' %}#}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActiviteController!{% endblock %}
+
+{% block body %}
+
+<main id="formulaire-bene-etape-2">
+        
+        <!-- Section Formulaire  Start -->
+        <section class="container" id="activite-form">
+          <h1>Proposer une activité</h1>
+          <div class="row">
+            <!-- progressbar Start -->
+            <div class="col-xl-12 col-12">
+                  <ul id="progressbar">
+                      <li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+                      <li id="activite-lieu" class="active" aria-label="Étape 2 du formulaire">Où</li>
+                      <li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
+                  </ul>
+            </div>
+            <!-- progressbar End -->
+            
+          </div>
+          <div class="row">
+
+            <!-- Formulaire étape 1 Start --> 
+            <div class="col-xl-7 d-flex flex-column">
+                {{form_start(formLieu)}}
+                <fieldset class="d-flex flex-column">
+                    <h2 class="legend">Précisez les lieux de l'activité :</h2>
+                    <div class="activite-adresse">
+                        {{form_label(formLieu.adresse_activite)}}
+                        <div class="d-flex">
+                            {{form_widget(formLieu.adresse_activite,{'attr':{'id':'activite-adresse-1','placeholder':'adresse'}})}}
+                            {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter l'adresse de vôtre activité"></button> #}
+                        </div>
+                    </div>
+
+                    <div class="cp-ville row flex-lg-row flex-column">
+
+                    <div class="col-lg-5">
+                        {{form_label(formLieu.code_postal_activite)}} 
+                        <div class="d-flex">
+                            {{form_widget(formLieu.code_postal_activite,{'attr':{'placeholder':'code postal', 'name':'code-postal', 'id':'code-postal'}})}}
+                            {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter le code postal du lieu de votre activité"></button> #}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        {{form_label(formLieu.ville_activite)}}
+                        <div class="d-flex">
+                        {{form_widget(formLieu.ville_activite,{'attr':{'placeholder':'ville', 'id':'ville', 'name':'ville'}})}}
+                        {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter la ville où se déroule votre activité"></button> #}
+                        </div>
+                    </div>
+
+
+                    </div>
+
+                    {{form_label(formLieu.moyen_transport)}}
+                    <div id="transport">
+                    {# <select id="select-transport" aria-label="Choissiez vôtre moyen de transport pour l'activité">
+                        <img src="Assets/Visuels/icones/flèche.svg  " alt="">
+                        <option selected>Choisissez dans liste</option>
+                        <option value="voiture">Voiture</option>
+                        <option value="metro">Métro</option>
+                        <option value="taxi">Taxi</option>
+                        <option value="vml">Véhicule médicalisé léger</option>
+                    </div>  
+                    </select> #}
+                    {{form_widget(formLieu.moyen_transport)}}
+
+                    
+
+
+                    <div class="row flex-lg-row flex-column" id="activite-lieux">
+
+                    <div class="col-lg-6">
+                        {{form_label(formLieu.adresse_depart)}}
+                        
+                       {#  <div class="adresse-card d-flex align-items-center">
+                        <input type="radio" value="13 rue de Louvier 75014 Paris" id="adresse-rdv-user" name="adresse-rdv" checked>
+                        <label for="adresse-rdv-user">13 rue de Louvier 75014 Paris</label>
+                        </div>
+                        <div class="adresse-card d-flex align-items-center">
+                        <input type="radio" value="ajouter-adresse"  id="adresse-rdv-add" name="adresse-rdv">
+                        <label for="adresse-rdv-add">Créer une autre adresse</label>
+                        </div>   #}
+                        
+                        {{form_widget(formLieu.adresse_depart)}}
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        {{form_label(formLieu.adresse_retour)}}
+                        <div class="adresse-card d-flex align-items-center">
+                        <input type="radio" form-check-input value="13 rue de Louvier 75014 Paris"  id="adresse-retour-user" name="adresse-retour" checked>
+                        <label for="adresse-retour-user">13 rue de Louvier 75014 Paris</label>
+                        </div>
+
+                        <div class="adresse-card d-flex align-items-center">
+                        <input type="radio" value="ajouter-adresse"  id="adresse-retour-add" name="adresse-retour">
+                        <label for="adresse-retour-add">Créer une autre adresse</label>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+
+            
+                    <div class="d-flex activite-bouton justify-content-between">
+
+
+                    <input type="button" name="retour" class="btn btn-secondary preview action-button" value="Retour">
+                    <input id="suivant" type="button" name="suivant" class="btn btn-primary next action-button" value="Étape suivante">
+
+
+                    </div>
+                </fieldset>
+                {{form_end(formLieu)}}
+            </div>
+            <!-- Formulaire étape 1 End -->
+
+            <!-- Récapitulatif Start-->
+            <div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+              <h2>Récapitulatif</h2>
+                <ul>
+                <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
+                <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
+                <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
+                <li id="codePostalActivite"><strong>Code postal : </strong></li>
+                <li id="villeActivite"><strong>Ville : </strong></li>
+                <li id="debutActivite"><strong>Heure de début : </strong></li>
+                <li id="finActivite"><strong>Heure de fin :</strong></li> 
+                <li id="transportActivite"><strong>Transport :</strong></li>
+              </ul>
+            </div>
+            <!-- Récapitulatif End -->
+          </div>
+          
+        </section> 
+
+
+<!-- Section Formulaire End -->        
+</main>
+
+{% block javascripts %}   <script src="{{asset('Assets/Scripts/index2.js')}}"></script>  {% endblock %}
+
+{% endblock %}
