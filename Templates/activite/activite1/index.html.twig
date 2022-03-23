@@ -33,10 +33,11 @@
             {{form_start(formActivite)}}
               <fieldset class="d-flex flex-column">
                 <legend>Informations générales :</legend>
-                <label for="activite-name">Nom de l'activité</label>
+                <label for="activite-name">Nom de l'activité :</label>
+
                 <div class="d-flex">
-                  {{ form_row(formActivite.titre_activite)}} 
-                  <button><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le titre de l'activité"></button>
+                  {{ form_widget(formActivite.titre_activite, {'attr': { 'placeholder' : 'maximum 30 caractères ( exemple : Concert de Stromae )'}})}} 
+                  <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le titre de l'activité"></button>
                 </div>
 
                 <!--  Type d'activite  start -->
@@ -88,11 +89,12 @@
 
                 <label for="activite-desc">Description</label>
                 <div class="d-flex">
-                  {{ form_row(formActivite.description_activite)}}
-                  <button><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la description de l'activité"></button>
+                  {{ form_widget(formActivite.description_activite, {'attr': { 
+                 'cols' : '30', 'rows' :'10', 'placeholder' : 'Précisez ici l’activité que vous souhaitez faire et l’aide que vous demanderez à votre accompagnant (ex : vous aider à monter les escaliers, à manger, à vous changer...)'}})}}
+                  <button type="button"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la description de l'activité"></button>
                 </div>
-                <div class="d-flex">
-                 <a name="retour" class="btn btn-secondary preview action-button" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
+                <div class="d-flex activite-bouton justify-content-between">
+                    <a name="retour" class="btn btn-secondary preview action-button p6" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
                  <input type="submit" id="suivant" name="suivant" class="btn btn-primary next action-button" value="Étape suivante"/>
                 </div>
               </fieldset>
@@ -108,11 +110,11 @@
                     <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
                     <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
                     <li id="lieuActivite"><strong>Lieu de rendez-vous : </strong></li>
-                    <li id="debutActivite"><strong>Heure de début : </strong></li>
-                    <li id="adresseActivite"><strong>Adresse  de l'activité</strong></li>
-                    <li id="finActivité"><strong>Heure de fin</strong></li> 
-                    <li id="retourActivite"><strong>Lieu de retour</strong></li>
-                    <li id="transportActivite"><strong>Transport</strong></li>
+                    <li id="adresseActivite"><strong>Adresse  de l'activité :</strong></li>
+                    <li id="debutActivite"><strong>Heure de début : </strong></li>  
+                    <li id="finActivité"><strong>Heure de fin :</strong></li> 
+                    <li id="retourActivite"><strong>Lieu de retour :</strong></li>
+                    <li id="transportActivite"><strong>Transport :</strong></li>
                   </ul>
               </div>
             <!-- Récapitulatif End -->

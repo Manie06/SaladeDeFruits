@@ -1,31 +1,24 @@
 //Déclaration des varianles
-let dateActivite;
-let recapDateActivite;
-let heureDebut;
-let recapHeureDebut;
-let heureFin;
-let recapHeureFin;
-let donnees=[];
-let enregistre;
+
+var heureDebut;
+var recapHeureDebut;
+var heureFin;
+var recapHeureFin;
+var donnees=[];
+var enregistre;
+var lieuActivite;
 
 
-dateActivite=document.getElementById("activite-rdv-date");
-recapDateActivite=document.getElementById("dateActivite");
-heureDebut=document.getElementById("activite-rdv-heure");
+
+heureDebut=document.getElementById("form_date_debut_time_hour");
 recapHeureDebut=document.getElementById("debutActivite");
-heureFin=document.getElementById("activite-retour-heure");
+heureFin=document.getElementById("form_date_fin_time_hour");
 recapHeureFin=document.getElementById("finActivite");
 enregistre=document.getElementById("suivant");
 
 
 //*******************************Activité 1********************//
 //Fonction qui affiche dans le récap
-function afficher7(){
-
-    recapDateActivite.innerHTML=`<strong>Date : </strong><p>${dateActivite.value}</p>`;
-    //On retourne ce que l'on écrit pour l'enregistrer par la suite
-    return(dateActivite.value);
-}
 
 function afficher8(){
 
@@ -45,13 +38,13 @@ function enregistrer3(){
     donnees.push(heureDebut.value);
     donnees.push(heureFin.value);
     
-    window.localStorage.setItem('cle',JSON.stringify(donnees));
+    window.localStorage.setItem('cle3',JSON.stringify(donnees));
     affichage();
 }
 
 function affichage (){
     //je cherche le local storage
-    let data=window.localStorage.getItem('cle');
+    var data=window.localStorage.getItem('cle3');
     console.log(data);
     //je teste sil y a quelque chose dedans
     if(data!=null && data != ''){
@@ -64,7 +57,53 @@ function affichage (){
 }
 
 //Code principal
-dateActivite.addEventListener("click",afficher7);
-heureDebut.addEventListener("keyup",afficher8);
-heureFin.addEventListener("keyup",afficher9);
-enregistre.addEventListener("click",enregistrer3);
+document.addEventListener('DOMContentLoaded', function (){
+    
+    heureDebut.addEventListener("keydown",afficher8);
+    heureFin.addEventListener("keydown",afficher9);
+    enregistre.addEventListener("click",enregistrer3);
+});
+
+var data=localStorage.getItem("cle");
+data=JSON.parse(data);
+console.log(data)
+recapActivite=document.getElementById("nameActivite");
+var string='';
+    
+for(index=0;index<data.length;index++){
+        var date=data[index];
+        //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
+        string+=
+
+        `<strong>Nom activité : </strong><p>${date.activite}</p>
+        <strong>Description activité : </strong><p>${date.description}</p>`
+       
+}
+
+var data1=localStorage.getItem("cle2");
+ data1=JSON.parse(data1);
+ console.log(data1)
+ lieuActivite=document.getElementById("lieuActivite");
+ console.log(lieuActivite);
+    
+var string1='';
+    
+for(index=0;index<data1.length;index++){
+        var date1=data1[index];
+        //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
+        string1+=
+
+        `<strong>Lieu activité : </strong><p>${date1.lieuActivite}</p>
+        <strong>Code postal : </strong><p>${date1.codePostalActivite}</p>
+        <strong>Ville: </strong><p>${date1.villeActivite}</p>
+        <strong>Transport: </strong><p>${date1.transport}</p>`
+        
+       
+    }
+//Ca charge toutes les fonctions a mettre, il en faut q'un ! 
+window.onload=function(){
+    recapActivite.innerHTML=string;
+    lieuActivite.innerHTML=string1; 
+}
+
+

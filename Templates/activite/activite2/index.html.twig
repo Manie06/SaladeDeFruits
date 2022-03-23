@@ -33,7 +33,7 @@
                         {{form_label(formLieu.adresse_activite)}}
                         <div class="d-flex">
                             {{form_widget(formLieu.adresse_activite,{'attr':{'id':'activite-adresse-1','placeholder':'adresse'}})}}
-                            {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter l'adresse de vôtre activité"></button> #}
+                            <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter l'adresse de vôtre activité"></button>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@
                         {{form_label(formLieu.code_postal_activite)}} 
                         <div class="d-flex">
                             {{form_widget(formLieu.code_postal_activite,{'attr':{'placeholder':'code postal', 'name':'code-postal', 'id':'code-postal'}})}}
-                            {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter le code postal du lieu de votre activité"></button> #}
+                            <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le code postal du lieu de votre activité"></button>
                         </div>
                     </div>
 
@@ -58,7 +58,7 @@
 
                     </div>
 
-                    {{form_label(formLieu.moyen_transport)}}
+                     {{form_label(formLieu.moyen_transport)}} 
                     <div id="transport">
                     {# <select id="select-transport" aria-label="Choissiez vôtre moyen de transport pour l'activité">
                         <img src="Assets/Visuels/icones/flèche.svg  " alt="">
@@ -128,7 +128,7 @@
               <h2>Récapitulatif</h2>
                 <ul>
                 <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-                <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
+                
                 <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
                 <li id="codePostalActivite"><strong>Code postal : </strong></li>
                 <li id="villeActivite"><strong>Ville : </strong></li>
