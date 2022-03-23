@@ -13,4 +13,9 @@ class HomeBeneficiaireController extends AbstractController
     {
         return $this->render('home_beneficiaire/index.html.twig');
     }
+
+    public function HomeAccompagnant(): Response
+    {
+        return $this->render('home_accompagnant/index.html.twig');
+    }
 }
