@@ -21,6 +21,10 @@ recapVilleActivite=document.getElementById("villeActivite");
 transportActivite=document.getElementById("form_moyen_transport");
 recapTransportActivite=document.getElementById("transportActivite");
 enregistre=document.getElementById("suivant");
+//On récupère les options du DOM qui se trouve dans l'identifiant form_moyen_transport, c'est mis dans un tableau 
+var options = document.querySelectorAll('#form_moyen_transport > option')
+// console.log(options);
+// console.log(options[0].innerHTML)
 
 //*******************************Activité 2********************
 
@@ -46,8 +50,9 @@ function afficher5(){
 }
 
 function afficher6(){
-
-    recapTransportActivite.innerHTML=`<strong>Transport : </strong><p>${transportActivite.value}</p>`;
+    //L'identidiant est mis dans la variable i et a avec innerHTML on récupère ce qu'il y a l'interieur de la balise. 
+    let i = transportActivite.value-1;
+    recapTransportActivite.innerHTML=`<strong>Transport : </strong><p>${options[i].innerHTML}</p>`;
     //On retourne ce que l'on écrit pour l'enregistrer par la suite
     return(transportActivite.value);
 }
@@ -87,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function (){
     lieuActivite.addEventListener("keyup",afficher3);
     codePostalActivite.addEventListener("keyup",afficher4);
     villeActivite.addEventListener("keyup",afficher5);
-    transportActivite.addEventListener("click",afficher6);
+    transportActivite.addEventListener("change",afficher6);
     enregistre.addEventListener("click",enregistrer2);
 });
 

@@ -6,6 +6,7 @@ use App\Entity\Activites;
 use App\Entity\Utilisateur;
 use App\Entity\MoyenTransport;
 use App\Repository\ActivitesRepository;
+use App\Repository\MoyenTransportRepository;
 use App\Repository\UtilisateurRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -59,7 +60,7 @@ class ActiviteController extends AbstractController
         ]);
     }
 
-     public function Activite2(EntityManagerInterface $em, Request $request, ActivitesRepository $activitesRepository): Response
+     public function Activite2(EntityManagerInterface $em, Request $request, ActivitesRepository $activitesRepository, MoyenTransportRepository $moyenTransportRepository): Response
     {   
         // $user = $this->getUser();
         // dd($this->getUser());
@@ -103,6 +104,11 @@ class ActiviteController extends AbstractController
             ->add ('moyen_transport', EntityType::class, [
                     'class' => MoyenTransport::class,
                     'choice_label' => 'label',
+                    'choice_attr' => [
+                        'Apple' => ['data-color' => 'Red'],
+                        'Banana' => ['data-color' => 'Yellow'],
+                        'Durian' => ['data-color' => 'Green'],
+                    ],
                     'label'=> 'Transport',
                     'expanded' => false,
                     'multiple' => false,
@@ -136,6 +142,7 @@ class ActiviteController extends AbstractController
              
         return $this->render('activite/activite2/index.html.twig',[
             'formLieu'=> $form->createView(),
+            'transports' => $moyenTransportRepository->findAll()
            
         ]);
     }

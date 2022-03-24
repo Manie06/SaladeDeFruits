@@ -41,16 +41,16 @@ main {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--hd-blue) !important;
     font-size: 1.6rem;
-    padding-left: 2rem;
+    padding-left: 0.2rem;
     opacity: 1; /* Firefox */
   }
 
 /*////////////////////////////////////////////////////  BOUTONS /////////////////////////////////////////////////////*/ 
 
 .btn {
-    height: 4.4rem;
+    height: 6.2rem;
     font-size: 1.8rem;
-    min-width: 16.6rem;
+    width: 19.7rem;
     padding: 0 2rem;
 }
 
@@ -917,8 +917,11 @@ strong.activite-label {
     width: 54rem;
     min-height: 6.2rem;
     outline: none;
+    color: var(--hd-blue);
+    font-size: 1.8rem;
     border: 1px solid var(--hd-blue);
     background-color: var(--hd-bleu-light);
+    border-radius: 0;
 }
 
 #activite-form .dictaphone {
@@ -941,17 +944,25 @@ strong.activite-label {
 
 #activite-form .activite-bouton {
     margin-top: 5.5rem;
-    width: 77%;
 }
+
+#activite-form .activite1-bouton {
+    width: 78%;
+}
+
+
 
 #activite-form .activite-bouton .btn-primary {
     background-color: var(--hd-blue);
+    height: 6.2rem;
+    width: 19.7rem;
 }
 
 #activite-form .activite-bouton .btn-secondary {
     border: 1px solid var(--hd-blue);
     background-color: var(--hd-white);
     outline: none;
+    line-height: 6.2rem;
 }
 
 #activite-form #activite-lieux input[type="radio"]:checked {
@@ -970,7 +981,7 @@ strong.activite-label {
 }
 
 #activite-form input#code-postal {
-    width: 15.3rem; 
+    width: 15.3rem !important; 
 }
 
 #activite-form .cp-ville, #activite-form #activite-lieux {
@@ -978,7 +989,7 @@ strong.activite-label {
     width: 79%;
 }
 
-#activite-form .cp-ville, #activite-form label[for=select-transport], #activite-form #activite-lieux, #activite-form .activite-adresse, #activite-form label[for=activite-name], #activite-form .activite-datetime label:nth-child(2n) {
+#activite-form .cp-ville, #activite-form label[for=form_moyen_transport], #activite-form #activite-lieux, #activite-form .activite-adresse, #activite-form label[for=activite-name], #activite-form .activite-datetime label:nth-child(2n) {
     margin-top: 5.5rem;
 }
 
@@ -997,15 +1008,20 @@ strong.activite-label {
     font-weight: normal;
 }
 
-#activite-form #activite-lieux .adresse-card {
+#activite-form #activite-lieux .adresse-card,  #activite-form #activite-lieux .form-check {
     box-sizing: border-box;
     padding: 1rem;
     height: 8rem;
     border: 1px solid var(--hd-blue);
     margin-bottom: 2.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#activite-form #activite-lieux .adresse-card input[type="radio"] {
+
+
+#activite-form #activite-lieux .adresse-card input[type="radio"], #activite-form #activite-lieux .form-check input[type="radio"] {
     appearance: none;
     margin: 1rem;
     width: 2rem;
@@ -1032,25 +1048,23 @@ strong.activite-label {
 /*//////////////////////////////////////////////   Progress Bar   ///////////////////////////////////////////*/
 
 #progressbar {
-    margin-bottom: 30px;
+    margin-bottom: 8.9rem;
     overflow: hidden;
     color: var(--hd-blue);
     background-image: url('../Visuels/icones/flèche.svg');
-    background-position: 100% 30% ;
+    background-position: 100% 24% ;
     background-repeat: no-repeat;
-}
-
-#progressbar .active {
-    font-weight: bold;
 }
 
 #progressbar li {
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     width: calc(100%/3);
     float: left;
     position: relative;
     text-align: center;
+    text-transform: uppercase;
+
 }
 
 #progressbar #activite-info:before {
@@ -1112,32 +1126,48 @@ legend.col-form-label  {
     color: var(--hd-blue) !important;
 }
 
+.cp-ville input[placeholder="code postal"] {
+    width: 15.3rem !important;
+}
+
+#activite-form label.form-check-label {
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding-top: 2rem;
+}
+
 /*//////////////////////////////////////////////   Activite-card   ///////////////////////////////////////////*/
 
 #activite-form .card-body {
     padding: 0;
-    height: 14.4rem; 
+    height: 18.6rem; 
     background-size: cover;
     background-position: center;
     margin-top: -4rem;
+    width: 20.5rem;
 }
 
 #activite-form .card {
     border: 0.4rem solid var(--hd-white);
+    width: 20.5rem;
 }
 
 #activite-form .card-title {
     color: var(--hd-white); 
     text-align: center;
-    transform: translateY(5rem);
-
+    height: 12.4rem;
+    line-height: 12.4rem;
+    font-size: 2.4rem;
+    width: 20.6rem;
+    /* width: 20.5rem; */
 }
 
 #activite-form .btn-primary {
     background-color: var(--hd-inactif);
     border: var(--hd-inactif);
-    height: 4.2rem;
+    height: 6.2rem;
     font-size: 1.8rem;
+    line-height: 6.2rem;
 
 }
 
@@ -1147,7 +1177,7 @@ legend.col-form-label  {
 }
 
 #activite-form .activite-type-cinema {
-    background-image: url('Assets/Visuels/images/activite-cinema.jpg');
+    background-image: url(../Visuels/images/activite-cinema.jpg);
     
 }
 
@@ -1168,7 +1198,7 @@ legend.col-form-label  {
     top: -4rem;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: -4%;
     background-color: rgba(39, 45, 126, 4);
     opacity: 0.6;
     z-index: 1;

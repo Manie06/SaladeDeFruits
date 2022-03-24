@@ -51,7 +51,7 @@
                         {{form_label(formLieu.ville_activite)}}
                         <div class="d-flex">
                         {{form_widget(formLieu.ville_activite,{'attr':{'placeholder':'ville', 'id':'ville', 'name':'ville'}})}}
-                        {# <button type="button" class="dictaphone"><img src="Assets/Visuels/icones/taille-32/dictaphone.svg" alt="Utiliser le dictaphone pour dicter la ville où se déroule votre activité"></button> #}
+                        <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la ville où se déroule votre activité"></button>
                         </div>
                     </div>
 
@@ -60,66 +60,31 @@
 
                      {{form_label(formLieu.moyen_transport)}} 
                     <div id="transport">
-                    {# <select id="select-transport" aria-label="Choissiez vôtre moyen de transport pour l'activité">
-                        <img src="Assets/Visuels/icones/flèche.svg  " alt="">
-                        <option selected>Choisissez dans liste</option>
-                        <option value="voiture">Voiture</option>
-                        <option value="metro">Métro</option>
-                        <option value="taxi">Taxi</option>
-                        <option value="vml">Véhicule médicalisé léger</option>
-                    </div>  
-                    </select> #}
                     {{form_widget(formLieu.moyen_transport)}}
 
                     
 
 
-                    <div class="row flex-lg-row flex-column" id="activite-lieux">
+                <div class="row flex-lg-row flex-column" id="activite-lieux">
 
                     <div class="col-lg-6">
                         {{form_label(formLieu.adresse_depart)}}
-                        
-                       {#  <div class="adresse-card d-flex align-items-center">
-                        <input type="radio" value="13 rue de Louvier 75014 Paris" id="adresse-rdv-user" name="adresse-rdv" checked>
-                        <label for="adresse-rdv-user">13 rue de Louvier 75014 Paris</label>
-                        </div>
-                        <div class="adresse-card d-flex align-items-center">
-                        <input type="radio" value="ajouter-adresse"  id="adresse-rdv-add" name="adresse-rdv">
-                        <label for="adresse-rdv-add">Créer une autre adresse</label>
-                        </div>   #}
-                        
                         {{form_widget(formLieu.adresse_depart)}}
-
                     </div>
 
                     <div class="col-lg-6">
                         {{form_label(formLieu.adresse_retour)}}
-                        <div class="adresse-card d-flex align-items-center">
-                        <input type="radio" form-check-input value="13 rue de Louvier 75014 Paris"  id="adresse-retour-user" name="adresse-retour" checked>
-                        <label for="adresse-retour-user">13 rue de Louvier 75014 Paris</label>
-                        </div>
-
-                        <div class="adresse-card d-flex align-items-center">
-                        <input type="radio" value="ajouter-adresse"  id="adresse-retour-add" name="adresse-retour">
-                        <label for="adresse-retour-add">Créer une autre adresse</label>
-                        </div>
+                        {{form_widget(formLieu.adresse_retour)}} 
                     </div>
-
-
-                    </div>
-
-
             
                     <div class="d-flex activite-bouton justify-content-between">
-
-
-                    <input type="button" name="retour" class="btn btn-secondary preview action-button" value="Retour">
-                    <input id="suivant" type="button" name="suivant" class="btn btn-primary next action-button" value="Étape suivante">
-
-
+                        <input type="button" name="retour" class="btn btn-secondary preview action-button" value="Retour">
+                        {{form_end(formLieu)}}
                     </div>
-                </fieldset>
-                {{form_end(formLieu)}}
+                </div>
+                
+            </fieldset>
+                
             </div>
             <!-- Formulaire étape 1 End -->
 
@@ -128,9 +93,8 @@
               <h2>Récapitulatif</h2>
                 <ul>
                 <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-                
                 <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
-                <li id="codePostalActivite"><strong>Code postal : </strong></li>
+                <li id="codePostalActivite"><strong>Code postal : </strong></li> 
                 <li id="villeActivite"><strong>Ville : </strong></li>
                 <li id="debutActivite"><strong>Heure de début : </strong></li>
                 <li id="finActivite"><strong>Heure de fin :</strong></li> 
@@ -146,6 +110,9 @@
 <!-- Section Formulaire End -->        
 </main>
 
-{% block javascripts %}   <script src="{{asset('Assets/Scripts/index2.js')}}"></script>  {% endblock %}
+{% block javascripts %}
+    <script src="{{asset('Assets/Scripts/index2.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+{% endblock %}
 
 {% endblock %}

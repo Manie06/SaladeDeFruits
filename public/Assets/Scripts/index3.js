@@ -59,8 +59,8 @@ function affichage (){
 //Code principal
 document.addEventListener('DOMContentLoaded', function (){
     
-    heureDebut.addEventListener("keydown",afficher8);
-    heureFin.addEventListener("keydown",afficher9);
+    heureDebut.addEventListener("click",afficher8);
+    heureFin.addEventListener("click",afficher9);
     enregistre.addEventListener("click",enregistrer3);
 });
 

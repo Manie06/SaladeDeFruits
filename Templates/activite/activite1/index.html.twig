@@ -41,7 +41,7 @@
                 </div>
 
                 <!--  Type d'activite  start -->
-                <div class="activite-type row w-50 flex-column flex-lg-row">
+                <div class="activite-type row w-75 flex-column flex-lg-row">
                   <label>Type d'activité : </label>
 
                   <label for="cinema" class="col-12 col-lg-6">
@@ -91,12 +91,14 @@
                 <div class="d-flex">
                   {{ form_widget(formActivite.description_activite, {'attr': { 
                  'cols' : '30', 'rows' :'10', 'placeholder' : 'Précisez ici l’activité que vous souhaitez faire et l’aide que vous demanderez à votre accompagnant (ex : vous aider à monter les escaliers, à manger, à vous changer...)'}})}}
-                  <button type="button"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la description de l'activité"></button>
+                <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la déscription de votre activité"></button>
                 </div>
-                <div class="d-flex activite-bouton justify-content-between">
-                    <a name="retour" class="btn btn-secondary preview action-button p6" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
+                
+                <div class="d-flex activite-bouton activite1-bouton  justify-content-between">
+                    <a name="retour" class="d-block btn btn-secondary preview" role="button" aria-label="Retournez à l'étape précédente" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
                  <input type="submit" id="suivant" name="suivant" class="btn btn-primary next action-button" value="Étape suivante"/>
                 </div>
+
               </fieldset>
               {{form_end(formActivite)}}
 
