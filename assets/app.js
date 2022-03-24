@@ -13,4 +13,3 @@ if (reactRoot != undefined) {
     ReactDOM.render( <App/> , reactRoot);
 }
 
-console.log(reactRoot);

@@ -24,7 +24,7 @@ enregistre=document.getElementById("suivant");
 //On récupère les options du DOM qui se trouve dans l'identifiant form_moyen_transport, c'est mis dans un tableau 
 var options = document.querySelectorAll('#form_moyen_transport > option')
 // console.log(options);
-// console.log(options[0].innerHTML)
+
 
 //*******************************Activité 2********************
 
@@ -54,7 +54,9 @@ function afficher6(){
     let i = transportActivite.value-1;
     recapTransportActivite.innerHTML=`<strong>Transport : </strong><p>${options[i].innerHTML}</p>`;
     //On retourne ce que l'on écrit pour l'enregistrer par la suite
-    return(transportActivite.value);
+    console.log(options[transportActivite.value-1].innerHTML)
+
+    return(options[transportActivite.value-1].innerHTML);
 }
 
 function enregistrer2(){
@@ -63,8 +65,10 @@ function enregistrer2(){
         lieuActivite:lieuActivite.value,
         codePostalActivite:codePostalActivite.value, 
         villeActivite:villeActivite.value,
-        transport:transportActivite.value, 
+        transport:options[transportActivite.value-1].innerHTML,
+        // transport:transportActivite.value, 
     }
+    
 
     donnees.push(donnee);
    

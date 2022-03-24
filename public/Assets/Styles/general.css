@@ -401,6 +401,7 @@ footer a:hover {
     bottom:33px;
     left: 9px;
     color:var(--hd-blue);
+    border: none;
 }
 
 #home-acc .filtre-apparence-bouton{
@@ -430,8 +431,8 @@ footer a:hover {
 
 #home-acc .demi-cercle-droite-trouver-une-activité{
     position: relative;
-    width: 1px;
-    height: 1px;
+    width: 69px;
+    height: 69px;
     z-index: 0;
     top: 36px;
     right: 24px;

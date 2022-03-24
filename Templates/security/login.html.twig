@@ -2,8 +2,6 @@
 
 {% block body %}
 
-
-
 <body>
   <!-- Header Start -->
  
@@ -11,7 +9,7 @@
 
     <section>
       <div class="container">
-        <div  class="row">
+        <div class="row">
 
           <div class="col-12 col-lg-6 d-none d-lg-flex">
             <img src="Assets/Visuels/illustrations/illu-connexion.svg" alt="illustration d'un visage stylisé">
@@ -31,6 +29,10 @@
                     You are logged in as {{ app.user.username }}, <a href="{{ path('handy_deconnexion') }}">Deconnexion</a>
                 </div>
             {% endif %}
+
+
+
+
           <form method="post">
           <label for="inputEmail">Email</label>
           <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="entrer votre email" >
@@ -40,14 +42,24 @@
           <input type="hidden" name="_csrf_token"
                  value="{{ csrf_token('authenticate') }}">
           {# Le bouton( input) doit etre dans le form ! #}
-          <input class="btn btn-lg btn-primary" type="submit"/> 
+        
+          <input type="submit"   class="btn btn-primary d-flex justify-content-center align-items-center" value="Se connecter"/>
+
         </form>
+        <div class="d-flex align-items-center">
+        <input type="checkbox" id="scales" name="scales" checked>
+        <label class="label-check" for="scales" aria-label="cliquer ici pour que le site se souvienne de vos identifiants de connexion">Se souvenir de moi</label>
+      </div>
+
+            
+            <a href="index.html" aria-label="lien vers la page d'inscription" aria-label="lien vers la page d'inscription">Toujours pas membre ? <span>Inscrivez-vous</span> !</a>
+
           </article>
         </div>
       </div>
     </section>
   </main>
 
-
+               
 </html>
 {% endblock %}

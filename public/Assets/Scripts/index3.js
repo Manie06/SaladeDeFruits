@@ -10,9 +10,9 @@ var lieuActivite;
 
 
 
-heureDebut=document.getElementById("form_date_debut_time_hour");
+heureDebut=document.getElementById("activite-debut-heure");
 recapHeureDebut=document.getElementById("debutActivite");
-heureFin=document.getElementById("form_date_fin_time_hour");
+heureFin=document.getElementById("activite-retour-heure");
 recapHeureFin=document.getElementById("finActivite");
 enregistre=document.getElementById("suivant");
 
@@ -34,7 +34,7 @@ function afficher9(){
 
 function enregistrer3(){
    
-    donnees.push(dateActivite.value);
+    
     donnees.push(heureDebut.value);
     donnees.push(heureFin.value);
     
@@ -59,8 +59,8 @@ function affichage (){
 //Code principal
 document.addEventListener('DOMContentLoaded', function (){
     
-    heureDebut.addEventListener("click",afficher8);
-    heureFin.addEventListener("click",afficher9);
+    heureDebut.addEventListener("keydown",afficher8);
+    heureFin.addEventListener("keyup",afficher9);
     enregistre.addEventListener("click",enregistrer3);
 });
 
