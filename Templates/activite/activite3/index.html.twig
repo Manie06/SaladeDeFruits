@@ -48,7 +48,7 @@
 
                 <div class="d-flex activite-bouton justify-content-between flex-column flex-lg-row">
                         <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
-                        <input  class="btn btn-primary next action-button" onclick="openForm()" value="Proposer une activité"/>
+                        <input  class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>
       
                 </div>
    
@@ -86,13 +86,12 @@
     <h2>Récapitulatif</h2>
         <ul>
         <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-        <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
-        <li id="lieuActivite"><strong>Lieu de rendez-vous : </strong></li>
+       
+        <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
+        
         <li id="debutActivite"><strong>Heure de début : </strong></li>
-        <li id="adresseActivite"><strong>Adresse  de l'activité</strong></li>
-        <li id="finActivité"><strong>Heure de fin</strong></li> 
-        <li id="retourActivite"><strong>Lieu de retour</strong></li>
-        <li id="transportActivite"><strong>Transport</strong></li>
+        <li id="finActivite"><strong>Heure de fin :</strong></li> 
+        
       </ul>
     </div>
     <!-- Récapitulatif End -->

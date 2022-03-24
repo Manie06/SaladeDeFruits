@@ -13,7 +13,7 @@ class DefaultController extends AbstractController
      */
     public function home(): Response
     {
-        return $this->render('base.html.twig');
+        return $this->render('security/index1.html.twig');
     }
 
     public function index()

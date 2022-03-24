@@ -54,10 +54,15 @@ function afficher6(){
 
 function enregistrer2(){
    
-    donnees.push(lieuActivite.value);
-    donnees.push(codePostalActivite.value);
-    donnees.push(villeActivite.value);
-    donnees.push(transportActivite.value);
+    const donnee={
+        lieuActivite:lieuActivite.value,
+        codePostalActivite:codePostalActivite.value, 
+        villeActivite:villeActivite.value,
+        transport:transportActivite.value, 
+    }
+
+    donnees.push(donnee);
+   
     
     window.localStorage.setItem('cle2',JSON.stringify(donnees));
     affichage();
@@ -87,21 +92,28 @@ document.addEventListener('DOMContentLoaded', function (){
 });
 
 
-// var data=JSON.parse(window.localStorage.getItem("cle"));
-// console.log(data)
-// recapActivite=document.getElementById("nameActivite");
+ var data=localStorage.getItem("cle");
+ data=JSON.parse(data);
+ console.log(data)
+recapActivite=document.getElementById("nameActivite");
     
-// var string='';
+var string='';
     
-// for(index=0;index<data.length;index++){
-//         var date=data[index];
-//         //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
-//         string+=`<article class="card-body" id="save-contact">
+for(index=0;index<data.length;index++){
+        var date=data[index];
+        //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
+        string+=
+
+        `<strong>Nom activité : </strong><p>${date.activite}</p>
+        <strong>Description activité : </strong><p>${date.description}</p>`
+       
                     
-//                     <i class="devare fas fa-trash-alt"></i>`
-//                     +date.activite+`<br>`+date.description+
-//                     `</article>`; 
+                
+                    
 
-//     }
+    }
 
-// recapActivite.innerHTML=string; 
+window.onload=function(){
+    recapActivite.innerHTML=string; 
+}
+    

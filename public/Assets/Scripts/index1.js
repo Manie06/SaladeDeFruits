@@ -54,25 +54,7 @@ function affichage (){
     //
  }
 
-
-    var retour=document.getElementById("retour");
-    
-    var string='';
-    
-    for(index=0;index<donnees.length;index++){
-        let date=data[index];
-        //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
-        string+=`<article class="card-body" id="save-contact">
-                    
-                    <i class="delete fas fa-trash-alt"></i>`
-                    +date.activite+`<br>`+date.description+
-                    `</article>`; 
-
-    }
-
-    retour.innerHTML=string; 
-
-    
+  
 }
 
 //Code principal
