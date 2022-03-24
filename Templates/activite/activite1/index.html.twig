@@ -3,6 +3,40 @@
 
 {% block title %}Proposer une activité{% endblock %}
 
+{% block header %}
+</head> 
+
+    <body>
+         <!-- Header Start -->
+      <header>
+
+        <!-- NavBar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="container d-flex justify-content-between">   
+                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </nav> 
+          <!-- NavBar End -->
+          
+      </header>
+      <!-- Header End -->
+{% endblock %}
+
 
 
   {% block body %}
@@ -115,14 +149,14 @@
                     <li id="finActivité"><strong>Heure de fin :</strong></li> 
                     <li id="retourActivite"><strong>Lieu de retour :</strong></li>
                     <li id="transportActivite"><strong>Transport :</strong></li>
+                    <div id="root2"></div>
                   </ul>
               </div>
             <!-- Récapitulatif End -->
           </div>
 
         </section> 
-          <div id="retour" >
-          </div>
+          
         <!-- Section Formulaire End -->        
       </main>
             

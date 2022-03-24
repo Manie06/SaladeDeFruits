@@ -3,16 +3,39 @@
 {% block title %}Homepage{% endblock %}
 
 
+{% block header %}
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="container d-flex justify-content-between">   
+                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </nav> 
+          <!-- NavBar End -->
+          
+      
+      <!-- Header End -->
+{% endblock %}
+
+
+
 {% block body %}
 
-
-
-
-<div id="root2"></div>
-  <!-- Header Start -->
-  <header>
-       <!-- Heroshot Start -->
-    <div id="header" class="container-fluid d-flex align-items-center">
+   <div id="header" class="container-fluid d-flex align-items-center">
       <div id="heroshot" class="container">
         <h1>Handy, <span>dis moi oui !</span></h1>
         <p>Des activités pour tous,<br> de la compagnie pour chacun</p>
@@ -22,47 +45,47 @@
   </header>
   <!-- Header End -->
 
+<!-- Main start -->
+  <main id="home-bene">
 
-  
-    <div class="container d-flex justify-content-center">
-    
-    
-      <img class="cercle-rouge" src="{{asset('Assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg')}}" alt="demi cercle rouge">
-        
-      <button class="prop-button" >
-      
-      <a type="button" class="container d-flex justify-content-center prop-button-bloc text-white" href="{{ path('handy_activite_beneficiaire1') }}"> Proposer une nouvelle activité</a>
-      
-      </button>
+<!-- Bouton proposer start -->
+      <img class="cercle-rouge" src="assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg" alt="demi cercle rouge décoratif">
+      <a href="{{ path('handy_activite_beneficiaire1') }}" class="container d-flex justify-content-center prop-button-bloc" aria-label="lien en forme de bouton vers la page proposer une activité">
+        <div class="prop-button align-items-center justify-content-center">Proposer une nouvelle activité</div>
+        <img class="icone-plus" src="Assets/Visuels/icones/taille-32/plus-grand.svg" alt="icone ajouter en forme de plus">
+      </a>
+<!-- Bouton proposer end -->
 
-       <img class="icone-plus" src="{{asset('Assets/Visuels/icones/taille-32/plus-grand.svg')}}">
-      
-    </div>
 
+
+
+
+
+<!-- Section prochaine activité start -->
     <section id="next-activite">
       <div class="container">
 
         <h2>Prochaine activité prévue</h2>
 
-        <div class="next-acti-card card xl-12">
+        <div class="next-acti-card card col-lg-12 col-12">
           <div class="row g-0">
             <div class="col-lg-4 d-flex flex-column">
-              <img src="{{asset('Assets/Visuels/images/activite-ballade.jpg')}}" class="img-fluid image-next-acti"
-                alt="cyclistes faisant du vélo en forêt">
-              <button class="card-button d-flex align-items-center">
+              <img src="Assets/Visuels/images/activité-randonné-home.jpg" class="img-fluid image-next-acti"
+                alt="deux personnes dont on ne voit que le bas du corps faisant de la rendonnée">
+              <button onclick="window.location.href = 'https://goo.gl/maps/mEgM3NFceZ9kcV4U9' " class="card-button d-flex align-items-center" aria-label="bouton avec lien vers Google Map">
                 Forêt de Fontainebleau, 77300 Fontainebleau<br>
                 Voir l'adresse sur une carte
               </button>
             </div>
-            <div class="col-md-8">
-              <div class="text-next-acti">
+            <div class="col-lg-8 col-12">
+              <div class="text-next-acti d-flex flex-column justify-content-between">
                 <h3>Randonnée</h3>
                 <p>Bonjour, je m’appelle Violette je vais faire une ballade dans la forêt de
                   Fontainebleau le week-end prochain. J’aimerais qu’une personne vienne avec moi pour me soutenir si
                   j’ai un petit moment de faiblesse pendant la ballade. On pourra picniquer dans une clairière très
                   jolie, j’apporte du cidre ! À bientôt. </p>
                 <div class="row">
-                  <div class="col-lg-4 d-flex flex-column">
+                  <div class="col-lg-4 col-4 d-flex flex-column">
                     <h4>Lieu de rendez-vous</h4>
                     <p>Paris 10ème</p>
                     <h4>Heure de rendez-vous</h4>
@@ -70,7 +93,7 @@
                       9h30
                     </p>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-4">
                     <h4>Lieu de retour</h4>
                     <p>Paris 10ème</p>
                     <h4>Heure de retour</h4>
@@ -79,7 +102,7 @@
                     </p>
 
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-4">
                     <h4>Transport</h4>
                     <p>Métro</p>
                   </div>
@@ -89,70 +112,81 @@
           </div>
         </div>
       </div>
-
     </section>
+<!-- Section prochaine activité end -->
+
+<!-- Section autres activités start -->
 
     <section id="autres-acti">
       <div class="container">
-        <div class="row justify-content-between">
+        <div class="row"> <!--flex-->
 
-          <div class="card-autres-acti card col-lg-6">
-            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
-              <h4>Propositions d'accompagnement</h4>
-              <div class="d-flex justify-content-evenly">
-                <div class="card mini-card col-lg-5">
-                  <div class="cinema-bkg mini-bkg">
-                    <h5>Cinéma</h5>
+          <div class="col-12 col-lg-6 card-autres-acti">
+            <div class="card w-100">
+              <div class="contenu-autres-acti ">
+                <h4>Propositions d'accompagnement</h4>
+                <div class="d-flex justify-content-evenly"> <!--flex-->
+                  <div class="card mini-card col-lg-5 col-6">
+                    <div class="cinema-bkg mini-bkg" aria-label="fauteils de cinéma">
+                      <h5>Cinéma</h5>
+                    </div>
+                    <button arial-label="bouton de lien vers l'activité" class="white-card-button">En voir plus</button>
                   </div>
-                  <button class="white-card-button">En voir plus</button>
+                
                 </div>
-
               </div>
+              <button class="card-button" aria-label="lien vers les propositions d'accompagnement">Voir toutes les propositions d'accompagnement</button>
             </div>
-            <button class="card-button">Voir toutes les propositions d'accompagnement</button>
           </div>
 
-          <div class="card-autres-acti card col-lg-6 d-flex justify-content-center flex-column">
-            <div class="contenu-autres-acti d-flex justify-content-center flex-column">
-              <h4>Donnez votre avis</h4>
-              <div class="d-flex justify-content-evenly">
-                <div class="card mini-card col-lg-5">
-                  <div class="piscine-bkg mini-bkg">
-                    <h5>Piscine</h5>
+          <div class="col-12 col-lg-6 card-autres-acti">
+            <div class="card w-100">
+              <div class="contenu-autres-acti ">
+                <h4>Donnez votre avis</h4>
+                <div class="d-flex justify-content-evenly"> <!--flex-->
+                  <div class="card mini-card col-lg-5 col-6">
+                    <div class="piscine-bkg mini-bkg" aria-label="bassin de piscine">
+                      <h5>Picine</h5>
+                    </div>
+                    <button arial-label="bouton de lien vers l'activité" class="white-card-button">En voir plus</button>
                   </div>
-                  <button class="white-card-button">En voir plus</button>
+                
                 </div>
-
               </div>
+              <button class="card-button" aria-label="lien vers les propositions d'accompagnement">Voir tous les avis à donner</button>
             </div>
-            <button class="card-button">Voir tous les avis à donner</button>
           </div>
-        </div>
 
-        <div class="row justify-content-between">
-          <div class="card-autres-acti card col-lg-6">
+
+        <div class="row">
+          <div class="col-12 col-lg-6 card-autres-acti">
+            <div class="card w-100">
             <div class="contenu-autres-acti d-flex justify-content-center flex-column">
               <h4>Activités à venir</h4>
-              <div class="d-flex justify-content-evenly">
-                <div class="card mini-card col-lg-5">
-                  <div class="resto-bkg mini-bkg">
+
+              <div class="d-flex justify-content-evenly row flex-lg-row flex-column">
+                  
+                <div class="card mini-card col-lg-5 col-6">
+                  <div class="resto-bkg mini-bkg" aria-label="l'assiette d'un dessert">
                     <h5>Restaurant</h5>
                   </div>
-                  <button class="white-card-button">En voir plus</button>
+                  <button class="white-card-button" arial-label="bouton de lien vers l'activité">En voir plus</button>
                 </div>
 
-                <div class="card mini-card col-lg-5">
-                  <div class="cyclisme-bkg mini-bkg">
+                <div class="card mini-card col-lg-5 col-6">
+                  <div class="cyclisme-bkg mini-bkg" aria-label="cyclistes en forêt">
                     <h5>Cyclisme</h5>
                   </div>
-                  <button class="white-card-button">En voir plus</button>
+                  <button class="white-card-button" arial-label="bouton de lien vers l'activité">En voir plus</button>
                 </div>
               </div>
             </div>
-            <button class="card-button">Voir toutes les activités à venir</button>
+          </div>
+            <button class="card-button w-100">Voir toutes les activités à venir</button>
           </div>
 
-          <div class="card-autres-acti card col-lg-6">
+          <div class="col-12 col-lg-6 card-autres-acti">
+            <div class="card w-100">
             <div class="contenu-autres-acti d-flex justify-content-center flex-column">
               <h4>Activités sans accompagnant</h4>
               <div class="text-sans-accomp d-flex justify-content-evenly">
@@ -160,46 +194,49 @@
 
               </div>
             </div>
-            <button class="card-button">Voir toutes les propositions d'accompagnement</button>
+            </div>
+            <button arial-label="bouton de lien vers les activités sans accompagnant" class="card-button w-100">Voir toutes les activités sans accompagnant</button>
           </div>
         </div>
       </div>
-      </div>
-      </div>
     </section>
+
+<!-- Section autres activités end -->
+
+<!-- Section activités passées start -->
 
     <section id="acti-passe">
       <div class="container">
         <h3>Activités passées</h3>
-          <div class="row">
+          <div class="row flex-lg-row flex-column">
 
-            <div class="col-lg-4 d-flex flex-column">
-              <img src="{{asset('Assets/Visuels/images/activite-piscine.jpg ')}}" class="img-fluid image-acti-passe" 
+            <div class="col-lg-4 col-12 d-flex flex-column">
+              <img src="Assets/Visuels/images/activite-piscine.jpg" class="img-fluid image-acti-passe" 
               alt="une bouée jaune dans une piscine et un transat">
-              <a href="#" class="card-button d-flex align-items-center">
+              <bouton class="card-button d-flex align-items-center" arial-label="bouton de lien vers Google map" onclick="window.location.href = 'https:https://www.google.fr/maps/preview'">
                 Voir le lieu<br>
                 250 avenue Jean Jaurès, 75020 Paris
-              </a>
+              </bouton>
               <h4>Piscine</h4>
             </div>
 
-            <div class="col-lg-4 d-flex flex-column">
-              <img src="{{asset('Assets/Visuels/images/activite-restau.jpg')}}" class="img-fluid image-acti-passe"
-              alt="un dessert à base de crème, de fraises et de gâteau">
-              <a href="#" class="card-button d-flex align-items-center">
+            <div class="col-lg-4 col-12 d-flex flex-column">
+              <img src="Assets/Visuels/images/activité-basket-home.png" class="img-fluid image-acti-passe" 
+              alt="des gens dont certains en fauteuil roulant jouant au Basket">
+              <bouton class="card-button d-flex align-items-center" arial-label="bouton de lien vers Google map" onclick="window.location.href = 'https:https://www.google.fr/maps/preview'">
                 Voir le lieu<br>
                 97 rue de la Jonquière, 75017 Paris
-              </a>
-              <h4>Restaurant</h4>
+              </bouton>
+              <h4>Basket</h4>
             </div>
 
-            <div class="col-lg-4 d-flex flex-column">
-              <img src="{{asset('Assets/Visuels/images/activite-coiffeur.jpg ')}} " class="img-fluid image-acti-passe" 
+            <div class="col-lg-4 col-12 d-flex flex-column">
+              <img src="Assets/Visuels/images/activite-coiffeur.jpg" class="img-fluid image-acti-passe" 
               alt="un homme se faisant tondre les cheveux">
-              <a href="#" class="card-button d-flex align-items-center">
+              <bouton class="card-button d-flex align-items-center" arial-label="bouton de lien vers Google map" onclick="window.location.href = 'https:https://www.google.fr/maps/preview'">
                 Voir le lieu<br>
                 8 rue des platanes, 94800 Villejuif
-              </a>
+              </bouton>
               <h4>Coiffeur</h4>
             </div>
 
@@ -207,12 +244,21 @@
       </div>
     </section>
 
-    <a href="{{ path('handy_activite_beneficiaire1') }}" class="container d-flex justify-content-center prop-button-bloc">
-      <button class="prop-button" >Proposer une nouvelle activité</button>
-      <img class="icone-plus" src="{{asset('Assets/Visuels/icones/taille-32/plus-grand.svg')}}">
+<!-- Section activités passées end -->
+
+<!-- Bouton proposer start -->
+
+    <a href="{{ path('handy_activite_beneficiaire1') }}" class="container d-flex justify-content-center prop-button-bloc" aria-label="lien en forme de bouton vers la page proposer une activité">
+      <div class="prop-button">Proposer une nouvelle activité</div>
+      <img class="icone-plus" src="Assets/Visuels/icones/taille-32/plus-grand.svg" alt="icone ajouter en forme de plus">
     </a>
-  
-  <img class="col-lg-4 illu-cnx-droit" src="{{asset('Assets/Visuels/illustrations/illu-connexion-droite.svg')}}">
-  
+    <img class="cercle-rouge bas" src="assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg" alt="demi cercle rouge décoratif">
+
+<!-- Bouton proposer end -->
+
+  <img class="col-lg-4 col-4 illu-cnx-droit" src="Assets/Visuels/illustrations/illu-connexion-droite.svg" alt="un bras et une main stylisés">
+
+  </main>
+
 
 {% endblock %}

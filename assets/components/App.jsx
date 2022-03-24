@@ -49,7 +49,7 @@ componentDidMount()
     for(let city of this.state.cities)
       {
       // Ect-ce que la ville contient la saisie ?
-      if (city.includes(event.target.value.toLowerCase()) === true ) 
+      if (city.startsWith(event.target.value.toLowerCase()) === true ) 
       //if (city.startWith(event.target.value.toLowerCase()) === true ) 
       // startsWith --> Commence par la saisie ! 
       {
@@ -58,7 +58,7 @@ componentDidMount()
       }
        
     }
-    console.table(suggestions);
+   
 
     // sa réinjecte la saisie dans city
     this.setState({ 
@@ -67,6 +67,7 @@ componentDidMount()
     });
 
   }
+ 
 
   render() { // obligatoire 
   
@@ -74,10 +75,16 @@ componentDidMount()
           <div className="App">
             <header className="App-header">
               
-      
-              <label htmlFor='city'>Quelle ville ?? </label>
-              <input type="text" id="city" value = {this.state.city} onChange={ this.onChangeInput} /> 
-              <p>{ this.state.suggestion }</p>   
+            
+           
+
+              <input type="text" className="form-control taille-filtres-desktop" id="ville-activite" value = {this.state.city} onChange={ this.onChangeInput} 
+                aria-describedby="choisir la ville de l'activité"  placeholder="Où ?"/>
+
+                <input type="text" id="ville-help" placeholder="ville" onChange={ this.onChangeInput} className="form-text " value={ this.state.suggestion }/>
+
+              
+
 
             </header>
           </div>
