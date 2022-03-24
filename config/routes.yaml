@@ -49,3 +49,8 @@ api_data:
     path: /api_data
     controller : App\Controller\ApiController::getData
 
+############# ACCUEIL ACCOMPAGNANT ########
+handy_home_accompagnant:
+    path: /accompagnant
+    controller: App\Controller\HomeBeneficiaireController::HomeAccompagnant
+
