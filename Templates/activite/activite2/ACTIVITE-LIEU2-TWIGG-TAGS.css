@@ -43,7 +43,6 @@ Date/heure rdv combo
 Date/heure retour combo 
 {{form_widget(formDate.date_fin)}}
 
-
 BOUTONS : 
 <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
 <input  class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>

@@ -68,7 +68,17 @@
 
           <div class="cp-ville activite-datetime row flex-lg-row flex-column">
             <label>Rendez-vous</label>
-              {{form_widget(formDate.date_debut)}}
+            <div class="col-lg-6">
+            <label for="activite-rdv-date" class="visually-hidden">Date de rendez-vous</label>
+            <img src="assets/Visuels/icones/taille-24/calendrier-petit.svg" class="input-icon" aria-hidden="true" alt="" placeholder="Choisissez une date">
+            <input type="date" name="activite-rdv-date" id="activite-rdv-date" aria-required="true"> 
+            
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-2">
+            <img src="assets/Visuels/icones/taille-24/Horloge.svg" class="input-icon" aria-hidden="true" alt="">
+            <label for="activite-rdv-heure" class="visually-hidden">Heure de rendez-vous</label>
+            <input type="time" name="activite-rdv-heure" id="activite-rdv-heure" aria-required="true">
+          </div>
               
 
             <label>Retour</label>
@@ -88,10 +98,39 @@
 
 
         <div class="d-flex activite-bouton justify-content-between flex-column flex-lg-row">
-        <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
-        <input  class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>
+            <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
+            <input  class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>
 
         </div>
+
+<div class="login-popup">
+        <div class="form-popup d-none" id="popupForm">
+            <section id="pop-up">
+                <div class="d-flex justify-content-center align-items-center">
+                {% set activite = app.user.activite|last %} 
+
+                    <h2>Votre activité {{activite.titreActivite}} est publiée !</h2>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Vous pouvez modifier votre activité en y accédant depuis la page d'accueil.</p>
+                        <p>Vous recevrez une notification lorsque des accompagnants vous proposeront leurs aide. Vous pourrez accéder à leurs profil et discuter avec eux avant de décider quelle personne vous accompagnera à l'activité. </p>
+                        <p>Merci d'utiliser Handy !</p>
+                    </div>   
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+
+                    <button type="submit" class="btn-blue">
+                    <a href="{{ path('handy_home_beneficiaire')}}">Fermer et retourner a l'accueil</a>
+                  
+                  </button>
+                   
+
+                </div>
+            </section>
+        </div>
+    </div>
 
 
 

@@ -20,7 +20,7 @@ villeActivite=document.getElementById("form_ville_activite");
 recapVilleActivite=document.getElementById("villeActivite");
 transportActivite=document.getElementById("form_moyen_transport");
 recapTransportActivite=document.getElementById("transportActivite");
-enregistre=document.getElementById("suivant");
+enregistre=document.getElementById("form_submit");
 //On récupère les options du DOM qui se trouve dans l'identifiant form_moyen_transport, c'est mis dans un tableau 
 var options = document.querySelectorAll('#form_moyen_transport > option')
 // console.log(options);
@@ -53,11 +53,17 @@ function afficher6(){
     //L'identidiant est mis dans la variable i et a avec innerHTML on récupère ce qu'il y a l'interieur de la balise. 
     let i = transportActivite.value-1;
     recapTransportActivite.innerHTML=`<strong>Transport : </strong><p>${options[i].innerHTML}</p>`;
+    // recapTransportActivite.innerHTML=`<strong>Transport : </strong><p>${transportActivite.value}</p>`;
     //On retourne ce que l'on écrit pour l'enregistrer par la suite
-    console.log(options[transportActivite.value-1].innerHTML)
+    // console.log(options[transportActivite.value-1].innerHTML);
+    console.log(transportActivite.value);
 
     return(options[transportActivite.value-1].innerHTML);
+    // return(transportActivite.value);
 }
+
+// let test = afficher6();
+// console.log(test); 
 
 function enregistrer2(){
    
