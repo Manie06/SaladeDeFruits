@@ -1,97 +1,107 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="{{asset('Assets/Styles/general.css')}}" rel="stylesheet">
-        {% block style %}  {% endblock %}
-           
-
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-            <!-- Va générer une balise link pour charger le code CSS app.css dans /assets de Webpack Encore -->
-        {% endblock %}
-
-        {% block javascripts %}
-
-           
-            {{ encore_entry_script_tags('app') }}
-            <!-- Va générer des balises script pour charger le code JavaScript app.js dans /assets de Webpack Encore -->
-        {% endblock %} 
-
-        {% block header %}  
-
-        {% endblock %}
-
-        <main>
-            {% if app.user.email is defined %}
-
-            
-        {% endif %}
-            {% for message in app.flashes('success') %}
-
-            <div class="alert alert-success">
-                {{ message }}
-            </div>
-
-            {% endfor %}
-            {# {% for message in app.flashes('danger') %}
-
-            <div class="alert alert-danger">
-                {{ message }}
-            </div>
-
-            {% endfor %} #}
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link href="{{asset('Assets/Styles/general.css')}}" rel="stylesheet"> {% block style %}{% endblock %}
 
 
-            {% block body %}
-            
-            {% endblock %}
-        </main>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+			<!-- Va générer une balise link pour charger le code CSS app.css dans /assets de Webpack Encore -->
+		{% endblock %}
 
-        <!-- Footer Start -->
-  <footer class="container">
-  <div class="row">
-    <div class="col-4 d-flex flex-column">
-      <ul>
-        <li><a href=""><img class="logo" src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"
-              src="Logo Handy" /></a></li>
-        <li>Handy, dis moi oui !</li>
-        <li>6 bis rue du chaudron,<br>75010 Paris.</li>
-        <li>contact@handy-france.fr</li>
-      </ul>
-    </div>
-    <div class="col-4 d-flex flex-column">
-      <h3>À propos</h3>
-      <ul>
-        <li><a href="">Qui sommes-nous ?</a></li>
-        <li><a href="">La communauté Handy</a></li>
-        <li><a href="">Mentions légales</a></li>
-        <li><a href="">Presse</a></li>
-      </ul>
-    </div>
-    <div class="col-4 d-flex flex-column">
-      <p>Retrouvez-nous sur les réseaux sociaux :</p>
-      <ul class="d-flex">
-        <li class="social-link"><a href=""><img src="Assets/Visuels/icones/taille-32/facebook.svg" alt=""></a></li>
-        <li class="social-link"><a href=""><img src="Assets/Visuels/icones/taille-32/instagram.svg" alt=""></a></li>
-        <li class="social-link"><a href=""><img src="Assets/Visuels/icones/taille-32/linkedin.svg" alt=""></a></li>
-        <li class="social-link"><a href=""><img src="Assets/Visuels/icones/taille-32/twitter.svg" alt=""></a></li>
-      </ul>
-    </div>
-
-    <p id="copyright">Copyright © 2022 All Right Reserved Handy - by La Salade de Fruits</p>
+		{% block javascripts %}
 
 
-  </div>
+			{{ encore_entry_script_tags('app') }}
+			<!-- Va générer des balises script pour charger le code JavaScript app.js dans /assets de Webpack Encore -->
+		{% endblock %}
+
+		{% block header %}{% endblock %}
+
+		<main>
+			{% if app.user.email is defined %}{% endif %}
+			{% for message in app.flashes('success') %}
+
+				<div class="alert alert-success">
+					{{ message }}
+				</div>
+
+			{% endfor %}
+			{# {% for message in app.flashes('danger') %}
+																																																																																																						
+																																																																																																						            <div class="alert alert-danger">
+																																																																																																						                {{ message }}
+																																																																																																						            </div>
+																																																																																																						
+																																																																																																						            {% endfor %} #}
 
 
-</footer>
-<!-- Footer End -->
-    </body>
-</html>
+			{% block body %}{% endblock %}
+		</main>
 
+		<!-- Footer Start -->
+		<footer class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-12 align-items-center align-items-lg-start d-flex flex-column">
+						<h3>
+							<a href=""><img alt="Logo de Handy" class="logo" src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+						</h3>
+						<ul>
+							<li tabindex="0">Handy, dis moi oui !</li>
+							<li tabindex="0">6 bis rue du chaudron,<br>75010 Paris.</li>
+							<li>
+								<a href="mailto:contact@handy-france.fr">contact@handy-france.fr</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-12 align-items-center align-items-lg-start  mt-5 mt-lg-0 d-flex flex-column">
+						<h3>À propos</h3>
+						<ul>
+							<li><a href="">Qui sommes-nous ?</a></li>
+							<li><a href="">La communauté Handy</a></li>
+							<li><a href="">Mentions légales</a></li>
+							<li><a href="">Presse</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-12 align-items-center align-items-lg-start  mt-5 mt-lg-0  d-flex flex-column">
+						<p tabindex="0">Retrouvez-nous sur les réseaux sociaux :</p>
+						<ul class="d-flex">
+							<li class="social-link">
+								<a href=""><img src="{{asset('Assets/Visuels/icones/taille-32/facebook.svg')}}" alt="Notre page Facebook"></a>
+							</li>
+							<li class="social-link">
+								<a href=""><img src="{{asset('Assets/Visuels/icones/taille-32/instagram.svg')}}" alt="Notre profil Instagram"></a>
+							</li>
+							<li class="social-link">
+								<a href=""><img src="{{asset('Assets/Visuels/icones/taille-32/linkedin.svg')}}" alt="Notre profil Linkedin"></a>
+							</li>
+							<li class="social-link">
+								<a href=""><img src="{{asset('Assets/Visuels/icones/taille-32/twitter.svg')}}" alt="Notre compte Twitter"></a>
+							</li>
+						</ul>
+						<label for="newsletter">Recevez notre newsletter</label>
+						<form class="d-flex">
+							<input type="text" name="newsletter" id="newsletter">
+							<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter vôtre adresse email afin de vous inscrire à la newsletter"></button>
+							<button type="submit" class="btn btn-primary newsletter" aria-label="s'inscrire à la newsletter" value="s'incrire à la newsletter"><img src="{{asset('Assets/Visuels/icones/taille-32/envoyer-light.svg')}}"></button>
+						</form>
+					</div>
+					<p class="visually-hidden" tabindex="0" style="margin-left:-50%">Merci d'avoir pris le temps d'écouter cette page de HANDY !</p>
+
+					<p id="copyright">Copyright © 2022 All Right Reserved Handy - by La Salade de Fruits</p>
+
+				</div>
+
+			</footer>
+			<!-- Footer End -->
+		</head>
+	</head>
+</html></head></html></body></html>

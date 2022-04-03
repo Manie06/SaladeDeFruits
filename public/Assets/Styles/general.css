@@ -1,27 +1,28 @@
-/*////////////////////////////////////////////////////  TYPO /////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////  TYPO /////////////////////////////////////////////////////*/
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-/*////////////////////////////////////////////////////  GENERAL /////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////  GENERAL /////////////////////////////////////////////////////*/
 
 :root {
     --hd-blue: #272D7E;
-    --hd-white: #FFFEFE; 
-    --hd-red: #D84B51;  
-    --hd-orange: #E43730; 
-    --hd-yellow: #FFCF00; 
+    --hd-white: #FFFEFE;
+    --hd-red: #D84B51;
+    --hd-orange: #E43730;
+    --hd-yellow: #FFCF00;
     --hd-blue-clear: #B7D2E7;
-    --hd-grey: #7089A7; 
-    --hd-beige: #FAD1BD; 
-    --hd-black: #1C1C1C; 
-    --hd-bleu-light: #E9EAF2; 
-    --hd-yellow-dark: #E99A24; 
-    --hd-inactif: #B2B6ED; 
+    --hd-grey: #7089A7;
+    --hd-beige: #FAD1BD;
+    --hd-bleu-light: #E9EAF2;
+    --hd-yellow-dark: #E99A24;
+    --hd-inactif: #B2B6ED;
+    --hd-hover: #000543;
 
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */ 
+    font-size: 62.5%;
+    /* 1rem = 10px */
 }
 
 body {
@@ -33,28 +34,27 @@ body {
 ul li {
     list-style-type: none;
 }
- main {
-    padding: 14.4rem 0 20rem;
-} 
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+main {
+    padding-bottom: 20rem;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--hd-blue) !important;
     font-size: 1.6rem;
     padding-left: 0.2rem;
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
 
-/*////////////////////////////////////////////////////  BOUTONS /////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////  BOUTONS /////////////////////////////////////////////////////*/
 
 .btn {
     height: 6.2rem;
     font-size: 1.8rem;
-    width: 19.7rem;
     padding: 0 2rem;
-}
-
-.btn:hover {
-    font-weight: bold;
+    border-radius: 0%;
 }
 
 .btn-primary {
@@ -64,7 +64,7 @@ ul li {
 }
 
 .btn-primary:hover {
-    background-color: var(--hd-black);
+    background-color: var(--hd-hover);
 }
 
 .btn-secondary {
@@ -72,15 +72,15 @@ ul li {
     outline: none;
     color: var(--hd-blue);
     border: 1px solid var(--hd-blue);
+    min-width: 19.7rem;
 }
 
-.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus  {
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
     color: var(--hd-blue);
 
 }
-
-
-
 
 /*////////////////////////////////////////////////////  NAVBAR /////////////////////////////////////////////////////*/
 
@@ -92,17 +92,18 @@ ul li {
     width: 119px;
 }
 
-nav,.navbar-light, .bg-light {
+nav,
+.navbar-light,
+.bg-light {
     background-color: var(--hd-white);
     --bs-bg-opacity: 0;
     box-shadow: 0px 8px 24px rgba(28, 28, 28, 0.15);
 }
 
 
+/*////////////////////////////////////////////////////  HEADER /////////////////////////////////////////////////////*/
 
-/*////////////////////////////////////////////////////  HEADER /////////////////////////////////////////////////////*/ 
-
-#header{
+#header {
     background-image: url('../Visuels/images/heroshot-sans-texte.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,8 +111,9 @@ nav,.navbar-light, .bg-light {
 }
 
 
-#heroshot h1, #heroshot p {
-color: var(--hd-white); 
+#heroshot h1,
+#heroshot p {
+    color: var(--hd-white);
 }
 
 #heroshot h1 {
@@ -129,8 +131,8 @@ color: var(--hd-white);
 }
 
 
-/*////////////////////////////////////////////////////  HEADINGS   /////////////////////////////////////////////////////*/ 
-h1 { 
+/*////////////////////////////////////////////////////  HEADINGS   /////////////////////////////////////////////////////*/
+h1 {
     font-size: 5.6rem;
     padding-bottom: 8.9rem;
 }
@@ -148,10 +150,12 @@ h2 {
 
 
 
-/*////////////////////////////////////////////////////  FOOTER /////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////  FOOTER /////////////////////////////////////////////////////*/
 
-footer #copyright  {
+footer #copyright {
     text-align: center;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
 }
 
 footer ul {
@@ -159,12 +163,12 @@ footer ul {
 }
 
 ul li.social-link {
-    padding-right: 1rem; 
+    padding-right: 1rem;
 }
 
 footer a {
-   text-decoration: none;
-   color: var(--hd-blue) 
+    text-decoration: none;
+    color: var(--hd-blue)
 }
 
 footer a:hover {
@@ -172,7 +176,40 @@ footer a:hover {
     color: var(--hd-blue);
 }
 
-/*////////////////////////////////////////////////////  HOME ACCOMPAGNANT   /////////////////////////////////////////////////////*/ 
+footer h3 {
+    font-weight: bold;
+}
+
+footer ul li {
+    padding-top: 1.8rem;
+}
+
+footer {
+    padding-top: 5.5rem;
+    box-shadow: 0px -8px 24px rgba(28, 28, 28, 0.25);
+}
+
+footer input[type="text"] {
+    height: 6.2rem;
+    width: 28.4rem;
+    border: none;
+    background-color: var(--hd-bleu-light);
+    color: var(--hd-blue);
+    font-size: 1.8rem;
+    border-radius: 0;
+
+}
+
+label[for=newsletter] {
+    margin-top: 2rem;
+}
+
+footer button.newsletter {
+    width: 6.2rem;
+    padding: 1rem;
+}
+
+/*////////////////////////////////////////////////////  HOME ACCOMPAGNANT   /////////////////////////////////////////////////////*/
 #home-acc .card-activite {
     box-shadow: 0px 8px 24px #1c1c1c1f;
 }
@@ -208,14 +245,14 @@ footer a:hover {
 }
 
 #home-acc h3 {
-    font-size: 32px!important;
+    font-size: 32px !important;
     font-weight: bold;
 }
 
-#home-acc .bouton-bleu{
-    height:62px;
+#home-acc .bouton-bleu {
+    height: 62px;
     background-color: var(--hd-blue);
-    text-align:center;
+    text-align: center;
 }
 
 #home-acc a {
@@ -245,108 +282,113 @@ footer a:hover {
     padding: 0;
 }
 
-#home-acc .pas-de-marge{
-    margin:0;
+#home-acc .pas-de-marge {
+    margin: 0;
 }
 
-#home-acc .margin-bot-200{
-    margin-bottom:200px;
+#home-acc .margin-bot-200 {
+    margin-bottom: 200px;
 }
 
-#home-acc .margin-bot-144{
-    margin-bottom:144px;
+.margin-bot-144 {
+    margin-bottom: 144px;
 }
 
-#home-acc .margin-bot-89{
-    margin-bottom:89px;
-}
-#home-acc .margin-bot-55{
-    margin-bottom:55px;
-}
-#home-acc .margin-bot-30{
-    margin-bottom:30px;
+#home-acc .margin-bot-89 {
+    margin-bottom: 89px;
 }
 
-#home-acc #onglets-accompagnant{
-    margin-top:-144px;
+#home-acc .margin-bot-55 {
+    margin-bottom: 55px;
 }
 
-#home-acc #trouver-une-activite{
+#home-acc .margin-bot-30 {
+    margin-bottom: 30px;
+}
+
+#home-acc #onglets-accompagnant {
+    padding: 0;
+}
+
+#home-acc #trouver-une-activite {
     margin: top -69px;
 }
 
-#home-acc .taille-filtres-desktop{
-    z-index:999;
-    width:250px;
+#home-acc .taille-filtres-desktop {
+    z-index: 999;
+    width: 250px;
 }
 
-#home-acc .accordion-header{
-    padding-bottom:0;
+#home-acc .accordion-header {
+    padding-bottom: 0;
     font-size: 1.8rem;
 }
 
-#home-acc .accordion-button{
-    height:6.2rem;
+#home-acc .accordion-button {
+    height: 6.2rem;
     background-color: #FFFEFE;
     border: 1px solid var(--hd-blue);
     line-height: 1.5;
-    padding:3px 7px 3px 7px;
+    padding: 3px 7px 3px 7px;
 }
 
-#home-acc .accordion-button:not(.collapsed){
-    height:6.2rem;
+#home-acc .accordion-button:not(.collapsed) {
+    height: 6.2rem;
     background-color: #FFFEFE;
     border: 1px solid var(--hd-blue);
-    color:var(--hd-blue);
+    color: var(--hd-blue);
     line-height: 1.5;
-    padding:3px 7px 3px 7px;
+    padding: 3px 7px 3px 7px;
 }
 
-#home-acc .accordion-button:hover{
-    color:#FFFEFE;
+#home-acc .accordion-button:hover {
+    color: #FFFEFE;
     background-color: var(--hd-blue);
 }
 
-#home-acc .accordion-button::after{
+#home-acc .accordion-button::after {
     background-image: none;
 }
 
-#home-acc .accordion-button:not(.collapsed)::after{
+#home-acc .accordion-button:not(.collapsed)::after {
     background-image: none;
 }
 
 #home-acc .accordion-button:focus {
     z-index: 3;
     background-color: var(--hd-blue);
-    color:#FFFEFE;
+    color: #FFFEFE;
     border-color: var(--hd-blue);
     outline: 0;
     box-shadow: 0 0 0 .25rem #B7D2E7;
 }
 
-#home-acc #filtre-activite-sportive + button, #filtre-activite-culturelle + button, #filtre-activite-autre + button{
-    margin:0;
-    font-size:1.6rem;
-    color:var(--hd-blue);
-    background-color: #FFFEFE ;
+#home-acc #filtre-activite-sportive+button,
+#filtre-activite-culturelle+button,
+#filtre-activite-autre+button {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--hd-blue);
+    background-color: #FFFEFE;
 }
 
-#home-acc .btn{
+#home-acc .btn {
     border-radius: 0rem;
 }
 
-#home-acc .btn-filter{
+#home-acc .btn-filter {
     text-align: left;
     border: 1px solid var(--hd-blue);
     color: var(--hd-blue);
 }
 
-#home-acc .btn-filter:hover{
-    color:#FFFEFE;
+#home-acc .btn-filter:hover {
+    color: #FFFEFE;
     background-color: var(--hd-blue);
 }
 
-#home-acc .btn-check:focus + .btn-filter, .btn-filter:focus{
+#home-acc .btn-check:focus+.btn-filter,
+.btn-filter:focus {
     color: #FFFEFE;
     background-color: var(--hd-blue);
     border: 1px solid var(--hd-blue);
@@ -354,81 +396,81 @@ footer a:hover {
 }
 
 
-#home-acc option{
+#home-acc option {
     background-color: #FFFEFE;
 }
 
-#home-acc .form-select{
+#home-acc .form-select {
     background-color: #FFFEFE;
     color: var(--hd-blue);
 }
 
-#home-acc .taille-18{
+#home-acc .taille-18 {
     font-size: 1.8rem;
 }
 
-#home-acc .taille-16{
-    font-size:1.6rem;
+#home-acc .taille-16 {
+    font-size: 1.6rem;
 }
 
-#home-acc .taille-14{
-    font-size:1.4rem;
+#home-acc .taille-14 {
+    font-size: 1.4rem;
 }
 
-#home-acc #ville-activite{
-    height:6.2rem;
+#home-acc #ville-activite {
+    height: 6.2rem;
     background-color: #FFFEFE;
     border: 1px solid var(--hd-blue);
     line-height: 1.5;
-    padding:3px 7px 3rem 7px;
+    padding: 3px 7px 3rem 7px;
 }
 
-#home-acc .form-control{
-    font-size:1.8rem;
+#home-acc .form-control {
+    font-size: 1.8rem;
     color: var(--hd-blue);
-    font-weight:bold
+    font-weight: bold
 }
 
-#home-acc .form-control::placeholder{
-    font-size:1.8rem;
+#home-acc .form-control::placeholder {
+    font-size: 1.8rem;
     color: var(--hd-blue);
 }
 
-#home-acc #ville-help{
-    position:relative;
-    font-size:1.6rem;
-    bottom:33px;
+#home-acc #ville-help {
+    position: relative;
+    font-size: 1.6rem;
+    bottom: 33px;
     left: 9px;
-    color:var(--hd-blue);
+    color: var(--hd-blue);
     border: none;
 }
 
-#home-acc .filtre-apparence-bouton{
+#home-acc .filtre-apparence-bouton {
     background-color: #FFFEFE;
     border: 1px solid var(--hd-blue);
 }
 
-#home-acc .filtre-apparence-texte{
-    color:var(--hd-blue);
+#home-acc .filtre-apparence-texte {
+    color: var(--hd-blue);
     background-color: #FFFEFE;
 }
 
-#home-acc .filtre-apparence-choix{
-    color:var(--hd-blue);
+#home-acc .filtre-apparence-choix {
+    color: var(--hd-blue);
     background-color: #FFFEFE;
 }
 
-#home-acc .btn{
-    height:6.2rem;
+#home-acc .btn {
+    height: 6.2rem;
 }
 
-#home-acc option{
-    font-size:1.6rem;
-    color:var(--hd-blue);
+#home-acc option {
+    font-size: 1.6rem;
+    color: var(--hd-blue);
     background-color: #FFFEFE;
 }
 
-#home-acc .demi-cercle-droite-trouver-une-activité{
+#home-acc .demi-cercle-droite-trouver-une-activite {
     position: relative;
     width: 69px;
     height: 69px;
@@ -437,38 +479,38 @@ footer a:hover {
     right: 24px;
 }
 
-#home-acc .illustration-oeil-rond-beige{
+#home-acc .illustration-oeil-rond-beige {
     width: 250px;
     height: 167px;
     position: absolute;
     left: 20px;
     top: 1160px;
-    margin-top:-167px;
+    margin-top: -140px;
 }
 
 
-#home-acc .bouton-blanc-fullscreen{
+#home-acc .bouton-blanc-fullscreen {
     display: inline-block;
     padding: 15px;
-    height:auto;
+    height: auto;
     background-color: #FFFEFE;
     font-size: 2rem;
 }
 
-#home-acc .pas-de-bordure{
-    border:none;
+#home-acc .pas-de-bordure {
+    border: none;
 }
 
-#home-acc .bouton-deguise-blanc{
-    text-decoration:none;
+#home-acc .bouton-deguise-blanc {
+    text-decoration: none;
     color: var(--hd-blue);
-    text-align:center;
+    text-align: center;
 }
 
-#home-acc .bouton-bleu-fullscreen{
+#home-acc .bouton-bleu-fullscreen {
     display: inline-block;
     padding: 15px;
-    height:auto;
+    height: auto;
     background-color: var(--hd-blue);
     font-size: 2rem;
     box-shadow: inset 10px -10px 4px rgba(0, 0, 0, 0.25);
@@ -477,47 +519,51 @@ footer a:hover {
 #home-acc .burger {
     -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none; /*pour ne pas que la checkbox prenne son apparence par défaut*/
+    appearance: none;
+    /*pour ne pas que la checkbox prenne son apparence par défaut*/
 
     display: block;
     cursor: pointer;
     width: 50px;
 }
 
-#home-acc .filtres-mobile{
-    display: none; /* Tant qu'on a pas cliqué sur le bouton burger, on cache la barre de nav */
+#home-acc .filtres-mobile {
+    display: none;
+    /* Tant qu'on a pas cliqué sur le bouton burger, on cache la barre de nav */
 }
 
 /* quand on a cliqué sur le burger, c'est qu'on clique sur l'input:checkbox et donc celle ci passe en mode "checked", ce qui nous permet de lui affecter un style différent sur cette pseudo classe, ici la croix */
 #home-acc .burger:checked {
-    content: none; /*le code intégré dans la propriété content injecte l'icône en croix*/
+    content: none;
+    /*le code intégré dans la propriété content injecte l'icône en croix*/
 }
 
 
-#home-acc .burger:checked + .filtres-mobile {
+#home-acc .burger:checked+.filtres-mobile {
     height: auto;
     padding-bottom: 50px;
 }
+
 /*fin Conception du menu burger*/
 
-#home-acc .burger:checked + .filtres-mobile{ /*le + est le sélecteur directement adjacent. Grâce à lui, on peut dans cette exercice visé exclusivement la balise nav qui se trouve directement après l'input de type checkbox*/
+#home-acc .burger:checked+.filtres-mobile {
+    /*le + est le sélecteur directement adjacent. Grâce à lui, on peut dans cette exercice visé exclusivement la balise nav qui se trouve directement après l'input de type checkbox*/
     display: block;
 }
 
 
-@media screen and (max-width:576px){
+@media screen and (max-width:576px) {
     #home-acc h3 {
-        font-size: 24px!important;
+        font-size: 24px !important;
     }
 }
 
-/*////////////////////////////////////////////////////  HOME BENEFICIARE   /////////////////////////////////////////////////////*/ 
+/*////////////////////////////////////////////////////  HOME BENEFICIARE   /////////////////////////////////////////////////////*/
 /* Police et titres */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 #home-bene {
-    margin: 144px 0px 200px;
     color: #272D7E;
     font-family: 'Mulish', sans-serif;
 }
@@ -536,10 +582,12 @@ footer a:hover {
 
 #home-bene h3 {
     font-size: 36px;
+    font-weight: 700;
+    text-align: left;
 }
 
 #home-bene h4 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
 }
 
@@ -553,7 +601,7 @@ footer a:hover {
 /* Général */
 
 #home-bene .row {
-    margin:0;
+    margin: 0;
 }
 
 #home-bene .card {
@@ -564,14 +612,18 @@ footer a:hover {
     word-wrap: normal;
 }
 
-#home-bene .card-button, #home-bene .prop-button {
+#home-bene .card-button,
+#home-bene .prop-button {
     background-color: #272D7E;
     color: #FFFEFE;
     height: 62px;
     border: none;
     padding: 15px;
+    line-height: 3.6rem;
 }
-#home-bene .prop-button:hover, .card-button:hover {
+
+#home-bene .prop-button:hover,
+.card-button:hover {
     background-color: #000543;
 }
 
@@ -583,7 +635,7 @@ footer a:hover {
     border: none;
     background-color: #FFFEFE;
     color: #272D7E;
-    border : 1px solid #272D7E;
+    border: 1px solid #272D7E;
     height: 62px;
 }
 
@@ -599,6 +651,7 @@ footer a:hover {
 
 #home-bene .prop-button-bloc {
     margin: auto;
+    width: fit-content;
 }
 
 #home-bene .icone-plus {
@@ -617,13 +670,15 @@ footer a:hover {
     margin-top: 89px;
 }
 
-#home-bene .image-next-acti, #home-bene .image-acti-passe {
+#home-bene .image-next-acti,
+#home-bene .image-acti-passe {
     height: 360px;
     object-fit: cover;
 }
 
 #home-bene #next-activite button {
     text-align: justify;
+    line-height: 2.3rem;
 }
 
 #home-bene .text-next-acti {
@@ -631,7 +686,7 @@ footer a:hover {
 }
 
 #home-bene .text-next-acti .row div {
-    padding-left: 0 ;
+    padding-left: 0;
     padding-right: 15px;
 }
 
@@ -640,6 +695,7 @@ footer a:hover {
 #home-bene #autres-acti {
     margin-bottom: 89px;
 }
+
 #home-bene #autres-acti h4 {
     text-align: center;
     margin-bottom: 55px;
@@ -665,19 +721,19 @@ footer a:hover {
 }
 
 #home-bene .cinema-bkg {
-    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-cinema.jpg);
+    background: linear-gradient(rgba(39, 45, 126, 0.5), rgba(39, 45, 126, 0.5)), url(../Visuels/images/activite-cinema.jpg);
 }
 
 #home-bene .piscine-bkg {
-    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-piscine.jpg);
+    background: linear-gradient(rgba(39, 45, 126, 0.5), rgba(39, 45, 126, 0.5)), url(../Visuels/images/activite-piscine.jpg);
 }
 
 #home-bene .resto-bkg {
-    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-restau.jpg);
+    background: linear-gradient(rgba(39, 45, 126, 0.5), rgba(39, 45, 126, 0.5)), url(../Visuels/images/activite-restau.jpg);
 }
 
 #home-bene .cyclisme-bkg {
-    background: linear-gradient(rgba(39,45,126,0.5), rgba(39,45,126,0.5)), url(../Visuels/images/activite-rugby.jpg);
+    background: linear-gradient(rgba(39, 45, 126, 0.5), rgba(39, 45, 126, 0.5)), url(../Visuels/images/activite-rugby.jpg);
 }
 
 #home-bene .text-sans-accomp {
@@ -713,7 +769,7 @@ footer a:hover {
     margin-bottom: -177px;
 }
 
-/*//////////////////////////////////////////////////// INDEX   /////////////////////////////////////////////////////*/ 
+/*//////////////////////////////////////////////////// INDEX   /////////////////////////////////////////////////////*/
 /* Général */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -725,27 +781,29 @@ footer a:hover {
 #index a {
     text-decoration: none;
 }
- 
+
 #index h2 {
     font-size: 56px;
+}
+
+a.button {
+    text-decoration: none;
+    display: block;
+    color: var(--hd-white);
+    background-color: var(--hd-blue);
+    height: 5.5rem;
+    font-size: 1.8rem;
+    border-radius: 0%;
+    width: 19.7rem;
+    text-align: center;
+    line-height: 5.5rem;
 }
 
 #index h3 {
     font-size: 36px;
 }
 
-#index .btn-blue {
-    background-color: var(--hd-blue);
-    color: var(--hd-white);
-    height: 62px;
-    border: none;
-    padding: 15px;
-    margin: auto;
-}
 
-#index .btn-blue:hover {
-    background-color: #000543;
-}
 
 /* Titre principal */
 
@@ -760,6 +818,19 @@ footer a:hover {
 
 #index h2 span {
     padding-left: 50px;
+}
+
+#index .btn-blue {
+    background-color: var(--hd-blue);
+    color: var(--hd-white);
+    height: 62px;
+    border: none;
+    padding: 15px;
+    margin: auto;
+}
+
+#index .btn-blue:hover {
+    background-color: #000543;
 }
 
 
@@ -792,7 +863,7 @@ footer a:hover {
 }
 
 
-/*//////////////////////////////////////////////////// CONNEXION  /////////////////////////////////////////////////////*/ 
+/*//////////////////////////////////////////////////// CONNEXION  /////////////////////////////////////////////////////*/
 /* Général */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -803,7 +874,7 @@ footer a:hover {
     background-image: url(../Visuels/illustrations/illu-gratuit-connexion.svg);
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-size: 35%;
+    background-size: 25%;
 }
 
 #connexion a {
@@ -814,10 +885,34 @@ footer a:hover {
 #connexion h1 {
     font-size: 56px;
     font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
-#connexion p, #connexion label, #connexion a {
+#connexion input[type=email],
+#connexion input[type=password] {
+    width: 41rem;
+    min-height: 5.3rem;
+    outline: none;
+    color: var(--hd-blue);
+    font-size: 1.8rem;
+    border: 1px solid var(--hd-blue);
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+#connexion p,
+#connexion label,
+#connexion a {
     font-size: 18px;
+}
+
+#connexion .connexion-container {
+    width: 41rem;
+}
+
+#connexion label {
+    margin-bottom: 2rem;
 }
 
 #connexion input::placeholder {
@@ -825,9 +920,12 @@ footer a:hover {
     font-size: 16px;
 }
 
-#connexion .container {
+#connexion .row {
     box-shadow: 0px 8px 24px #1c1c1c1f;
-    padding: 60px;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -836,11 +934,13 @@ footer a:hover {
     background-color: var(--hd-white);
 }
 
-#connexion article > *, #connexion .btn-blue {
-    margin-bottom: 21px!important;
+#connexion article>*,
+#connexion .btn-blue {
+    margin-bottom: 21px !important;
 }
 
-#connexion #input-email, #connexion #input-mdp {
+#connexion #input-email,
+#connexion #input-mdp {
     height: 60px;
     padding: 15px;
     width: 100%;
@@ -881,7 +981,7 @@ footer a:hover {
 }
 
 #connexion .btn-blue:hover {
-   background-color: #000543;
+    background-color: #000543;
 }
 
 #connexion a span {
@@ -891,11 +991,11 @@ footer a:hover {
 
 @media (max-width: 576px) {
     h1 {
-        font-size: 42px!important;
+        font-size: 42px !important;
     }
 }
 
-/*//////////////////////////////////////////////////// FORMULAIRE BÉNÉFICAIRE /////////////////////////////////////////////////////*/ 
+/*//////////////////////////////////////////////////// FORMULAIRE BÉNÉFICAIRE /////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////   Formulaire    ///////////////////////////////////////////*/
 
 #activite-form legend {
@@ -903,17 +1003,23 @@ footer a:hover {
     font-weight: bold;
 }
 
-#activite-form label, #activite-form label[for="adresse_depart"] {
+#activite-form label,
+#activite-form label[for="adresse_depart"] {
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 2rem;
+
 }
 
-strong.activite-label {
-    color: yellowgreen;
+#activite-form input#form_adresse_activite {
+    width: 52.5rem;
 }
 
-#activite-form input[type=text], #activite-form textarea, #activite-form select, #activite-form input[type=date], #activite-form input[type=time] {
+#activite-form input[type=text],
+#activite-form textarea,
+#activite-form select,
+#activite-form input[type=date],
+#activite-form input[type=time] {
     width: 54rem;
     min-height: 6.2rem;
     outline: none;
@@ -924,17 +1030,44 @@ strong.activite-label {
     border-radius: 0;
 }
 
-#activite-form .dictaphone {
+
+/* Hide Calendar Icon In Chrome */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: relative;
+    padding: 2rem 1.5rem;
+    ;
+    right: 100%;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 100;
+    width: 2rem;
+}
+
+
+#activite-form input#form_ville_activite {
+    width: 31rem !important;
+}
+
+.dictaphone {
     background-color: var(--hd-white);
     border: 1px solid var(--hd-blue);
+    width: 62px;
+    padding: 0;
+}
+
+#activite-form .dictaphone {
     border-left: none;
 }
 
+
 #activite-form input[type=radio] {
     appearance: none;
-} 
+}
 
-#activite-form input[type=radio]:checked + div.card a {
+#activite-form input[type=radio]:checked+div.card a {
     background-color: var(--hd-blue);
 }
 
@@ -946,8 +1079,12 @@ strong.activite-label {
     margin-top: 5.5rem;
 }
 
-#activite-form .activite1-bouton {
-    width: 78%;
+#activite-form .activite-bouton-container {
+    width: 60.2rem;
+}
+
+#activite-form .activite-bouton-container-3 {
+    width: 58.6rem;
 }
 
 
@@ -955,8 +1092,14 @@ strong.activite-label {
 #activite-form .activite-bouton .btn-primary {
     background-color: var(--hd-blue);
     height: 6.2rem;
-    width: 19.7rem;
+    min-width: 19.7rem;
 }
+
+#activite-form .activite-bouton .btn-primary:hover {
+    background-color: var(--hd-hover);
+}
+
+
 
 #activite-form .activite-bouton .btn-secondary {
     border: 1px solid var(--hd-blue);
@@ -981,15 +1124,21 @@ strong.activite-label {
 }
 
 #activite-form input#code-postal {
-    width: 15.3rem !important; 
+    width: 15.3rem !important;
 }
 
-#activite-form .cp-ville, #activite-form #activite-lieux {
+#activite-form .cp-ville,
+#activite-form #activite-lieux {
     justify-content: space-between;
-    width: 79%;
+    width: 60.2rem !important;
 }
 
-#activite-form .cp-ville, #activite-form label[for=form_moyen_transport], #activite-form #activite-lieux, #activite-form .activite-adresse, #activite-form label[for=activite-name], #activite-form .activite-datetime label:nth-child(2n) {
+#activite-form .cp-ville,
+#activite-form label[for=form_moyen_transport],
+#activite-form #activite-lieux,
+#activite-form .activite-adresse,
+#activite-form label[for=activite-name],
+#activite-form .activite-datetime label:nth-child(2n) {
     margin-top: 5.5rem;
 }
 
@@ -1003,12 +1152,16 @@ strong.activite-label {
     appearance: auto;
 }
 
-#activite-form #activite-lieux label[for=adresse-rdv-user], #activite-form #activite-lieux label[for=adresse-retour-user], #activite-form #activite-lieux label[for=adresse-rdv-add], #activite-form #activite-lieux label[for=adresse-retour-add] {
+#activite-form #activite-lieux label[for=adresse-rdv-user],
+#activite-form #activite-lieux label[for=adresse-retour-user],
+#activite-form #activite-lieux label[for=adresse-rdv-add],
+#activite-form #activite-lieux label[for=adresse-retour-add] {
     font-size: 0.5rem;
     font-weight: normal;
 }
 
-#activite-form #activite-lieux .adresse-card,  #activite-form #activite-lieux .form-check {
+#activite-form #activite-lieux .adresse-card,
+#activite-form #activite-lieux .form-check {
     box-sizing: border-box;
     padding: 1rem;
     height: 8rem;
@@ -1021,7 +1174,8 @@ strong.activite-label {
 
 
 
-#activite-form #activite-lieux .adresse-card input[type="radio"], #activite-form #activite-lieux .form-check input[type="radio"] {
+#activite-form #activite-lieux .adresse-card input[type="radio"],
+#activite-form #activite-lieux .form-check input[type="radio"] {
     appearance: none;
     margin: 1rem;
     width: 2rem;
@@ -1032,7 +1186,8 @@ strong.activite-label {
     position: relative;
 }
 
-#activite-form input[type=date], #activite-form input[type=time] {
+#activite-form input[type=date],
+#activite-form input[type=time] {
     width: 100%;
     padding-left: 5rem;
 }
@@ -1041,6 +1196,7 @@ strong.activite-label {
     position: absolute;
     padding: 2rem 1.5rem;
     min-width: 2rem;
+    z-index: 10;
 }
 
 
@@ -1051,8 +1207,8 @@ strong.activite-label {
     margin-bottom: 8.9rem;
     overflow: hidden;
     color: var(--hd-blue);
-    background-image: url('../Visuels/icones/flèche.svg');
-    background-position: 100% 24% ;
+    background-image: url('../Visuels/icones/fleche.svg');
+    background-position: 100% 24%;
     background-repeat: no-repeat;
 }
 
@@ -1072,7 +1228,7 @@ strong.activite-label {
 }
 
 #progressbar #activite-lieu:before {
-    
+
     content: "2";
 }
 
@@ -1117,8 +1273,8 @@ strong.activite-label {
 }
 
 /*/////////////////////////////////////////////////  SYMFONY STYLE /////////////////////////////////////////////////////*/
-legend.col-form-label  {
-    font-size:  2.4rem !important;
+legend.col-form-label {
+    font-size: 2.4rem !important;
 }
 
 .form-controle::placeholder {
@@ -1136,11 +1292,13 @@ legend.col-form-label  {
     padding-top: 2rem;
 }
 
+
+
 /*//////////////////////////////////////////////   Activite-card   ///////////////////////////////////////////*/
 
 #activite-form .card-body {
     padding: 0;
-    height: 18.6rem; 
+    height: 18.6rem;
     background-size: cover;
     background-position: center;
     margin-top: -4rem;
@@ -1153,7 +1311,7 @@ legend.col-form-label  {
 }
 
 #activite-form .card-title {
-    color: var(--hd-white); 
+    color: var(--hd-white);
     text-align: center;
     height: 12.4rem;
     line-height: 12.4rem;
@@ -1172,23 +1330,24 @@ legend.col-form-label  {
 }
 
 
-#activite-form .card-title, #activite-form a[role=button] {
+#activite-form .card-title,
+#activite-form a[role=button] {
     z-index: 2;
 }
 
 #activite-form .activite-type-cinema {
     background-image: url(../Visuels/images/activite-cinema.jpg);
-    
+
 }
 
 #activite-form .activite-type-sport-aquatique {
     background-image: url(../Visuels/images/activite-piscine.jpg);
-    
+
 }
 
 #activite-form .activite-type-restaurant {
     background-image: url(../Visuels/images/activite-restau.jpg);
-    
+
 }
 
 #activite-form .card-body::after {
@@ -1211,7 +1370,7 @@ legend.col-form-label  {
 /*//////////////////////////////////////////////   recap   ///////////////////////////////////////////*/
 #activite-form-recap {
     border: 1px solid var(--hd-blue);
-    background-color:var(--hd-bleu-light);
+    background-color: var(--hd-bleu-light);
     padding: 2rem;
     height: fit-content;
 }
@@ -1224,29 +1383,37 @@ legend.col-form-label  {
 #activite-form-recap ul li {
     padding-bottom: 2rem;
     font-weight: 600;
-    
+
 }
 
-#activite-form-recap strong  {
+#activite-form-recap strong {
     display: block;
-    font-weight: inherit;
-} 
+    font-weight: 900;
+}
+
+#activite-form-recap {
+    font-weight: normal;
+}
+
+
 
 
 /*///////////////////////////////////////////////// background illustration /////////////////////////////////////////:*/
 
-main#formulaire-bene-etape-1, main#formulaire-bene-etape-2, main#formulaire-bene-etape-3 {
+main#formulaire-bene-etape-1,
+main#formulaire-bene-etape-2,
+main#formulaire-bene-etape-3 {
     background: url('../Visuels/illustrations/illu-amusant.svg') no-repeat;
     background-size: 20%;
-    
+
 }
 
 main#formulaire-bene-etape-1 {
-    background-position: 105% 80%;
+    background-position: 105% 100%;
 }
 
 main#formulaire-bene-etape-2 {
-    background-position:  105% 100%;
+    background-position: 105% 100%;
 }
 
 main#formulaire-bene-etape-3 {
@@ -1254,22 +1421,25 @@ main#formulaire-bene-etape-3 {
 }
 
 @media screen and (max-width: 1200px) {
-    main#formulaire-bene-etape-1, main#formulaire-bene-etape-2, main#formulaire-bene-etape-3 {
+
+    main#formulaire-bene-etape-1,
+    main#formulaire-bene-etape-2,
+    main#formulaire-bene-etape-3 {
         background: url('../Visuels/illustrations/illu-amusant.svg') no-repeat;
         background-size: 20%;
         background-position: bottom right;
     }
-  }
+}
 
 /*/////////////////////////////////////////  NOTIFICATIONS ///////////////////////////////////////////////////////*/
 
 #notification article {
-    padding: 2rem; 
+    padding: 2rem;
 }
 
 #notification article img {
-   width: 48px;
-   height: 48px; 
+    width: 48px;
+    height: 48px;
 
 }
 
@@ -1277,7 +1447,7 @@ main#formulaire-bene-etape-3 {
     font-size: x-large;
 }
 
-#notification article  .notif-content {
+#notification article .notif-content {
     width: 80%;
 }
 
@@ -1285,6 +1455,7 @@ main#formulaire-bene-etape-3 {
     font-weight: bold;
     padding: 0%;
 }
+
 #notification .container h3 {
     font-weight: bold;
 }
@@ -1302,7 +1473,8 @@ main#formulaire-bene-etape-3 {
     box-shadow: 10px 5px 5px lightgrey;
 }
 
-#notification .new-notif , .notif-read {
+#notification .new-notif,
+.notif-read {
     margin-bottom: 11px;
 }
 
@@ -1313,15 +1485,35 @@ main#formulaire-bene-etape-3 {
     /* width: 100%; */
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--hd-white);
+    width: 50vw;
+    height: 70vh;
+}
+
+.pop-up-position {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: ease-in 1800ms;
 }
 
 #pop-up .btn-blue {
-    background-color: #272D7E;
-    color: #FFFEFE;
+    background-color: var(--hd-blue);
+    color: var(--hd-white);
     text-decoration: none;
     margin-bottom: 3%;
     width: 40%;
- 
+}
+
+#pop-up .btn-blue:hover {
+    background-color: var(--hd-hover);
+}
+
+#pop-up a {
+    text-decoration: none;
+    color: var(--hd-white);
 }
 
 #pop-up h2 {
@@ -1344,15 +1536,9 @@ main#formulaire-bene-etape-3 {
 }
 
 #pop-up a:hover {
-    color:#FFFEFE;
-  }
+    color: #FFFEFE;
+}
 
 .p6 {
     padding-top: 6px;
 }
-
-
-
-
-
-

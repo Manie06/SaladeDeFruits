@@ -1,169 +1,183 @@
-
 {% extends 'base.html.twig' %}
 
-{% block title %}Proposer une activité{% endblock %}
+{% block title %}Proposer une activité
+{% endblock %}
 
 {% block header %}
-</head> 
+</head>
 
-    <body>
-         <!-- Header Start -->
-      <header>
+<body>
+	<!-- Header Start -->
+	<header>
 
-        <!-- NavBar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between">   
-                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
-                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </nav> 
-          <!-- NavBar End -->
-          
-      </header>
-      <!-- Header End -->
+		<!-- NavBar Start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/beneficiaire-violette.jpg')}}" alt="">Profil</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
+
+	</header>
+	<!-- Header End -->
 {% endblock %}
+{% block body %}
+</body>
+<body>
+	<div class="margin-bot-144"></div>
+	<main
+		id="formulaire-bene-etape-1">
+
+		<!-- Section Formulaire  Start -->
+		<section class="container" id="activite-form">
+			<h1>Proposer une activité</h1>
+			<div
+				class="row">
+				<!-- progressbar Start -->
+				<div class="col-xl-12 col-12">
+					<ul id="progressbar">
+						<li class="active" id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+						<li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
+						<li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
+					</ul>
+				</div>
+			</div>
 
 
+			<div class="row">
 
-  {% block body %}
-  <body>
+				<div class="col-xl-7 d-flex flex-column">
+					{{form_start(formActivite)}}
+					<fieldset class="d-flex flex-column">
+						<legend>Informations générales :</legend>
+						<label for="activite-name">Nom de l'activité :</label>
 
-     
-      <main id="formulaire-bene-etape-1">
-        
-        <!-- Section Formulaire  Start -->
-        <section class="container" id="activite-form">
-          <h1>Proposer une activité</h1>
-          <div class="row">
-            <!-- progressbar Start -->
-            <div class="col-xl-12 col-12">
-                  <ul id="progressbar">
-                      <li class="active" id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
-                      <li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
-                      <li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
-                  </ul>
-            </div>
-          </div>
+						<div class="d-flex">
+							{{ form_widget(formActivite.titre_activite, {'attr': { 'placeholder' : 'maximum 30 caractères ( exemple : Concert de Stromae )'}})}}
+							<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le titre de l'activité"></button>
+						</div>
 
+						<!--  Type d'activite  start -->
+						<div class="activite-type row w-75 flex-column flex-lg-row">
+							<label>Type d'activité :
+							</label>
 
+							<label for="cinema" class="col-12 col-lg-6">
+								<input type="radio" value="cinema" id="cinema" name="activite-type">
+								<div class="card activity-type-card">
+									<div class="card-body activite-type-cinema d-flex flex-column justify-content-between">
+										<h3 class="card-title">Cinema</h3>
+										<a role="button" class="btn btn-primary w-100">Selectionner</a>
+									</div>
+								</div>
+							</label>
 
-          <div class="row">
+							<label for="sport-aquatique" class="col-12 col-lg-6">
+								<input type="radio" id="sport-aquatique" value="sport aquatique" name="activite-type">
+								<div class="card activity-type-card">
+									<div class="card-body activite-type-sport-aquatique d-flex flex-column justify-content-between">
+										<h3 class="card-title justify-self-center">Sport d'eau</h3>
+										<a role="button" class="btn btn-primary w-100">Selectionner</a>
+									</div>
+								</div>
+							</label>
 
-            <div class="col-xl-7 d-flex flex-column">
-            {{form_start(formActivite)}}
-              <fieldset class="d-flex flex-column">
-                <legend>Informations générales :</legend>
-                <label for="activite-name">Nom de l'activité :</label>
+							<label for="restaurant" class="col-12 col-lg-6">
+								<input type="radio" id="restaurant" value="restaurant" name="activite-type">
+								<div class="card activity-type-card">
+									<div class="card-body activite-type-restaurant d-flex flex-column justify-content-between">
+										<h3 class="card-title justify-self-center">Restaurant</h3>
+										<a role="button" class="btn btn-primary w-100">Selectionner</a>
+									</div>
+								</div>
+							</label>
 
-                <div class="d-flex">
-                  {{ form_widget(formActivite.titre_activite, {'attr': { 'placeholder' : 'maximum 30 caractères ( exemple : Concert de Stromae )'}})}} 
-                  <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le titre de l'activité"></button>
-                </div>
+							<label for="add-type" class="col-12 col-lg-6">
+								<input type="radio" id="add-type" value="Ajouter un type d'activité" name="activite-type">
+								<div class="card activity-type-card">
+									<div class="card-body activite-type-add-type d-flex flex-column justify-content-between">
+										<h3 class="card-title justify-self-center">+</h3>
+										<a role="button" class="btn btn-primary w-100">Selectionner</a>
+									</div>
+								</div>
+							</label>
 
-                <!--  Type d'activite  start -->
-                <div class="activite-type row w-75 flex-column flex-lg-row">
-                  <label>Type d'activité : </label>
+						</div>
+						<!--  Type d'activite  end -->
 
-                  <label for="cinema" class="col-12 col-lg-6">
-                    <input type="radio" value="cinema"  id="cinema" name="activite-type">
-                    <div class="card activity-type-card">
-                      <div class="card-body activite-type-cinema d-flex flex-column justify-content-between">
-                        <h3 class="card-title">Cinema</h3>
-                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
-                      </div>
-                    </div>
-                  </label> 
-
-                  <label for="sport-aquatique" class="col-12 col-lg-6">
-                    <input type="radio" id="sport-aquatique" value="sport aquatique" name="activite-type">
-                    <div class="card activity-type-card">   
-                      <div class="card-body activite-type-sport-aquatique d-flex flex-column justify-content-between">
-                        <h3 class="card-title justify-self-center">Sport d'eau</h3>
-                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
-                      </div>
-                    </div>
-                  </label>
-
-                  <label for="restaurant" class="col-12 col-lg-6">
-                    <input type="radio" id="restaurant" value="restaurant" name="activite-type">
-                    <div class="card activity-type-card">   
-                      <div class="card-body activite-type-restaurant d-flex flex-column justify-content-between">
-                        <h3 class="card-title justify-self-center">Restaurant</h3>
-                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
-                      </div>
-                    </div>
-                  </label>
-
-                  <label for="add-type" class="col-12 col-lg-6">
-                    <input type="radio" id="add-type" value="Ajouter un type d'activité" name="activite-type">
-                    <div class="card activity-type-card">   
-                      <div class="card-body activite-type-add-type d-flex flex-column justify-content-between">
-                        <h3 class="card-title justify-self-center">+</h3>
-                        <a role="button" class="btn btn-primary w-100">Selectionner</a>
-                      </div>
-                    </div>
-                  </label>
-                  
-                </div>
-                <!--  Type d'activite  end -->
-
-                <label for="activite-desc">Description</label>
-                <div class="d-flex">
-                  {{ form_widget(formActivite.description_activite, {'attr': { 
+						<label for="activite-desc">Description</label>
+						<div class="d-flex">
+							{{ form_widget(formActivite.description_activite, {'attr': { 
                  'cols' : '30', 'rows' :'10', 'placeholder' : 'Précisez ici l’activité que vous souhaitez faire et l’aide que vous demanderez à votre accompagnant (ex : vous aider à monter les escaliers, à manger, à vous changer...)'}})}}
-                <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la déscription de votre activité"></button>
-                </div>
-                
-                <div class="d-flex activite-bouton activite1-bouton  justify-content-between">
-                    <a name="retour" class="d-block btn btn-secondary preview" role="button" aria-label="Retournez à l'étape précédente" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
-                 <input type="submit" id="suivant" name="suivant" class="btn btn-primary next action-button" value="Étape suivante"/>
-                </div>
+							<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la déscription de votre activité"></button>
+						</div>
 
-              </fieldset>
-              {{form_end(formActivite)}}
+						<div class="d-flex activite-bouton activite-bouton-container  justify-content-between">
+							<a name="retour" class="d-block btn btn-secondary preview" role="button" aria-label="Retournez à l'étape précédente" value="Retour" href=" {{ path('handy_home_beneficiaire')}}">Retour</a>
+							<input type="submit" id="suivant" name="suivant" class="btn btn-primary next action-button" value="Étape suivante"/>
+						</div>
 
-            </div>
-            <!-- Formulaire étape 1 End -->
+					</fieldset>
+					{{form_end(formActivite)}}
 
-            <!-- Récapitulatif Start-->
-              <div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
-                <h2>Récapitulatif</h2>
-                  <ul>
-                    <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-                    <li id="descriptionActivite"><strong>Description de l'activité:</strong></li>
-                    <li id="lieuActivite"><strong>Lieu de rendez-vous : </strong></li>
-                    <li id="adresseActivite"><strong>Adresse  de l'activité :</strong></li>
-                    <li id="debutActivite"><strong>Heure de début : </strong></li>  
-                    <li id="finActivité"><strong>Heure de fin :</strong></li> 
-                    <li id="retourActivite"><strong>Lieu de retour :</strong></li>
-                    <li id="transportActivite"><strong>Transport :</strong></li>
-                    <div id="root2"></div>
-                  </ul>
-              </div>
-            <!-- Récapitulatif End -->
-          </div>
+				</div>
+				<!-- Formulaire étape 1 End -->
 
-        </section> 
-          
-        <!-- Section Formulaire End -->        
-      </main>
-            
-  </body>
-</html>
-{% block javascripts %}   <script src="{{asset('Assets/Scripts/index1.js')}}"></script>  {% endblock %}
+				<!-- Récapitulatif Start-->
+				<div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+					<h2>Récapitulatif</h2>
+					<ul>
+						<li id="nameActivite">
+							<strong>Nom de l'activité :</strong>
+						</li>
+						<li id="descriptionActivite">
+							<strong>Description de l'activité:</strong>
+						</li>
+						<li id="lieuActivite">
+							<strong>Lieu de rendez-vous :
+							</strong>
+						</li>
+						<li id="adresseActivite">
+							<strong>Adresse  de l'activité :</strong>
+						</li>
+						<li id="debutActivite">
+							<strong>Heure de début :
+							</strong>
+						</li>
+						<li id="finActivité">
+							<strong>Heure de fin :</strong>
+						</li>
+						<li id="retourActivite">
+							<strong>Lieu de retour :</strong>
+						</li>
+						<li id="transportActivite">
+							<strong>Transport :</strong>
+						</li>
+						<div id="root2"></div>
+					</ul>
+				</div>
+				<!-- Récapitulatif End -->
+			</div>
 
-{% endblock %}
+		</section>
+
+		<!-- Section Formulaire End -->
+	</main>
+
+</body></html>{% block javascripts %}
+<script src="{{asset('Assets/Scripts/index1.js')}}"></script>{% endblock %}{% endblock %}

@@ -1,168 +1,177 @@
 {#{% form_theme form 'bootstrap_5_home.html.twig' %}#}
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActiviteController!{% endblock %}
+{% block title %}Hello ActiviteController!
+{% endblock %}
 
 
 {% block header %}
-</head> 
+</head>
 
-    <body>
-         <!-- Header Start -->
-      <header>
+<body>
+	<!-- Header Start -->
+	<header>
 
-        <!-- NavBar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between">   
-                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
-                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </nav> 
-          <!-- NavBar End -->
-          
-      </header>
-      <!-- Header End -->
+		<!-- NavBar Start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/beneficiaire-violette.jpg')}}" alt="">Profil</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
+
+	</header>
+	<!-- Header End -->
 {% endblock %}
 
 {% block body %}
 
-<main id="formulaire-bene-etape-3">
-        
-<!-- Section Formulaire  Start -->
-<section class="container" id="activite-form">
-  <h1>Proposer une activité</h1>
-  <div class="row">
-    <!-- progressbar Start -->
-    <div class="col-xl-12 col-12">
-          <ul id="progressbar">
-              <li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
-              <li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
-              <li id="activite-date" class="active" aria-label="Étape 3 du formulaire">Quand</li>
-          </ul>
-    </div>
-    <!-- progressbar End -->
-    
-  </div>
-  <div class="row">
+	<div class="margin-bot-144"></div>
+	<main
+		id="formulaire-bene-etape-3">
 
-    <!-- Formulaire étape 3 Start --> 
-     <div class="col-xl-7 d-flex flex-column">
-      {{form_start(formDate)}}
-        <fieldset class="d-flex flex-column">
-          <legend>Date & Heure :</legend>
+		<!-- Section Formulaire  Start -->
+		<section class="container" id="activite-form">
+			<h1>Proposer une activité</h1>
+			<div
+				class="row">
+				<!-- progressbar Start -->
+				<div class="col-xl-12 col-12">
+					<ul id="progressbar">
+						<li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+						<li id="activite-lieu" aria-label="Étape 2 du formulaire">Où</li>
+						<li id="activite-date" class="active" aria-label="Étape 3 du formulaire">Quand</li>
+					</ul>
+				</div>
+				<!-- progressbar End -->
 
+			</div>
+			<div
+				class="row">
 
-          <div class="cp-ville activite-datetime row flex-lg-row flex-column">
-            <label>Rendez-vous</label>
-            <div class="col-lg-6">
-            <label for="activite-rdv-date" class="visually-hidden">Date de rendez-vous</label>
-            <img src="assets/Visuels/icones/taille-24/calendrier-petit.svg" class="input-icon" aria-hidden="true" alt="" placeholder="Choisissez une date">
-            <input type="date" name="activite-rdv-date" id="activite-rdv-date" aria-required="true"> 
-            
-          </div>
-          <div class="col-lg-6 mt-lg-0 mt-2">
-            <img src="assets/Visuels/icones/taille-24/Horloge.svg" class="input-icon" aria-hidden="true" alt="">
-            <label for="activite-rdv-heure" class="visually-hidden">Heure de rendez-vous</label>
-            <input type="time" name="activite-rdv-heure" id="activite-rdv-heure" aria-required="true">
-          </div>
-              
-
-            <label>Retour</label>
-            <div class="col-lg-6 mt-lg-0 mt-2">
-              <img src="assets/Visuels/icones/taille-24/calendrier-petit.svg" class="input-icon" aria-hidden="true" alt="">
-              <label for="activite-retour-date" class="visually-hidden">Date de retour</label>
-              <input type="date" name="activite-retour-date" id="activite-retour-date" aria-required="true">
-            </div>
-
-            <div class="col-lg-6 mt-lg-0 mt-2">
-              <img src="assets/Visuels/icones/taille-24/Horloge.svg" class="input-icon" aria-hidden="true" alt="">
-              <label for="activite-retour-heure" class="visually-hidden">Heure de retour</label>
-              <input type="time" name="activite-retour-heure" id="activite-retour-heure" aria-required="true">
-            </div>
-          </div>
+				<!-- Formulaire étape 3 Start -->
+				<div class="col-xl-7 d-flex flex-column">
+					{{form_start(formDate)}}
+					<fieldset class="d-flex flex-column">
+						<legend>Date & Heure :</legend>
 
 
+						<div class="cp-ville activite-datetime row flex-lg-row flex-column">
+							<label>Rendez-vous</label>
+							<div class="col-lg-6">
+								<label for="activite-rdv-date" class="visually-hidden">Date de rendez-vous</label>
+								{# <img src="{{asset('Assets/Visuels/icones/taille-32/calendrier-grand.svg')}}" class="input-icon" aria-hidden="true" alt=""> #}
+								<input type="date" name="activite-rdv-date" id="activite-rdv-date" placeholder="Choisissez une date" aria-required="true">
 
-        <div class="d-flex activite-bouton justify-content-between flex-column flex-lg-row">
-            <a class="btn btn-primary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
-            <input  class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>
+							</div>
+							<div class="col-lg-6 mt-lg-0 mt-2">
+								{# <img src="assets/Visuels/icones/taille-24/Horloge.svg" class="input-icon" aria-hidden="true" alt=""> #}
+								<label for="activite-rdv-heure" class="visually-hidden">Heure de rendez-vous</label>
+								<input type="time" name="activite-rdv-heure" id="activite-rdv-heure" aria-required="true">
+							</div>
+						</div>
+						<div class="cp-ville activite-datetime row flex-lg-row flex-column">
+							<label>Retour</label>
+							<div class="col-lg-6 mt-lg-0 mt-2">
+								{# <img src="assets/Visuels/icones/taille-24/calendrier-petit.svg" class="input-icon" aria-hidden="true" alt=""> #}
+								<label for="activite-retour-date" class="visually-hidden">Date de retour</label>
+								<input type="date" name="activite-retour-date" id="activite-retour-date" aria-required="true">
+							</div>
 
-        </div>
-
-<div class="login-popup">
-        <div class="form-popup d-none" id="popupForm">
-            <section id="pop-up">
-                <div class="d-flex justify-content-center align-items-center">
-                {% set activite = app.user.activite|last %} 
-
-                    <h2>Votre activité {{activite.titreActivite}} est publiée !</h2>
-
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p>Vous pouvez modifier votre activité en y accédant depuis la page d'accueil.</p>
-                        <p>Vous recevrez une notification lorsque des accompagnants vous proposeront leurs aide. Vous pourrez accéder à leurs profil et discuter avec eux avant de décider quelle personne vous accompagnera à l'activité. </p>
-                        <p>Merci d'utiliser Handy !</p>
-                    </div>   
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-
-                    <button type="submit" class="btn-blue">
-                    <a href="{{ path('handy_home_beneficiaire')}}">Fermer et retourner a l'accueil</a>
-                  
-                  </button>
-                   
-
-                </div>
-            </section>
-        </div>
-    </div>
+							<div class="col-lg-6 mt-lg-0 mt-2">
+								{# <img src="assets/Visuels/icones/taille-24/Horloge.svg" class="input-icon" aria-hidden="true" alt=""> #}
+								<label for="activite-retour-heure" class="visually-hidden">Heure de retour</label>
+								<input type="time" name="activite-retour-heure" id="activite-retour-heure" placeholder="Choisissez une date" aria-required="true">
+							</div>
+						</div>
 
 
+						<div class="d-flex activite-bouton activite-bouton-container-3 justify-content-between flex-column flex-lg-row">
+							<a class="btn btn-secondary" type="button" href="{{ path('handy_activite_beneficiaire2')}}">Retour</a>
+							<input class="btn btn-primary next action-button" onclick="openForm()" id="suivant" value="Proposer une activité"/>
+						</div>
 
-        </fieldset>
-      </form>
-    </div>
-    <!-- Formulaire étape 3 End -->
-<!-- Récapitulatif Start-->
-<div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
-<h2>Récapitulatif</h2>
-    <ul>
-    <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-   
-    <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
-    
-    <li id="debutActivite"><strong>Heure de début : </strong></li>
-    <li id="finActivite"><strong>Heure de fin :</strong></li> 
-    
-  </ul>
-</div>
-<!-- Récapitulatif End -->
-    <!-- Récapitulatif End -->
-  </div>
+						<div class="login-popup pop-up-position">
+							<div class="form-popup d-none" id="popupForm">
+								<section id="pop-up">
+									<div class="d-flex justify-content-center align-items-center">
+										{% set activite = app.user.activite|last %}
 
-</section> 
- 
-<!-- Section Formulaire End -->        
-</main>
+										<h2>Votre activité
+											{{activite.titreActivite}}
+											est publiée !</h2>
 
-    {% block javascripts %}  
-        <script src="{{asset('Assets/Scripts/index.js')}}"></script> 
-        <script src="{{asset('Assets/Scripts/index3.js')}}"></script> 
-    {% endblock %}
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<p>Vous pouvez modifier votre activité en y accédant depuis la page d'accueil.</p>
+											<p>Vous recevrez une notification lorsque des accompagnants vous proposeront leurs aide. Vous pourrez accéder à leurs profil et discuter avec eux avant de décider quelle personne vous accompagnera à l'activité.
+											</p>
+											<p>Merci d'utiliser Handy !</p>
+										</div>
+									</div>
+									<div class="d-flex justify-content-center align-items-center">
 
-{% endblock %}
+										<button type="submit" class="btn-blue">
+											<a href="{{ path('handy_home_beneficiaire')}}">Fermer et retourner a l'accueil</a>
+
+										</button>
+
+
+									</div>
+								</section>
+							</div>
+						</div>
+
+
+					</fieldset>
+				</form>
+			</div>
+			<!-- Formulaire étape 3 End -->
+			<!-- Récapitulatif Start-->
+			<div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+				<h2>Récapitulatif</h2>
+				<ul>
+					<li id="nameActivite">
+						<strong>Nom de l'activité :</strong>
+					</li>
+
+					<li id="lieuActivite">
+						<strong>Lieu de l'activité :
+						</strong>
+					</li>
+
+					<li id="debutActivite">
+						<strong>Heure de début :
+						</strong>
+					</li>
+					<li id="finActivite">
+						<strong>Heure de fin :</strong>
+					</li>
+
+				</ul>
+			</div>
+			<!-- Récapitulatif End -->
+			<!-- Récapitulatif End -->
+		</div>
+
+	</section>
+	<!-- Section Formulaire End -->
+</body></main>{% block javascripts %}
+<script src="{{asset('Assets/Scripts/index.js')}}"></script>
+<script src="{{asset('Assets/Scripts/index3.js')}}"></script>{% endblock %}{% endblock %}

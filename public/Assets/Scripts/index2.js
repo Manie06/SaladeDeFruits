@@ -116,16 +116,10 @@ var string='';
     
 for(index=0;index<data.length;index++){
         var date=data[index];
-        //On met un article qui inclu un icone dans du HTML, data contacts nous permet de mettre des nombres caches
         string+=
 
         `<strong>Nom activité : </strong><p>${date.activite}</p>
         <strong>Description activité : </strong><p>${date.description}</p>`
-       
-                    
-                
-                    
-
     }
 
 window.onload=function(){

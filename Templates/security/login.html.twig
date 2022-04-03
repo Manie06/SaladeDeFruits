@@ -2,64 +2,79 @@
 
 {% block body %}
 
-<body>
-  <!-- Header Start -->
- 
-  <main id="connexion">
+	<body>
+		<!-- Header Start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 pb-3 ">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center d-none d-lg-block" href="#"><img src="Assets/Visuels/logoetfavicone/handy-logo-svg.svg" src="Logo Handy, retour à l'accueil"/></a>
+					<a class="navbar-brand logo align-self-center d-block d-lg-none" href="#"><img src="Assets/Visuels/logoetfavicone/favicone.svg" src="Logo Handy, retour à l'accueil"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<a class="button" href="{{path('handy_index')}}" role="bouton" aria-label="bouton avec lien vers la page de connexion">Retour</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
+		<!-- Header End -->
 
-    <section>
-      <div class="container">
-        <div class="row">
+		<div class="margin-bot-144"></div>
+		<main id="connexion">
 
-          <div class="col-12 col-lg-6 d-none d-lg-flex">
-            <img src="Assets/Visuels/illustrations/illu-connexion.svg" alt="illustration d'un visage stylisé">
-          </div>
-  
-          <article class="col-12 col-lg-6">
+			<section>
+				<div class="container">
+					<div class="row">
 
-            <h1>Identification</h1>
-            <p>Si vous êtes déjà un membre de Handy, vous pouvez vous connecter avec vôtre email et mot de passe.</p>
+						<div class="col-12 col-lg-6 p-0 d-none d-lg-flex">
+							<img src="Assets/Visuels/illustrations/illu-connexion.svg" alt="illustration d'un visage stylisé">
+						</div>
 
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
-        
-            {% if app.user %}
-                <div class="mb-3">
-                    You are logged in as {{ app.user.username }}, <a href="{{ path('handy_deconnexion') }}">Deconnexion</a>
-                </div>
-            {% endif %}
+						<article class="col-12 col-lg-6 d-flex pt-5 flex-column align-items-center">
+
+							<h1 class="connexion-container text-start ">Identification</h1>
+							<p class="connexion-container">Si vous êtes déjà un membre de Handy, vous pouvez vous connecter avec vôtre email et mot de passe.</p>
+
+							{% if error %}
+								<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+							{% endif %}
+
+							{% if app.user %}
+								<div class="mb-3">
+									You are logged in as
+									{{ app.user.username }},
+									<a href="{{ path('handy_deconnexion') }}">Deconnexion</a>
+								</div>
+							{% endif %}
 
 
+							<form method="post" class="connexion-container">
+								<label for="inputEmail">Email</label>
+								<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="entrer votre email">
+								<label for="inputPassword">Mot de passe</label>
+								<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="entrer votre mot de passe">
+
+								<input
+								type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+								{# Le bouton( input) doit etre dans le form ! #}
+								<div class="d-flex align-items-center mb-5">
+									<input type="checkbox" id="scales" name="scales" checked>
+									<label class="label-check m-0" for="scales" aria-label="cliquer ici pour que le site se souvienne de vos identifiants de connexion">Se souvenir de moi</label>
+								</div>
+								<input type="submit" class="btn btn-primary d-flex justify-content-center align-items-center w-100" value="Se connecter"/>
+
+							</form>
 
 
-          <form method="post">
-          <label for="inputEmail">Email</label>
-          <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="entrer votre email" >
-          <label for="inputPassword">Mot de passe</label>
-          <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="entrer votre mot de passe" >
-      
-          <input type="hidden" name="_csrf_token"
-                 value="{{ csrf_token('authenticate') }}">
-          {# Le bouton( input) doit etre dans le form ! #}
-        
-          <input type="submit"   class="btn btn-primary d-flex justify-content-center align-items-center" value="Se connecter"/>
+							<a href="index.html" aria-label="lien vers la page d'inscription" aria-label="lien vers la page d'inscription">Toujours pas membre ?
+								<span>Inscrivez-vous</span>
+								!</a>
 
-        </form>
-        <div class="d-flex align-items-center">
-        <input type="checkbox" id="scales" name="scales" checked>
-        <label class="label-check" for="scales" aria-label="cliquer ici pour que le site se souvienne de vos identifiants de connexion">Se souvenir de moi</label>
-      </div>
-
-            
-            <a href="index.html" aria-label="lien vers la page d'inscription" aria-label="lien vers la page d'inscription">Toujours pas membre ? <span>Inscrivez-vous</span> !</a>
-
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-               
-</html>
-{% endblock %}
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>{% endblock %}

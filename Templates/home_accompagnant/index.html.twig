@@ -2,687 +2,554 @@
 
 
 {% block header %}
-</head> 
+</head>
 
-    <body>
-         <!-- Header Start -->
-      <header>
+<body>
+	<!-- Header Start -->
+	<header>
 
-        <!-- NavBar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between">   
-                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
-                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </nav> 
-          <!-- NavBar End -->
-          
-      </header>
-      <!-- Header End -->
+		<!-- NavBar Start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/beneficiaire-sophie.jpg')}}" alt="">Profil</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
+
+	</header>
+	<!-- Header End -->
 {% endblock %}
 
- {% block body %}
-
-    <div id="header" class="container-fluid d-flex align-items-center">
-      <div id="heroshot" class="container">
-        <h1>Handy, <span>dis moi oui !</span></h1>
-        <p>Des activités pour tous,<br> de la compagnie pour chacun</p>
-      </div>
-    </div>
-    <!-- Heroshot End -->
-  </header>
-  <!-- Header End -->
-
-
-  <main id="home-acc">
-
-
-
-    <!-- Boutons en bas du Heroshot START -->
-    <div class="container-fluid margin-bot-89" id="onglets-accompagnant">
-      <div class="row">
-        <div class="col-6 bouton-blanc-fullscreen text-center">
-          <a href="#" role="button" class="bouton-deguise-blanc">Trouver une activité</a>
-        </div>
-        <div class="col-6 bouton-bleu-fullscreen text-center">
-          <a href="#" role="button" class="bouton-deguise-bleu">Activités que j'accompagne</a>
-        </div>
-      </div>
-    </div>
-    <!-- Boutons en bas du Heroshot END -->
-
-    <!-- Titre H1 START -->
-    <div id="trouver-une-activite" class="container">
-      <article class="row">
-
-        <img src="{{asset('assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg')}}"
-          class="demi-cercle-droite-trouver-une-activité ">
-        <h2 class="col-8 col-lg-12 col-md-8 titre-h1">Trouver une activité</h2>
-
-        <div class="col-4 d-block d-lg-none">
-          <input role="button" class="burger" type="checkbox"><img src="assets/Visuels/icones/taille-32/filtres.jpg"
-            alt="icône filtres"></input>
-          <p>Filtrer</p>
-        </div>
-      </article>
-    </div>
-    <!-- Titre H1 END -->
-
-
-    <!-- Illustration oeil START -->
-    <img src="assets/Visuels/illustrations/illu-eye-rond-beige.svg" alt="Oeil entouré d'un rond beige"
-      class="illustration-oeil-rond-beige d-none d-lg-block">
-
-    <!-- Illustration oeil END -->
-
-    <!-- Filtres START -->
-    <div class="container pas-de-padding d-none d-lg-block margin-bot-55">
-
-      <div class="d-none d-lg-block">
-        <p class="taille-14">Vous pouvez sélectionner plusieurs options de filtres en maintenant la touche Ctrl
-          (Windows) ou Cmd (Mac)
-          appuyée lorsque vous cliquez sur les options dans une même liste de filtres.</p>
-      </div>
-
-      <div class="d-flex justify-content-between">
-        <div class="accordion accordion-flush filtre-activites filtre-apparence" id="filtre-activite">
-          <div class="accordion-item ">
-            <h2 class="accordion-header taille-filtres-desktop " id="filtre-type-activite">
-              <button
-                class="accordion-button collapsed filtre-apparence-texte taille-filtres-desktop d-flex flex-column align-items-start"
-                type="button" data-bs-toggle="collapse" data-bs-target="#filtre-type-activite-ouvert"
-                aria-expanded="false" aria-controls="filtre-type-activite-ouvert">
-                <strong class="taille-18 ">Quoi ?</strong> <br>
-                <p class="taille-16 ">Type d'activité</p>
-              </button>
-            </h2>
-            <div id="filtre-type-activite-ouvert" class="accordion-collapse collapse "
-              aria-labelledby="filtre-type-activite" data-bs-parent="filtre-activite">
-
-              <!-- Inside filtre type activités START -->
-
-              <div class="accordion accordion-flush sous-filtre-activites d-none d-lg-block "
-                id="filtre-sous-type-activite">
-                <div class="accordion-item ">
-                  <h2 class="accordion-header " id="filtre-activite-sportive">
-                    <button class="accordion-button collapsed taille-filtres-desktop filtre-apparence-texte"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-sportive-ouvert"
-                      aria-expanded="false" aria-controls="filtre-activite-sportive-ouvert">
-                      <p class="taille-16">Activité sportive</p>
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-sportive-ouvert"
-                    class="pas-de-bordure accordion-collapse collapse filtres-desktop"
-                    aria-labelledby="filtre-activite-sportive" data-bs-parent="filtre-sous-type-activite">
-                    <select
-                      class="form-select pas-de-bordure taille-filtres-desktop pas-de-marge filtre-apparence-texte pas-de-padding"
-                      multiple aria-label="choix d'activites sportives">
-
-                      <option value="alpinisme" class="filtre-apparence-choix">Alpinisme / escalade</option>
-                      <option value="athletisme" class="filtre-apparence-choix">Athlétisme</option>
-                      <option value="cyclisme">Cyclisme</option>
-                      <option value="sport-d-eau">Sport d'eau</option>
-                      <option value="sport-de-balle">Sport de balle</option>
-                      <option value="sport-individuel">Sport individuel</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="filtre-activite-culturelle">
-                    <button
-                      class="accordion-button collapsed pas-de-marge taille-filtres-desktop pas-de-padding taille-filtres-desktop filtre-apparence-texte"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-culturelle-ouvert"
-                      aria-expanded="false" aria-controls="filtre-activite-culturelle-ouvert">
-                      <p class="taille-16">Activité culturelle</p>
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-culturelle-ouvert" class="accordion-collapse collapse "
-                    aria-labelledby="filtre-activite-culturelle" data-bs-parent="filtre-sous-type-activite">
-                    <select
-                      class="form-select filtre-apparence-texte pas-de-bordure taille-filtres-desktop pas-de-padding"
-                      multiple aria-label="choix d'activites culturelle">
-
-                      <option value="chant">Chant / Chorale</option>
-                      <option value="cinema">Cinéma</option>
-                      <option value="concert">Concert</option>
-                      <option value="conference">Conférence</option>
-                      <option value="musee">Musée / Exposition</option>
-                      <option value="spectacle">Spectacle / Théâtre</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="filtre-activite-autre">
-                    <button
-                      class="accordion-button collapsed pas-de-marge  taille-filtres-desktop pas-de-padding filtre-apparence-texte"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-autre-ouvert"
-                      aria-expanded="false" aria-controls="filtre-activite-autre-ouvert">
-                      <p class="taille-16">Autre activité</p>
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-autre-ouvert" class="accordion-collapse collapse"
-                    aria-labelledby="filtre-activite-autre" data-bs-parent="filtre-sous-type-activite">
-                    <select class="form-select filtre-apparence-texte pas-de-bordure pas-de-padding" multiple
-                      aria-label="choix d'activites autre">
-
-                      <option value="balade">Balade / Randonnée</option>
-                      <option value="bar">Bar / Restaurant</option>
-                      <option value="benevolat">Bénévolat</option>
-                      <option value="excursion">Excursion</option>
-                      <option value="jardinage">Jardinage</option>
-                      <option value="shopping">Shopping</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Inside filtre type activités END -->
-
-
-
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-type-handicap"
-            role="button" aria-expanded="false" aria-controls="choix-type-handicap">
-            <strong>Qui ?</strong><br>
-            <p class="taille-16">Type de handicap</p>
-          </a>
-          <select class="form-select collapse" id="choix-type-handicap" multiple aria-label="choix de type de handicap">
-            <option value="moteur"><img src="assets/visuels/icones/taille-24/handicap-moteur.svg"
-                alt="fauteuil roulant">
-              Handicap moteur</option>
-            <option value="visuel"><img src="assets/visuels/icones/taille-24/handicap-visuel.svg" alt="oeil non-voyant">
-              Handicap visuel</option>
-            <option value="auditif"><img src="assets/Visuels/icones/taille-24/handicap-auditif.svg"
-                alt="oreille malentendante"> Handicap auditif</option>
-          </select>
-        </div>
-
-        <div>
-          <a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-date-activite"
-            role="button" aria-expanded="false" aria-controls="choix-date-activite">
-            <strong>Quand ?</strong><br>
-            <p class="taille-16">Date</p>
-          </a>
-          <select class="form-select collapse" id="choix-date-activite" multiple aria-label="choix de date d'activité">
-            <option value="semaine-prochaine">Semaine prochaine</option>
-            <option value="mois-actuel">Ce mois-ci</option>
-            <option value="mois-prochain">Le mois prochain</option>
-            <option value="plus-tard">Plus tard</option>
-          </select>
-        </div>
-
-        <div id="root2">
-          {# <label for="ville-activite" class="form-label " hidden>Où ?</label>
-
-          <input type="text" class="form-control taille-filtres-desktop" id="ville-activite"
-            aria-describedby="choisir la ville de l'activité" textarea placeholder="Où ?">
-          
-          <div id="ville-help" class="form-text">Ville</div> #}
-        </div>
-
-
-        <div>
-          <a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-distance-activite"
-            role="button" aria-expanded="false" aria-controls="choix-distance-activite">
-            <strong>Distance</strong><br>
-            <p class="taille-16">Élargir recherche</p>
-          </a>
-          <select class="form-select collapse" id="choix-distance-activite" multiple
-            aria-label="choix de distance d'activité">
-            <option value="inf-cinq">- de 5 km</option>
-            <option value="cinq">5 km</option>
-            <option value="dix">10 km</option>
-            <option value="quinze">15 km</option>
-            <option value="vingt">20 km</option>
-          </select>
-        </div>
-
-        <!-- Utiliser appearance:none dans le CSS pour supprimer la mise en forme initiale -->
-
-      </div>
-
-    </div>
-
-    <!-- Filtres END -->
-
-    <!-- Filtres mobiles START-->
-    <div class="menu d-flex d-block d-lg-none">
-      <!--Conteneur Flex-->
-      <input class="burger" type="checkbox">
-      <!--Menu BURGER-->
-
-      <div class="filtres-mobile pas-de-padding d-flex">
-
-        <div class="accordion accordion-flush filtre-activites" id="filtre-activite">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="filtre-type-activite">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#filtre-type-activite-ouvert" aria-expanded="false"
-                aria-controls="filtre-type-activite-ouvert">
-                Quoi ?<br>
-                Type d'activité
-              </button>
-            </h2>
-            <div id="filtre-type-activite-ouvert" class="accordion-collapse collapse"
-              aria-labelledby="filtre-type-activite" data-bs-parent="filtre-activite">
-
-              <!-- Inside filtre type activités START -->
-              <!-- Filtre activité sportive START -->
-              <div class="accordion accordion-flush sous-filtre-activites " id="filtre-sous-type-activite">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="filtre-activite-sportive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#filtre-activite-sportive-ouvert" aria-expanded="false"
-                      aria-controls="filtre-activite-sportive-ouvert">
-                      Activité sportive
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-sportive-ouvert" class="accordion-collapse collapse"
-                    aria-labelledby="filtre-activite-sportive" data-bs-parent="filtre-sous-type-activite">
-                    <select class="form-select" multiple aria-label="choix d'activites sportives">
-
-                      <option value="alpinisme">Alpinisme et escalade</option>
-                      <option value="athletisme">Athlétisme</option>
-                      <option value="cyclisme">Cyclisme</option>
-                      <option value="sport-d-eau">Sport d'eau</option>
-                      <option value="sport-de-balle">Sport de balle</option>
-                      <option value="sport-individuel">Sport individuel</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Filtre Actitivté Sportive END -->
-
-                <!-- Filtre Activité Culturelle START -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="filtre-activite-culturelle">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#filtre-activite-culturelle-ouvert" aria-expanded="false"
-                      aria-controls="filtre-activite-culturelle-ouvert">
-                      Activité culturelle
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-culturelle-ouvert" class="accordion-collapse collapse"
-                    aria-labelledby="filtre-activite-culturelle" data-bs-parent="filtre-sous-type-activite">
-                    <select class="form-select" multiple aria-label="choix d'activites culturelle">
-
-                      <option value="chant">Chant / Chorale</option>
-                      <option value="cinema">Cinéma</option>
-                      <option value="concert">Concert</option>
-                      <option value="conference">Conférence</option>
-                      <option value="musee">Musée / Exposition</option>
-                      <option value="spectacle">Spectacle / Théâtre</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Filtre Activité Culturelle END -->
-
-                <!-- Filtre Activité Autre START -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="filtre-activite-autre">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#filtre-activite-autre-ouvert" aria-expanded="false"
-                      aria-controls="filtre-activite-autre-ouvert">
-                      Autre activité
-                    </button>
-                  </h2>
-                  <div id="filtre-activite-autre-ouvert" class="accordion-collapse collapse"
-                    aria-labelledby="filtre-activite-autre" data-bs-parent="filtre-sous-type-activite">
-                    <select class="form-select" multiple aria-label="choix d'activites autre">
-                      <option value="balade">Balade / Randonnée</option>
-                      <option value="bar">Bar / Restaurant</option>
-                      <option value="benevolat">Bénévolat</option>
-                      <option value="excursion">Excursion</option>
-                      <option value="jardinage">Jardinage</option>
-                      <option value="shopping">Shopping</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Filtre Activité Autre END -->
-
-              </div>
-
-              <!-- Inside filtre type activités END -->
-
-            </div>
-          </div>
-        </div>
-        <!-- Filtre activité END -->
-
-        <!-- Filtre Handicap START -->
-        <div>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-type-handicap" role="button"
-            aria-expanded="false" aria-controls="choix-type-handicap">
-            Qui ?<br>Type de handicap
-          </a>
-          <select class="form-select collapse" id="choix-type-handicap" multiple aria-label="choix de type de handicap">
-            <option value="moteur"><img src="assets/visuels/icones/taille-24/handicap-moteur.svg"
-                alt="fauteuil roulant"> Handicap moteur</option>
-            <option value="visuel"><img src="assets/visuels/icones/taille-24/handicap-visuel.svg" alt="oeil non-voyant">
-              Handicap visuel</option>
-            <option value="auditif"><img src="assets/Visuels/icones/taille-24/handicap-auditif.svg"
-                alt="oreille malentendante"> Handicap auditif</option>
-          </select>
-        </div>
-        <!-- Filtre Handicap END -->
-
-        <!-- Filtre Date START -->
-        <div>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-date-activite" role="button"
-            aria-expanded="false" aria-controls="choix-date-activite">
-            Quand ?<br>Date
-          </a>
-          <select class="form-select collapse" id="choix-date-activite" multiple aria-label="choix de date d'activité">
-            <option value="semaine-prochaine">La semaine prochaine</option>
-            <option value="mois-actuel">Ce mois-ci</option>
-            <option value="mois-prochain">Le mois prochain</option>
-            <option value="plus-tard">Plus tard</option>
-          </select>
-        </div>
-        <!-- Filtre Date END -->
-
-        <!-- Filtre Ville START -->
-        <div>
-          <label for="ville-activite" class="form-label" hidden>Où ?<br>Ville</label>
-          <input type="text" class="form-control" id="ville-activite" aria-describedby="choisir la ville de l'activité"
-            placeholder="Où ?">
-          <div id="ville-help" class="form-text">Ville</div>
-        </div>
-        <!-- Filtre Ville END -->
-
-        <!-- Filtre Distance activité START -->
-        <div>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-distance-activite" role="button"
-            aria-expanded="false" aria-controls="choix-distance-activite">
-            Distance<br>Élargir recherche
-          </a>
-          <select class="form-select collapse" id="choix-distance-activite" multiple
-            aria-label="choix de distance d'activité">
-            <option value="inf-cinq">- de 5 km</option>
-            <option value="cinq">5 km</option>
-            <option value="dix">10 km</option>
-            <option value="quinze">15 km</option>
-            <option value="vingt">20 km</option>
-          </select>
-        </div>
-        <!-- Filtre Distance activité END -->
-
-
-
-      </div>
-    </div>
-
-    <!-- Filtres Mobiles END -->
-
-
-    <!-- Bouton lancer ma recherche START -->
-    <div class="row justify-content-center margin-bot-89">
-      <a href="#" role="button" class="bouton-bleu col-10 col-lg-4 d-flex align-items-center justify-content-center">Lancer ma recherche</a>
-    </div>
-    <!-- Bouton lancer ma recherche END -->
-
-    <!-- Cartes activités START -->
-
-    <!-- Ligne activités 1 desktop START-->
-    <article id="cartes-trouver-activites-page-acc" class="container">
-      <section class="row flex-lg-row flex-column">
-
-        <!-- Première activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img class="col-4 image-carte-trouver-activite" src="assets/Visuels/images/activite-piscine-petit.jpg"
-               alt="une bouée jaune qui flotte sur l’eau d’une piscine">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Piscine</h3>
-                  <p class="p-card">Lundi 18 avril 2022</p>
-
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-violette.jpg"
-                        alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Violette C.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                        alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">4,7/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Première activité desktop END-->
-
-        <!-- Deuxième activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img src="assets/Visuels/images/activite-coiffeur.jpg" class="col-4 image-carte-trouver-activite"
-              alt="un coiffeur qui rase les cheveux d’un homme assis avec une tondeuse">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Faire un tour chez le coupe-tifs</h3>
-                  <p class="p-card">Mardi 19 avril 2022</p>
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-gladys.jpg"
-                        alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Gladys D.</p>  
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                        alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">4,9/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Deuxième activité desktop END-->
-      </section>
-  </article>
-    <!-- Ligne activités 1 desktop END-->
-
-    <!-- Ligne activités 2 desktop START-->
-    <article id="cartes-trouver-activites-page-acc" class="container">
-      <section class="row flex-lg-row flex-column">
-
-        <!-- Première activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img src="assets/Visuels/images/activite-ballade.jpg" class="col-4 image-carte-trouver-activite"
-                  alt="deux personnes en train de faire une balade à vélo dans une forêt">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Vélo au bois de Vincennes</h3>
-                  <p class="p-card">Mercredi 20 avril 2022</p>
-
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-gaspard.jpg"
-                        alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Gaspard P.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                        alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">4,6/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Première activité desktop END-->
-
-        <!-- Deuxième activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img src="assets/Visuels/images/activite-restau.jpg" class="col-4 image-carte-trouver-activite"
-              alt="des pancakes avec des morceaux de fraises, sucre glace et crème chantilly posés sur une assiette noir et doré">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Manger au Fouquet's</h3>
-                  <p class="p-card">Samedi 23 avril 2022</p>
-
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-nicolas.jpg"
-                        alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Nicolas S.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                      alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">4,6/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Deuxième activité desktop END-->
-      </section>
-
-    </article>
-    <!-- Ligne activités 2 desktop END-->
-
-    <!-- Ligne activités 3 desktop START-->
-    <article id="cartes-trouver-activites-page-acc" class="container">
-      <section class="row margin-bot-30 flex-lg-row flex-column">
-
-        <!-- Première activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img src="assets/Visuels/images/activite-cinema.jpg" class="col-4 image-carte-trouver-activite"
-              alt="des places assise rouge dans une salle de cinéma">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Aller voir "Batman" au cinéma</h3>
-                  <p class="p-card">Samedi 23 avril 2022</p>
-
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-violette.jpg"
-                      alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Pascale N.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                      alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">3,5/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- Première activité desktop END-->
-
-        <!-- Deuxième activité desktop START-->
-        <article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
-          <div class="container carte-trouver-activite">
-            <div class="row card-activite">
-              <img src="assets/Visuels/images/activite-rugby.jpg" class="col-4 image-carte-trouver-activite"
-              alt="un ballon de football américain posé sur un terrain">
-
-              <div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
-                <div class="bloc-texte-card d-flex justify-content-between flex-column">
-                  <h3>Football américain</h3>
-                  <p class="p-card">Dimanche 24 avril 2022</p>
-
-                  <div class="d-flex flex-lg-row flex-column justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-32/beneficiaire-gladys.jpg"
-                      alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
-                      <p class="p-card">Sophie K.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <img src="assets/visuels/icones/taille-24/etoile-pleine.svg"
-                      alt="note donnée à cette personne par les accompagnants">
-                      <p class="p-card">3,8/5</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Deuxième activité desktop END-->
-      </section>
-
-    </article>
-    <!-- Ligne activités 3 desktop END-->
-
-    <!-- Cartes activités desktop END -->
-
-
-
-    <!-- Bouton Voir plus d'activités START -->
-    <div class="row justify-content-center margin-bot-200">
-      <a href="#" role="button" class="bouton-bleu col-10 col-lg-4 d-flex align-items-center justify-content-center">Voir plus d'activité</a>
-    </div>
-    <!-- Bouton Voir plus d'activités END -->
-  </main>
-
-
-  <!-- Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
-</body>
-
-</html>
-
-{% endblock %}
-
+{% block body %}
+
+	<div id="header" class="container-fluid d-flex align-items-center">
+		<div id="heroshot" class="container">
+			<h1>Handy,
+				<span>dis moi oui !</span>
+			</h1>
+			<p>Des activités pour tous,<br>
+				de la compagnie pour chacun</p>
+		</div>
+	</div>
+	<!-- Heroshot End -->
+</body></header><!-- Header End --><main
+id="home-acc">
+
+
+<!-- Boutons en bas du Heroshot START -->
+<div class="container-fluid margin-bot-89" id="onglets-accompagnant">
+	<div class="row">
+		<div class="col-6 bouton-blanc-fullscreen text-center">
+			<a href="#" role="button" class="bouton-deguise-blanc">Trouver une activité</a>
+		</div>
+		<div class="col-6 bouton-bleu-fullscreen text-center">
+			<a href="#" role="button" class="bouton-deguise-bleu">Activités que j'accompagne</a>
+		</div>
+	</div>
+</div>
+<!-- Boutons en bas du Heroshot END -->
+
+<!-- Titre H1 START -->
+<div id="trouver-une-activite" class="container">
+	<article class="row">
+
+		<img src="{{asset('assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg')}}" class="demi-cercle-droite-trouver-une-activite">
+		<h2 class="col-8 col-lg-12 col-md-8 titre-h1">Trouver une activité</h2>
+
+		<div class="col-4 d-block d-lg-none">
+			<input role="button" class="burger" type="checkbox"><img src="assets/Visuels/icones/taille-32/filtres.jpg" alt="icône filtres"></input>
+		<p>Filtrer</p>
+	</div>
+</article></div><!-- Titre H1 END --><!-- Illustration oeil START --><img src="assets/Visuels/illustrations/illu-eye-rond-beige.svg" alt="Oeil entouré d'un rond beige" class="illustration-oeil-rond-beige d-none d-lg-block"><!-- Illustration oeil END --><!-- Filtres START -->
+<div class="container pas-de-padding d-none d-lg-block margin-bot-55"> <div class="d-none d-lg-block">
+	<p class="taille-14">Vous pouvez sélectionner plusieurs options de filtres en maintenant la touche Ctrl
+								          (Windows) ou Cmd (Mac)
+								          appuyée lorsque vous cliquez sur les options dans une même liste de filtres.</p>
+</div>
+
+<div class="d-flex justify-content-between">
+	<div class="accordion accordion-flush filtre-activites filtre-apparence" id="filtre-activite">
+		<div class="accordion-item ">
+			<h2 class="accordion-header taille-filtres-desktop " id="filtre-type-activite">
+				<button class="accordion-button collapsed filtre-apparence-texte taille-filtres-desktop d-flex flex-column align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-type-activite-ouvert" aria-expanded="false" aria-controls="filtre-type-activite-ouvert">
+					<strong class="taille-18 ">Quoi ?</strong>
+					<p class="taille-16 ">Type d'activité</p>
+				</button>
+			</h2>
+			<div
+				id="filtre-type-activite-ouvert" class="accordion-collapse collapse " aria-labelledby="filtre-type-activite" data-bs-parent="filtre-activite">
+
+				<!-- Inside filtre type activités START -->
+
+				<div class="accordion accordion-flush sous-filtre-activites d-none d-lg-block " id="filtre-sous-type-activite">
+					<div class="accordion-item ">
+						<h2 class="accordion-header " id="filtre-activite-sportive">
+							<button class="accordion-button collapsed taille-filtres-desktop filtre-apparence-texte" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-sportive-ouvert" aria-expanded="false" aria-controls="filtre-activite-sportive-ouvert">
+								<p class="taille-16">Activité sportive</p>
+							</button>
+						</h2>
+						<div id="filtre-activite-sportive-ouvert" class="pas-de-bordure accordion-collapse collapse filtres-desktop" aria-labelledby="filtre-activite-sportive" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select pas-de-bordure taille-filtres-desktop pas-de-marge filtre-apparence-texte pas-de-padding" multiple aria-label="choix d'activites sportives">
+
+								<option value="alpinisme" class="filtre-apparence-choix">Alpinisme / escalade</option>
+								<option value="athletisme" class="filtre-apparence-choix">Athlétisme</option>
+								<option value="cyclisme">Cyclisme</option>
+								<option value="sport-d-eau">Sport d'eau</option>
+								<option value="sport-de-balle">Sport de balle</option>
+								<option value="sport-individuel">Sport individuel</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="filtre-activite-culturelle">
+							<button class="accordion-button collapsed pas-de-marge taille-filtres-desktop pas-de-padding taille-filtres-desktop filtre-apparence-texte" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-culturelle-ouvert" aria-expanded="false" aria-controls="filtre-activite-culturelle-ouvert">
+								<p class="taille-16">Activité culturelle</p>
+							</button>
+						</h2>
+						<div id="filtre-activite-culturelle-ouvert" class="accordion-collapse collapse " aria-labelledby="filtre-activite-culturelle" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select filtre-apparence-texte pas-de-bordure taille-filtres-desktop pas-de-padding" multiple aria-label="choix d'activites culturelle">
+
+								<option value="chant">Chant / Chorale</option>
+								<option value="cinema">Cinéma</option>
+								<option value="concert">Concert</option>
+								<option value="conference">Conférence</option>
+								<option value="musee">Musée / Exposition</option>
+								<option value="spectacle">Spectacle / Théâtre</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="filtre-activite-autre">
+							<button class="accordion-button collapsed pas-de-marge  taille-filtres-desktop pas-de-padding filtre-apparence-texte" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-autre-ouvert" aria-expanded="false" aria-controls="filtre-activite-autre-ouvert">
+								<p class="taille-16">Autre activité</p>
+							</button>
+						</h2>
+						<div id="filtre-activite-autre-ouvert" class="accordion-collapse collapse" aria-labelledby="filtre-activite-autre" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select filtre-apparence-texte pas-de-bordure pas-de-padding" multiple aria-label="choix d'activites autre">
+
+								<option value="balade">Balade / Randonnée</option>
+								<option value="bar">Bar / Restaurant</option>
+								<option value="benevolat">Bénévolat</option>
+								<option value="excursion">Excursion</option>
+								<option value="jardinage">Jardinage</option>
+								<option value="shopping">Shopping</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Inside filtre type activités END -->
+
+
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-type-handicap" role="button" aria-expanded="false" aria-controls="choix-type-handicap">
+			<strong>Qui ?</strong><br>
+			<p class="taille-16">Type de handicap</p>
+		</a>
+		<select class="form-select collapse" id="choix-type-handicap" multiple aria-label="choix de type de handicap">
+			<option value="moteur"><img src="assets/visuels/icones/taille-24/handicap-moteur.svg" alt="fauteuil roulant">
+				Handicap moteur</option>
+			<option value="visuel"><img src="assets/visuels/icones/taille-24/handicap-visuel.svg" alt="oeil non-voyant">
+				Handicap visuel</option>
+			<option value="auditif"><img src="assets/Visuels/icones/taille-24/handicap-auditif.svg" alt="oreille malentendante">
+				Handicap auditif</option>
+		</select>
+	</div>
+
+	<div>
+		<a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-date-activite" role="button" aria-expanded="false" aria-controls="choix-date-activite">
+			<strong>Quand ?</strong><br>
+			<p class="taille-16">Date</p>
+		</a>
+		<select class="form-select collapse" id="choix-date-activite" multiple aria-label="choix de date d'activité">
+			<option value="semaine-prochaine">Semaine prochaine</option>
+			<option value="mois-actuel">Ce mois-ci</option>
+			<option value="mois-prochain">Le mois prochain</option>
+			<option value="plus-tard">Plus tard</option>
+		</select>
+	</div>
+
+	<div
+		id="root2">{# <label for="ville-activite" class="form-label " hidden>Où ?</label>
+												
+												          <input type="text" class="form-control taille-filtres-desktop" id="ville-activite"
+												            aria-describedby="choisir la ville de l'activité" textarea placeholder="Où ?">
+												          
+												          <div id="ville-help" class="form-text">Ville</div> #}
+	</div>
+
+
+	<div>
+		<a class="btn btn-filter taille-filtres-desktop" data-bs-toggle="collapse" href="#choix-distance-activite" role="button" aria-expanded="false" aria-controls="choix-distance-activite">
+			<strong>Distance</strong><br>
+			<p class="taille-16">Élargir recherche</p>
+		</a>
+		<select class="form-select collapse" id="choix-distance-activite" multiple aria-label="choix de distance d'activité">
+			<option value="inf-cinq">- de 5 km</option>
+			<option value="cinq">5 km</option>
+			<option value="dix">10 km</option>
+			<option value="quinze">15 km</option>
+			<option value="vingt">20 km</option>
+		</select>
+	</div>
+
+	<!-- Utiliser appearance:none dans le CSS pour supprimer la mise en forme initiale -->
+
+</div></div><!-- Filtres END --><!-- Filtres mobiles START--><div
+class="menu d-flex d-block d-lg-none">
+<!--Conteneur Flex-->
+<input
+class="burger" type="checkbox">
+<!--Menu BURGER-->
+
+<div class="filtres-mobile pas-de-padding d-flex">
+
+	<div class="accordion accordion-flush filtre-activites" id="filtre-activite">
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="filtre-type-activite">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-type-activite-ouvert" aria-expanded="false" aria-controls="filtre-type-activite-ouvert">
+					Quoi ?<br>
+					Type d'activité
+				</button>
+			</h2>
+			<div id="filtre-type-activite-ouvert" class="accordion-collapse collapse" aria-labelledby="filtre-type-activite" data-bs-parent="filtre-activite">
+
+				<!-- Inside filtre type activités START -->
+				<!-- Filtre activité sportive START -->
+					<div class="accordion accordion-flush sous-filtre-activites " id="filtre-sous-type-activite"> <div class="accordion-item">
+						<h2 class="accordion-header" id="filtre-activite-sportive">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-sportive-ouvert" aria-expanded="false" aria-controls="filtre-activite-sportive-ouvert">
+								Activité sportive
+							</button>
+						</h2>
+						<div id="filtre-activite-sportive-ouvert" class="accordion-collapse collapse" aria-labelledby="filtre-activite-sportive" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select" multiple aria-label="choix d'activites sportives">
+
+								<option value="alpinisme">Alpinisme et escalade</option>
+								<option value="athletisme">Athlétisme</option>
+								<option value="cyclisme">Cyclisme</option>
+								<option value="sport-d-eau">Sport d'eau</option>
+								<option value="sport-de-balle">Sport de balle</option>
+								<option value="sport-individuel">Sport individuel</option>
+							</select>
+						</div>
+					</div>
+					<!-- Filtre Actitivté Sportive END -->
+
+					<!-- Filtre Activité Culturelle START -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="filtre-activite-culturelle">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-culturelle-ouvert" aria-expanded="false" aria-controls="filtre-activite-culturelle-ouvert">
+								Activité culturelle
+							</button>
+						</h2>
+						<div id="filtre-activite-culturelle-ouvert" class="accordion-collapse collapse" aria-labelledby="filtre-activite-culturelle" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select" multiple aria-label="choix d'activites culturelle">
+
+								<option value="chant">Chant / Chorale</option>
+								<option value="cinema">Cinéma</option>
+								<option value="concert">Concert</option>
+								<option value="conference">Conférence</option>
+								<option value="musee">Musée / Exposition</option>
+								<option value="spectacle">Spectacle / Théâtre</option>
+							</select>
+						</div>
+					</div>
+					<!-- Filtre Activité Culturelle END -->
+
+					<!-- Filtre Activité Autre START -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="filtre-activite-autre">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtre-activite-autre-ouvert" aria-expanded="false" aria-controls="filtre-activite-autre-ouvert">
+								Autre activité
+							</button>
+						</h2>
+						<div id="filtre-activite-autre-ouvert" class="accordion-collapse collapse" aria-labelledby="filtre-activite-autre" data-bs-parent="filtre-sous-type-activite">
+							<select class="form-select" multiple aria-label="choix d'activites autre">
+								<option value="balade">Balade / Randonnée</option>
+								<option value="bar">Bar / Restaurant</option>
+								<option value="benevolat">Bénévolat</option>
+								<option value="excursion">Excursion</option>
+								<option value="jardinage">Jardinage</option>
+								<option value="shopping">Shopping</option>
+							</select>
+						</div>
+					</div>
+					<!-- Filtre Activité Autre END -->
+
+				</div>
+
+				<!-- Inside filtre type activités END -->
+
+			</div>
+		</div>
+	</div>
+	<!-- Filtre activité END -->
+
+	<!-- Filtre Handicap START -->
+	<div>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-type-handicap" role="button" aria-expanded="false" aria-controls="choix-type-handicap">
+			Qui ?<br>Type de handicap
+		</a>
+		<select class="form-select collapse" id="choix-type-handicap" multiple aria-label="choix de type de handicap">
+			<option value="moteur"><img src="assets/visuels/icones/taille-24/handicap-moteur.svg" alt="fauteuil roulant">
+				Handicap moteur</option>
+			<option value="visuel"><img src="assets/visuels/icones/taille-24/handicap-visuel.svg" alt="oeil non-voyant">
+				Handicap visuel</option>
+			<option value="auditif"><img src="assets/Visuels/icones/taille-24/handicap-auditif.svg" alt="oreille malentendante">
+				Handicap auditif</option>
+		</select>
+	</div>
+	<!-- Filtre Handicap END -->
+
+	<!-- Filtre Date START -->
+	<div>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-date-activite" role="button" aria-expanded="false" aria-controls="choix-date-activite">
+			Quand ?<br>Date
+		</a>
+		<select class="form-select collapse" id="choix-date-activite" multiple aria-label="choix de date d'activité">
+			<option value="semaine-prochaine">La semaine prochaine</option>
+			<option value="mois-actuel">Ce mois-ci</option>
+			<option value="mois-prochain">Le mois prochain</option>
+			<option value="plus-tard">Plus tard</option>
+		</select>
+	</div>
+	<!-- Filtre Date END -->
+
+	<!-- Filtre Ville START -->
+	<div>
+		<label for="ville-activite" class="form-label" hidden>Où ?<br>Ville</label>
+		<input type="text" class="form-control" id="ville-activite" aria-describedby="choisir la ville de l'activité" placeholder="Où ?">
+		<div id="ville-help" class="form-text">Ville</div>
+	</div>
+	<!-- Filtre Ville END -->
+
+	<!-- Filtre Distance activité START -->
+	<div>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#choix-distance-activite" role="button" aria-expanded="false" aria-controls="choix-distance-activite">
+			Distance<br>Élargir recherche
+		</a>
+		<select class="form-select collapse" id="choix-distance-activite" multiple aria-label="choix de distance d'activité">
+			<option value="inf-cinq">- de 5 km</option>
+			<option value="cinq">5 km</option>
+			<option value="dix">10 km</option>
+			<option value="quinze">15 km</option>
+			<option value="vingt">20 km</option>
+		</select>
+	</div>
+	<!-- Filtre Distance activité END -->
+
+
+</div></div><!-- Filtres Mobiles END --><!-- Bouton lancer ma recherche START --><div class="row justify-content-center margin-bot-89">
+<a href="#" role="button" class="bouton-bleu col-10 col-lg-4 d-flex align-items-center justify-content-center">Lancer ma recherche</a></div><!-- Bouton lancer ma recherche END --><!-- Cartes activités START --><!-- Ligne activités 1 desktop START-->
+<article id="cartes-trouver-activites-page-acc" class="container"> <section
+	class="row flex-lg-row flex-column">
+
+	<!-- Première activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img class="col-4 image-carte-trouver-activite" src="assets/Visuels/images/activite-piscine-petit.jpg" alt="une bouée jaune qui flotte sur l’eau d’une piscine">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Piscine</h3>
+						<p class="p-card">Lundi 18 avril 2022</p>
+
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-violette.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Violette C.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">4,7/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- Première activité desktop END-->
+
+	<!-- Deuxième activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img src="assets/Visuels/images/activite-coiffeur.jpg" class="col-4 image-carte-trouver-activite" alt="un coiffeur qui rase les cheveux d’un homme assis avec une tondeuse">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Faire un tour chez le coupe-tifs</h3>
+						<p class="p-card">Mardi 19 avril 2022</p>
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-gladys.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Gladys D.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">4,9/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<!-- Deuxième activité desktop END-->
+</section></article><!-- Ligne activités 1 desktop END--><!-- Ligne activités 2 desktop START--><article id="cartes-trouver-activites-page-acc" class="container">
+<section
+	class="row flex-lg-row flex-column">
+
+	<!-- Première activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img src="assets/Visuels/images/activite-ballade.jpg" class="col-4 image-carte-trouver-activite" alt="deux personnes en train de faire une balade à vélo dans une forêt">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Vélo au bois de Vincennes</h3>
+						<p class="p-card">Mercredi 20 avril 2022</p>
+
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-gaspard.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Gaspard P.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">4,6/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- Première activité desktop END-->
+
+	<!-- Deuxième activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img src="assets/Visuels/images/activite-restau.jpg" class="col-4 image-carte-trouver-activite" alt="des pancakes avec des morceaux de fraises, sucre glace et crème chantilly posés sur une assiette noir et doré">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Manger au Fouquet's</h3>
+						<p class="p-card">Samedi 23 avril 2022</p>
+
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-nicolas.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Nicolas S.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">4,6/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- Deuxième activité desktop END-->
+</section></article><!-- Ligne activités 2 desktop END--><!-- Ligne activités 3 desktop START--><article id="cartes-trouver-activites-page-acc" class="container">
+<section
+	class="row margin-bot-30 flex-lg-row flex-column">
+
+	<!-- Première activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img src="assets/Visuels/images/activite-cinema.jpg" class="col-4 image-carte-trouver-activite" alt="des places assise rouge dans une salle de cinéma">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Aller voir "Batman" au cinéma</h3>
+						<p class="p-card">Samedi 23 avril 2022</p>
+
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-violette.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Pascale N.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">3,5/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+	<!-- Première activité desktop END -->
+
+	<!-- Deuxième activité desktop START-->
+	<article class="accueil-accompagnant-trouver-activite col-lg-6 col-12">
+		<div class="container carte-trouver-activite">
+			<div class="row card-activite">
+				<img src="assets/Visuels/images/activite-rugby.jpg" class="col-4 image-carte-trouver-activite" alt="un ballon de football américain posé sur un terrain">
+
+				<div class="col-8 bloc-texte-carte-trouver-activite justify-content-between flex-column d-flex">
+					<div class="bloc-texte-card d-flex justify-content-between flex-column">
+						<h3>Football américain</h3>
+						<p class="p-card">Dimanche 24 avril 2022</p>
+
+						<div class="d-flex flex-lg-row flex-column justify-content-between">
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-32/beneficiaire-gladys.jpg" alt="personne en situation de handicap qui propose l'activité" class="img-fluid">
+								<p class="p-card">Sophie K.</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<img src="assets/visuels/icones/taille-24/etoile-pleine.svg" alt="note donnée à cette personne par les accompagnants">
+								<p class="p-card">3,8/5</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" role="button" class="bouton-deguise-bleu d-flex align-items-center justify-content-center bouton-bleu">Voir l'activité</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<!-- Deuxième activité desktop END-->
+</section></article><!-- Ligne activités 3 desktop END--><!-- Cartes activités desktop END --><!-- Bouton Voir plus d'activités START -->
+<div class="row justify-content-center"> <a href="#" role="button" class="bouton-bleu col-10 col-lg-4 d-flex align-items-center justify-content-center">Voir plus d'activité</a></div><!-- Bouton Voir plus d'activités END --></main><!-- Bootstrap Bundle --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script></body></html>{% endblock %}

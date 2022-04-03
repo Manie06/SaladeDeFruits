@@ -2,74 +2,72 @@
 
 
 {% block body %}
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="container d-flex justify-content-between">   
-                <a class="navbar-brand logo align-self-center d-none d-lg-block" href="#"><img src="Assets/Visuels/logoetfavicone/handy-logo-svg.svg" src="Logo Handy, retour à l'accueil" /></a>
-                <a class="navbar-brand logo align-self-center d-block d-lg-none" href="#"><img src="Assets/Visuels/logoetfavicone/favicone.svg" src="Logo Handy, retour à l'accueil" /></a>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        
-                        <a type="button" class="btn btn-primary p5" href="{{path('handy_connexion')}}" role="bouton" aria-label="bouton avec lien vers la page de connexion">Se connecter</a>
-                    </ul>
-                </div>
-            </div> 
-        </div>
-    </nav> 
-      <!-- NavBar End -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 pb-3 ">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center d-none d-lg-block" href="#"><img src="Assets/Visuels/logoetfavicone/handy-logo-svg.svg" src="Logo Handy, retour à l'accueil"/></a>
+					<a class="navbar-brand logo align-self-center d-block d-lg-none" href="#"><img src="Assets/Visuels/logoetfavicone/favicone.svg" src="Logo Handy, retour à l'accueil"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<a class="button" href="{{path('handy_connexion')}}" role="bouton" aria-label="bouton avec lien vers la page de connexion">Se connecter</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
 
-    <!-- Heroshot Start -->
-    <div id="header" class="container-fluid d-flex align-items-center">
-        <div id="heroshot" class="container"> 
-            <h1>Handy, <span>dis moi oui !</span></h1>
-            <p>Des activités pour tous,<br> de la compagnie pour chacun</p>
-        </div>
-    </div>  
-    <!-- Heroshot End -->
-  
-  </header>
+		<!-- Heroshot Start -->
+		<div id="header" class="container-fluid d-flex align-items-center">
+			<div id="heroshot" class="container">
+				<h1>Handy,
+					<span>dis-moi oui !</span>
+				</h1>
+				<p>Des activités pour tous,<br>
+					de la compagnie pour chacun</p>
+			</div>
+		</div>
+		<!-- Heroshot End -->
 
-<main id="index">
-  <section>
-    <div class="container">
-      <div class="d-flex align-items-start">
-        <img class="cercle-rouge" src="assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg" alt="demi cercle rouge décoratif">
-        <h2>Faire ensemble</h2>
-      </div>
+	</header>
 
-      <div class="row justify-content-between">
+	<div class="margin-bot-144"></div>
+	<main id="index">
+		<section>
+			<div class="container">
+				<div class="d-flex align-items-start">
+					<img class="cercle-rouge" src="assets/Visuels/illustrations/demi-cercle-droite-trouver-une-activité.svg" alt="demi cercle rouge décoratif">
+					<h2>Faire ensemble</h2>
+				</div>
 
-        <article class="col-12 col-lg-5 d-flex flex-column justify-content-between">
-          <h3 class="d-flex align-items-end">
-            <img src="Assets/Visuels/illustrations/Accompagnant.svg" alt="pictogramme d'un accompagnant"> 
-            <span>Je suis un accompagnant</span>
-          </h3>
-          <p> En utilisant Handy, vous partagez des activités que vous souhaitez faire, en précisant les besoins
-            spécifiques liés à votre situation et la meilleure manière de vous aider.
-            Les accompagnants volontaires d’Handy consulteront votre proposition d’activité et vous proposeront leur
-            aide selon leur disponibilité ! </p>
-          <a class="btn-blue d-flex align-items-center" href="acc-homepage.html" role="bouton" aria-label="bouton avec lien vers la page d'acceuil">Entrer sur Handy</a>
+				<div class="row justify-content-between">
 
-        </article>
-        <article class="col-12 col-lg-5 d-flex flex-column justify-content-between">
+					<article class="col-12 col-lg-5 d-flex flex-column justify-content-between">
+						<h3 class="d-flex align-items-end">
+							<img src="Assets/Visuels/illustrations/Accompagnant.svg" alt="pictogramme d'un accompagnant">
+							<span>Je suis un accompagnant</span>
+						</h3>
+						<p>
+							En utilisant Handy, vous partagez des activités que vous souhaitez faire, en précisant les besoins
+						</p>
+						<a class="btn-blue d-flex align-items-center" href="acc-homepage.html" role="bouton" aria-label="bouton avec lien vers la page d'acceuil">Entrer sur Handy</a>
 
-          <h3 class="d-flex align-items-end">
-            <img src="Assets/Visuels/illustrations/Bénéficiaire.svg" alt="pictogramme d'un accompagné"> 
-            <span>Je veux être accompagné</span>
-          </h3>
-          <p> Vous souhaitez rencontrer de nouvelles personnes et vous aimez prendre soin des plus fragiles ? Grâce à
-            Handy, vous accompagnez des personnes en situation de handicap à des activités de votre choix.
-            Passez de bons moments avec eux, participez gratuitement à des évènements et rendez service en vous
-            faisant
-            aussi plaisir !</p>
-          <a class="btn-blue d-flex align-items-center" href="bene-homepage.html" role="bouton" aria-label="bouton avec lien vers la page d'acceuil">Entrer sur Handy</a>
+					</article>
+					<article class="col-12 col-lg-5 d-flex flex-column justify-content-between">
 
-        </article>
-      </div>
+						<h3 class="d-flex align-items-end">
+							<img src="Assets/Visuels/illustrations/Bénéficiaire.svg" alt="pictogramme d'un accompagné">
+							<span>Je veux être accompagné</span>
+						</h3>
+						<p>
+							Vous souhaitez rencontrer de nouvelles personnes et vous aimez prendre soin des plus fragiles ? Grâce à
+																																																																																											            aussi plaisir !</p>
+						<a class="btn-blue d-flex align-items-center" href="bene-homepage.html" role="bouton" aria-label="bouton avec lien vers la page d'acceuil">Entrer sur Handy</a>
 
-    </div>
-</main>
- {% endblock %}
+					</article>
+				</div>
 
-
+			</div>
+		</main>
+	{% endblock %}

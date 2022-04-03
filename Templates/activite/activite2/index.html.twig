@@ -1,156 +1,177 @@
 {#{% form_theme form 'bootstrap_5_home.html.twig' %}#}
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActiviteController!{% endblock %}
+{% block title %}Hello ActiviteController!
+{% endblock %}
 
 
 {% block header %}
-</head> 
+</head>
 
-    <body>
-         <!-- Header Start -->
-      <header>
+<body>
+	<!-- Header Start -->
+	<header>
 
-        <!-- NavBar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="container d-flex justify-content-between">   
-                    <a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
-                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/profil-grand.svg')}}" alt="">Profil</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </nav> 
-          <!-- NavBar End -->
-          
-      </header>
-      <!-- Header End -->
+		<!-- NavBar Start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="container d-flex justify-content-between">
+					<a class="navbar-brand logo align-self-center" href="#"><img src="{{asset('Assets/Visuels/logoetfavicone/handy-logo-svg.svg')}}"/></a>
+					<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/messagerie.svg')}}" alt="">Messages</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/cloche-vide.svg' )}}" alt="">Notifications</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link d-flex flex-column align-items-center" href="#"><img src="{{asset('Assets/Visuels/icones/taille-32/beneficiaire-violette.jpg')}}" alt="">Profil</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- NavBar End -->
+
+	</header>
+	<!-- Header End -->
 {% endblock %}
 
 
 {% block body %}
 
-<main id="formulaire-bene-etape-2">
-        
-        <!-- Section Formulaire  Start -->
-        <section class="container" id="activite-form">
-          <h1>Proposer une activité</h1>
-          <div class="row">
-            <!-- progressbar Start -->
-            <div class="col-xl-12 col-12">
-                  <ul id="progressbar">
-                      <li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
-                      <li id="activite-lieu" class="active" aria-label="Étape 2 du formulaire">Où</li>
-                      <li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
-                  </ul>
-            </div>
-            <!-- progressbar End -->
-            
-          </div>
-          <div class="row">
+	<div class="margin-bot-144"></div>
+	<main
+		id="formulaire-bene-etape-2">
 
-            <!-- Formulaire étape 1 Start --> 
-            <div class="col-xl-7 d-flex flex-column">
-                {{form_start(formLieu)}}
-                <fieldset class="d-flex flex-column">
-                    <h2 class="legend">Précisez les lieux de l'activité :</h2>
-                    <div class="activite-adresse">
-                        {{form_label(formLieu.adresse_activite)}}
-                        <div class="d-flex">
-                            {{form_widget(formLieu.adresse_activite,{'attr':{'id':'activite-adresse-1','placeholder':'adresse'}})}}
-                            <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter l'adresse de vôtre activité"></button>
-                        </div>
-                    </div>
+		<!-- Section Formulaire  Start -->
+		<section class="container" id="activite-form">
+			<h1>Proposer une activité</h1>
+			<div
+				class="row">
+				<!-- progressbar Start -->
+				<div class="col-xl-12 col-12">
+					<ul id="progressbar">
+						<li id="activite-info" aria-label="Étape 1 du formulaire">Quoi</li>
+						<li id="activite-lieu" class="active" aria-label="Étape 2 du formulaire">Où</li>
+						<li id="activite-date" aria-label="Étape 3 du formulaire">Quand</li>
+					</ul>
+				</div>
+				<!-- progressbar End -->
 
-                    <div class="cp-ville row flex-lg-row flex-column">
+			</div>
+			<div
+				class="row">
 
-                    <div class="col-lg-5">
-                        {{form_label(formLieu.code_postal_activite)}} 
-                        <div class="d-flex">
-                            {{form_widget(formLieu.code_postal_activite,{'attr':{'placeholder':'code postal', 'name':'code-postal', 'id':'code-postal'}})}}
-                            <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le code postal du lieu de votre activité"></button>
-                        </div>
-                    </div>
+				<!-- Formulaire étape 1 Start -->
+				<div class="col-xl-7 d-flex flex-column">
+					{{form_start(formLieu)}}
+					<fieldset class="d-flex flex-column">
+						<h2 class="legend">Précisez les lieux de l'activité :</h2>
+						<div class="activite-adresse">
+							{{form_label(formLieu.adresse_activite)}}
+							<div class="d-flex">
+								{{form_widget(formLieu.adresse_activite,{'attr':{'id':'activite-adresse-1','placeholder':'adresse'}})}}
+								<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter l'adresse de vôtre activité"></button>
+							</div>
+						</div>
 
-                    <div class="col-lg-7">
-                        {{form_label(formLieu.ville_activite)}}
-                        <div class="d-flex">
-                        {{form_widget(formLieu.ville_activite,{'attr':{'placeholder':'ville', 'id':'ville', 'name':'ville'}})}}
-                        <button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la ville où se déroule votre activité"></button>
-                        </div>
-                    </div>
+						<div class="cp-ville row flex-lg-row flex-column">
 
+							<div class="col-lg-5">
+								{{form_label(formLieu.code_postal_activite)}}
+								<div class="d-flex">
+									{{form_widget(formLieu.code_postal_activite,{'attr':{'placeholder':'code postal', 'name':'code-postal', 'id':'code-postal'}})}}
+									<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter le code postal du lieu de votre activité"></button>
+								</div>
+							</div>
 
-                    </div>
-
-                     {{form_label(formLieu.moyen_transport)}} 
-                    <div id="transport">
-                    {{form_widget(formLieu.moyen_transport)}}
-
-                    
+							<div class="col-lg-7">
+								{{form_label(formLieu.ville_activite)}}
+								<div class="d-flex">
+									{{form_widget(formLieu.ville_activite,{'attr':{'placeholder':'ville', 'id':'ville', 'name':'ville'}})}}
+									<button type="button" class="dictaphone"><img src="{{asset('Assets/Visuels/icones/taille-32/dictaphone.svg')}}" alt="Utiliser le dictaphone pour dicter la ville où se déroule votre activité"></button>
+								</div>
+							</div>
 
 
-                <div class="row flex-lg-row flex-column" id="activite-lieux">
+						</div>
 
-                    <div class="col-lg-6">
-                        {{form_label(formLieu.adresse_depart)}}
-                        {{form_widget(formLieu.adresse_depart)}}
-                    </div>
-
-                    <div class="col-lg-6">
-                        {{form_label(formLieu.adresse_retour)}}
-                        {{form_widget(formLieu.adresse_retour)}} 
-                    </div>
-            
-                    <div class="d-flex activite-bouton justify-content-between">
-                        <input type="button" name="retour" class="btn btn-secondary preview action-button" value="Retour">
-                        {{form_widget(formLieu.submit)}} 
-                        {# <input type="button" id="suivant" name="suivant" class="btn btn-primary next action-button" value="etape suivante"> #}
-                        {{form_end(formLieu)}}
-                    </div>
-                </div>
-                
-            </fieldset>
-                
-            </div>
-            <!-- Formulaire étape 1 End -->
-
-            <!-- Récapitulatif Start-->
-            <div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
-              <h2>Récapitulatif</h2>
-                <ul>
-                <li id="nameActivite"><strong>Nom de l'activité :</strong></li>
-                <li id="lieuActivite"><strong>Lieu de l'activité : </strong></li>
-                <li id="codePostalActivite"><strong>Code postal : </strong></li> 
-                <li id="villeActivite"><strong>Ville : </strong></li>
-                <li id="debutActivite"><strong>Heure de début : </strong></li>
-                <li id="finActivite"><strong>Heure de fin :</strong></li> 
-                <li id="transportActivite"><strong>Transport :</strong></li>
-              </ul>
-            </div>
-            <!-- Récapitulatif End -->
-          </div>
-          
-        </section> 
+						{{form_label(formLieu.moyen_transport)}}
+						<div id="transport">
+							{{form_widget(formLieu.moyen_transport)}}
 
 
-<!-- Section Formulaire End -->        
-</main>
+							<div class="row flex-lg-row flex-column" id="activite-lieux">
 
-{% block javascripts %}
-    <script src="{{asset('Assets/Scripts/index2.js')}}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-{% endblock %}
+								<div class="col-lg-6">
+									{{form_label(formLieu.adresse_depart)}}
+									{{form_widget(formLieu.adresse_depart)}}
+								</div>
 
-{% endblock %}
+								<div class="col-lg-6">
+									{{form_label(formLieu.adresse_retour)}}
+									{{form_widget(formLieu.adresse_retour)}}
+								</div>
+
+								<div class="d-flex activite-bouton activite-bouton-container justify-content-between">
+									<input type="button" name="retour" class="btn btn-secondary preview action-button" value="Retour">
+									{{form_widget(formLieu.submit)}}
+									{# <input type="button" id="suivant" name="suivant" class="btn btn-primary next action-button" value="etape suivante"> #}
+									{{form_end(formLieu)}}
+								</div>
+							</div>
+
+						</fieldset>
+
+					</div>
+					<!-- Formulaire étape 1 End -->
+
+					<!-- Récapitulatif Start-->
+					<div class="col-xl-5 d-none flex-column d-lg-flex" id="activite-form-recap">
+						<h2>Récapitulatif</h2>
+						<ul>
+							<li id="nameActivite">
+								<strong>Nom de l'activité :</strong>
+							</li>
+							<li id="lieuActivite">
+								<strong>Lieu de l'activité :
+								</strong>
+							</li>
+							<li id="codePostalActivite">
+								<strong>Code postal :
+								</strong>
+							</li>
+							<li id="villeActivite">
+								<strong>Ville :
+								</strong>
+							</li>
+							<li id="debutActivite">
+								<strong>Heure de début :
+								</strong>
+							</li>
+							<li id="finActivite">
+								<strong>Heure de fin :</strong>
+							</li>
+							<li id="transportActivite">
+								<strong>Transport :</strong>
+							</li>
+						</ul>
+					</div>
+					<!-- Récapitulatif End -->
+				</div>
+
+			</section>
+
+
+			<!-- Section Formulaire End -->
+		</main>
+
+		{% block javascripts %}
+			<script src="{{asset('Assets/Scripts/index2.js')}}"></script>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		{% endblock %}
+
+	{% endblock %}
